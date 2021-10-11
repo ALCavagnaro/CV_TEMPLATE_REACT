@@ -1,5 +1,7 @@
 import {cv} from '../resume/resume';
 
+const Form = () => {
+
 const resume = require('resume-schema');
 
 resume.validate (
@@ -16,5 +18,12 @@ resume.validate (
   }
 );
 
+return (
+  <>
+  </>
+)
+
+}
 
 
+export default Form;
