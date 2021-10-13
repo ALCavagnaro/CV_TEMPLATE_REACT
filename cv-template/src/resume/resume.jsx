@@ -6,17 +6,18 @@ const cv =
     },
     
     "basics": {
-      "name": "Thomas Davis",
-      "label": "Web Developer",
-      "image": "https://avatars0.githubusercontent.com/u/416209?s=460&u=38f220a2c9c658141804f881c334c594eb1642ac&v=4",
-      "summary": "I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
+      "nombre": "Thomas Davis",
+      "puesto": "Web Developer",
+      "foto": "https://avatars0.githubusercontent.com/u/416209?s=460&u=38f220a2c9c658141804f881c334c594eb1642ac&v=4",
+      "descripción": "I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
       "website": "https://lordajax.com",
+      "teléfono":"",
       "email": "thomasalwyndavis@gmail.com",
       "location": {
-        "city": "Melbourne",
-        "countryCode": "AU"
+        "ciudad": "Melbourne",
+        "código postal": "AU"
       },
-      "profiles": [
+      "link a redes sociales": [
         {
           "username": "ajaxdavis",
           "url": "https://twitter.com/ajaxdavis",
@@ -31,17 +32,17 @@ const cv =
     },
     "education": [
       {
-        "endDate": "2009-12-12",
-        "startDate": "2008-02-12",
-        "area": "Software Engineering (incomplete)",
-        "studyType": "Bachelors",
-        "institution": "The University of Queensland"
+        "fecha de inicio": "2009-12-12",
+        "fecha de finalización": "2008-02-12",
+        "campo de estudio": "Software Engineering (incomplete)",
+        "título": "Bachelors",
+        "institución": "The University of Queensland"
       }
     ],
     "references": [
       {
-        "reference": "Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.",
-        "name": "Joey Flores, Co-founder and CEO of Earbits, Inc."
+        "recomendación": "Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.",
+        "nombre y cargo": "Joey Flores, Co-founder and CEO of Earbits, Inc."
       },
       {
         "reference": "I've had the great pleasure of working with Thomas for the past three years at Earbits, and on a few side projects. Two years ago our CTO left on a moment's notice, Thomas saved our company by quickly stepping up to fill this role. He has been with our company through thick and thin and made serious personal sacrifices in order to help the company during tough times. He is a phenomenal hacker and a true team player. Highly recommended!",
@@ -58,14 +59,14 @@ const cv =
     ],
     "skills": [
       {
-        "keywords": [
+        "palabra clave": [
           "HTML / JSX",
           "SCSS / CSS / BEM / Styled Components",
           "Javascript / Typescript",
           "React / Next",
           "Redux / Apollo"
         ],
-        "level": "Senior",
+        "nivel": "Senior",
         "name": "Frontend"
       },
       {
@@ -81,19 +82,22 @@ const cv =
     ],
     "awards": [
       {
-        "title": "Defender of the Internet",
-        "awarder": "Fight For The Future"
+        "título": "Defender of the Internet",
+        "institución": "Fight For The Future",
+        "fecha de inicio": "2020-05-05",
+        "fecha de finalización": ""
       }
     ],
     "work": [
       {
-        "summary": "Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.",
+        "tareas": "Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.",
         "website": "https://tokenized.com/",
-        "name": "Tokenized",
-        "location": "Melbourne",
-        "position": "Senior Javascript Developer",
-        "startDate": "2020-05-05",
-        "highlights": ["React", "Redux", "SCSS", "Product"]
+        "lugar de trabajo": "Tokenized",
+        "localidad": "Melbourne",
+        "posición": "Senior Javascript Developer",
+        "fecha de inicio": "2020-05-05",
+        "fecha de finalización": "",
+        "habilidades requeridas": ["React", "Redux", "SCSS", "Product"]
       },
       {
         "summary": "Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.",
@@ -224,7 +228,7 @@ const cv =
     ],
     "interests": [
       {
-        "name": "Gardening"
+        "actividad": "Gardening"
       },
       {
         "name": "Music / Jamming"

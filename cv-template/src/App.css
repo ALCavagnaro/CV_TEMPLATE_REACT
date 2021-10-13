@@ -15,3 +15,98 @@
   height: 4rem;
 }
 
+.cvForm {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem auto;
+  border: rgb(48, 46, 49) solid;
+  border-radius: 5px;
+  padding: 3rem;
+}
+
+.basic-fields{
+  padding:1rem;
+  border-radius: 1px;
+  margin: auto;
+}
+
+.fields {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  text-transform:uppercase;
+}
+
+.sub-label {
+  text-transform: capitalize;
+}
+
+input {
+  margin: 0.5rem 2rem;
+  border-radius: 3px;
+  border: rgb(48, 46, 49) solid 1px;
+  height: 2rem;
+  width: 16rem;
+}
+
+#location, #perfiles, #meta, #basics, #name, #website {
+  display: none;
+}
+
+#education, #references, #skills, #awards, #work, #interests{
+  visibility:hidden ;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-bottom: 1.5rem;
+}
+
+#education:after {
+  content: "educación:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
+
+#references:after {
+  content: "recomendaciones:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
+
+#skills:after {
+  content: "habilidades:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
+
+#awards:after {
+  content: "cursos:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
+
+#work:after {
+  content: "experiencia:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
+
+#interests:after {
+  content: "intereses:";
+  visibility: visible;
+  display: block;
+  position: absolute;
+}
