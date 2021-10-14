@@ -116,3 +116,7 @@ input {
   display: block;
   position: absolute;
 }
+
+Button {
+  width:5rem;
+}
