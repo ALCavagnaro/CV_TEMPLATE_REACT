@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(216, 221, 230);
+}
+
 .navBar {
   background-color: #427e4f;
   display: flex;
@@ -13,6 +17,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   height: 4rem;
+  margin-bottom: 8rem;
 }
 
 .cvForm {
@@ -20,9 +25,10 @@
   flex-direction: column;
   width: 40%;
   margin: 2rem auto;
-  border: rgb(48, 46, 49) solid;
+  border: rgb(123, 129, 207) solid;
   border-radius: 5px;
   padding: 3rem;
+  background-color: white;
 }
 
 .basic-fields{

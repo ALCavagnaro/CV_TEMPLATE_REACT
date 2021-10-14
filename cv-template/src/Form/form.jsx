@@ -1,4 +1,5 @@
 import {cv} from '../resume/resume';
+import Button from '../Button/button.jsx';
 
 const Form = () => {
 
@@ -148,19 +149,18 @@ for (let element in Object.entries(cv)[7][1][0]) {
 
 return (
   <>
-    <>
     <form className='cvForm'>
        <h3>Datos personales:</h3>
        {userData}
        {location}
-       {work}
+       {work} 
+       <Button text= '+'/>
        {education}
        {references}
        {skills}
        {awards}
        {interests}
     </form>
-    </>
   </>
 )
 
