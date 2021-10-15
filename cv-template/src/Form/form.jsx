@@ -154,7 +154,7 @@ return (
        {userData}
        {location}
        {work} 
-       <Button text= '+'/>
+       <Button text= 'Agregar experiencia'/>
        {education}
        {references}
        {skills}
