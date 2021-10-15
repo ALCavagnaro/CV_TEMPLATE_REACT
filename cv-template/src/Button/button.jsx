@@ -1,10 +1,17 @@
 import React from "react";
 
-const Button = () => {
+const Button = (props) => {
+
+    const handleClick = (e) => {
+
+        e.preventDefault();
+
+        console.log('hola')
+    }
 
  return (   
 
- <button>Agregar experiencia</button>
+ <button onClick = {(handleClick)}>{props.text}</button>
 
  )
 
