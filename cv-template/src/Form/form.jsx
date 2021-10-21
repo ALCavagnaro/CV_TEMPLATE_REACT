@@ -28,6 +28,7 @@ resume.validate (
 );
 
 
+
 return (
   <>
     <form className='cvForm'>
@@ -37,8 +38,11 @@ return (
        <Work/> 
        <Button text= 'Agregar experiencia'/>
        <Education/>
+       <Button text= 'Agregar educación'/>
        <References/>
+       <Button text= 'Agregar referencia'/>
        <Skills/>
+       <Button text= 'Agregar habilidad/ conocimiento'/>
        <Awards/>
        <Interests/>
        <Button text= 'Agregar actividad'/>
