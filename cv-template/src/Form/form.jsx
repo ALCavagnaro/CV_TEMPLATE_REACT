@@ -1,5 +1,8 @@
 import {cv} from '../resume/resume';
 import Button from '../Button/button.jsx';
+import awards from './Awards/awards.js';
+import Education from './Education/education.jsx';
+import Interests from './Interests/interests.jsx';
 
 const Form = () => {
 
@@ -18,6 +21,7 @@ resume.validate (
     console.error("The resume was invalid:", err);
   }
 );
+
 
 let userData = [];
 
@@ -57,20 +61,6 @@ for (let element of Object.keys(cv.basics.location)) {
 
 }
 
-let education = [];
-
-  education.push(
-    <div className='fields' id={Object.keys(cv)[2]}>
-      <label>
-        {Object.keys(cv)[2]}
-      </label>
-    </div>
-  )
-
-
-for (let element in Object.entries(cv)[2][1][0] ) {
-  education.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>)
-}
 
 let references = [];
 
@@ -102,20 +92,6 @@ for (let element in Object.entries(cv)[4][1][0] ) {
   skills.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
 }
 
-let awards = [];
-
-  awards.push(
-    <div className='fields' id={Object.keys(cv)[5]}>
-      <label>
-        {Object.keys(cv)[5]}
-      </label>
-    </div>
-  )
-
-
-for (let element in Object.entries(cv)[5][1][0] ) {
-  awards.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
-}
 
 let work = [];
 
@@ -132,20 +108,6 @@ for (let element in Object.entries(cv)[6][1][0] ) {
   work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
 }
 
-let interests = [];
-
-  interests.push(
-    <div className='fields' id={Object.keys(cv)[7]}>
-      <label>
-        {Object.keys(cv)[7]}
-      </label>
-    </div>
-  )
-
-
-for (let element in Object.entries(cv)[7][1][0]) {
-  interests.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
-}
 
 return (
   <>
@@ -155,11 +117,12 @@ return (
        {location}
        {work} 
        <Button text= 'Agregar experiencia'/>
-       {education}
+       <Education/>
        {references}
        {skills}
-       {awards}
-       {interests}
+       <awards/>
+       <Interests/>
+       <Button text= 'Agregar actividad'/>
     </form>
   </>
 )
