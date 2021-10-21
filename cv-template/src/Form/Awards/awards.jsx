@@ -1,6 +1,6 @@
 import {cv} from '../../resume/resume';
 
-const awards = () => {
+const Awards = () => {
 
   let awards = [];
   
@@ -16,6 +16,9 @@ const awards = () => {
            awards.push(<label className= 'sub-label'id={element} key={element}>{element}<input placeholder='holaaaaa'/></label>);
          }
 
+         return (<></>)
+
 }
 
-export default awards 
+
+export default Awards;
