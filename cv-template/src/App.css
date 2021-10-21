@@ -90,7 +90,7 @@ input {
 }
 
 #skills:after {
-  content: "habilidades:";
+  content: "habilidades y conocimientos:";
   visibility: visible;
   display: block;
   position: absolute;
