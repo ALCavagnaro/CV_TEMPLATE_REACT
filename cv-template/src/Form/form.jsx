@@ -1,5 +1,4 @@
 import {cv} from '../resume/resume';
-import Button from '../Button/button.jsx';
 import Awards from './Awards/awards.jsx';
 import Education from './Education/education.jsx';
 import Interests from './Interests/interests.jsx';
@@ -8,6 +7,7 @@ import UserData from './userData/userdata.jsx';
 import References from './References/references.jsx';
 import Skills from './Skills/skills.jsx';
 import Work from './Work/work.jsx';
+import { useState } from 'react';
 
 const Form = () => {
 
@@ -28,6 +28,18 @@ resume.validate (
 );
 
 
+//let workField = [<Work/>]
+
+const [workField, setWorkField] = useState([<Work/>])
+
+const handleClick = (e) => {
+
+  e.preventDefault();
+
+  setWorkField([...workField, <Work/>]);
+  console.log(<Work/>, 'holaaaa');
+
+}
 
 return (
   <>
@@ -35,17 +47,17 @@ return (
        <h3>Datos personales:</h3>
        <UserData/>
        <Location/>
-       <Work/> 
-       <Button text= 'Agregar experiencia'/>
+       {workField}
+       <button onClick= {(handleClick)}>Agregar experiencia</button> 
        <Education/>
-       <Button text= 'Agregar educación'/>
+       
        <References/>
-       <Button text= 'Agregar referencia'/>
+       
        <Skills/>
-       <Button text= 'Agregar habilidad/ conocimiento'/>
+       
        <Awards/>
        <Interests/>
-       <Button text= 'Agregar actividad'/>
+       
     </form>
   </>
 )
