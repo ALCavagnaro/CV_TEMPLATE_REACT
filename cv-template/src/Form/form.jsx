@@ -8,6 +8,7 @@ import References from './References/references.jsx';
 import Skills from './Skills/skills.jsx';
 import Work from './Work/work.jsx';
 import { useState } from 'react';
+import Button from '../Button/button.jsx'
 
 const Form = () => {
 
@@ -48,7 +49,7 @@ return (
        <UserData/>
        <Location/>
        {workField}
-       <button onClick= {(handleClick)}>Agregar experiencia</button> 
+       <Button text='Agregar experiencia' onClick={(handleClick)}/>
        <Education/>
        
        <References/>
@@ -57,6 +58,8 @@ return (
        
        <Awards/>
        <Interests/>
+
+       <Button text='SOY UN BOTÓN' onClick={(handleClick)}/>
        
     </form>
   </>
