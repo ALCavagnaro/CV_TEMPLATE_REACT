@@ -31,12 +31,20 @@ resume.validate (
 
 const [workField, setWorkField] = useState([<Work/>])
 
-const handleClick = (e) => {
+const addWork = (e) => {
 
   e.preventDefault();
-
   setWorkField([...workField, <Work/>]);
-  console.log(<Work/>, 'experiencia');
+  console.log('work added');
+}
+
+const removeWork = (e, index) => {
+
+  e.preventDefault();
+  const workList = [...workField];
+  workList.splice(index, 1);
+  setWorkField(workList);
+  console.log('work removed');
 
 }
 
@@ -47,8 +55,8 @@ return (
        <UserData/>
        <Location/>
        {workField}
-       <Button text='Agregar experiencia' onClick={(handleClick)}/>
-       <Button text='Quitar experiencia' onClick={(handleClick)}/>
+       <Button text='Agregar experiencia' onClick={(addWork)}/>
+       <Button text='Quitar experiencia' onClick={(removeWork)}/>
        <Education/>
        <Button text='Agregar educación'/>
        <References/>
