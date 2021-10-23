@@ -36,14 +36,11 @@ return (
        <Location/>
        <Work/>
        <Education/>
-       <Button text='Agregar educación'/>
        <References/>
-       <Button text='Agregar referencia'/>
        <Skills/>
-       <Button text='Agregar habilidad'/>
        <Awards/>
        <Interests/>
-       <Button text='Agregar interés'/>
+       <Button text='Confirmar'/>
     </form>
   </>
 )
