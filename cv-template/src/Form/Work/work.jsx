@@ -1,4 +1,6 @@
 import {cv} from '../../resume/resume';
+import Button from '../../Button/button.jsx';
+import { useState} from 'react';
 
 const Work = () => {
     let work = [];
@@ -16,9 +18,32 @@ for (let element in Object.entries(cv)[6][1][0] ) {
   work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
 }
 
+console.log(work);
+
+const [workField, setWorkField] = useState(work)
+
+const addWork = (e) => {
+
+  e.preventDefault();
+  setWorkField([...workField, work]);
+  console.log('work added', workField);
+}
+
+const removeWork = (e, index) => {
+
+  e.preventDefault();
+  const workList = [...workField];
+  workList.splice(index, 1);
+  setWorkField(workList);
+  console.log('work removed');
+
+}
+
 return (
     <>
-    {work}
+    {workField}
+    <Button text='Agregar experiencia' onClick={(addWork)}/>
+    <Button text='Quitar experiencia' onClick={(removeWork)}/>
     </>
 )
 

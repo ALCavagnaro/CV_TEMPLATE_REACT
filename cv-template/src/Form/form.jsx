@@ -7,7 +7,6 @@ import UserData from './userData/userdata.jsx';
 import References from './References/references.jsx';
 import Skills from './Skills/skills.jsx';
 import Work from './Work/work.jsx';
-import { useState } from 'react';
 import Button from '../Button/button.jsx'
 
 const Form = () => {
@@ -29,34 +28,13 @@ resume.validate (
 );
 
 
-const [workField, setWorkField] = useState([<Work/>])
-
-const addWork = (e) => {
-
-  e.preventDefault();
-  setWorkField([...workField, <Work/>]);
-  console.log('work added');
-}
-
-const removeWork = (e, index) => {
-
-  e.preventDefault();
-  const workList = [...workField];
-  workList.splice(index, 1);
-  setWorkField(workList);
-  console.log('work removed');
-
-}
-
 return (
   <>
     <form className='cvForm'>
        <h3>Datos personales:</h3>
        <UserData/>
        <Location/>
-       {workField}
-       <Button text='Agregar experiencia' onClick={(addWork)}/>
-       <Button text='Quitar experiencia' onClick={(removeWork)}/>
+       <Work/>
        <Education/>
        <Button text='Agregar educación'/>
        <References/>
