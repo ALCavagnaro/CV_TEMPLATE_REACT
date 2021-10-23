@@ -29,8 +29,6 @@ resume.validate (
 );
 
 
-//let workField = [<Work/>]
-
 const [workField, setWorkField] = useState([<Work/>])
 
 const handleClick = (e) => {
@@ -38,7 +36,7 @@ const handleClick = (e) => {
   e.preventDefault();
 
   setWorkField([...workField, <Work/>]);
-  console.log(<Work/>, 'holaaaa');
+  console.log(<Work/>, 'experiencia');
 
 }
 
@@ -50,17 +48,16 @@ return (
        <Location/>
        {workField}
        <Button text='Agregar experiencia' onClick={(handleClick)}/>
+       <Button text='Quitar experiencia' onClick={(handleClick)}/>
        <Education/>
-       
+       <Button text='Agregar educación'/>
        <References/>
-       
+       <Button text='Agregar referencia'/>
        <Skills/>
-       
+       <Button text='Agregar habilidad'/>
        <Awards/>
        <Interests/>
-
-       <Button text='SOY UN BOTÓN' onClick={(handleClick)}/>
-       
+       <Button text='Agregar interés'/>
     </form>
   </>
 )
