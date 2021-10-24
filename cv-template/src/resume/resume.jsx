@@ -97,7 +97,7 @@ const cv =
         "posición": "Senior Javascript Developer",
         "fecha de inicio": "2020-05-05",
         "fecha de finalización": "",
-        "habilidades requeridas": ["React", "Redux", "SCSS", "Product"]
+        "habilidades": ["React", "Redux", "SCSS", "Product"]
       },
       {
         "summary": "Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.",
