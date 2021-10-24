@@ -58,7 +58,7 @@ input {
   width: 16rem;
 }
 
-#location, #perfiles, #meta, #basics, #name, #website {
+#location, #perfiles, #meta, #basics, #name, #website, #habilidades {
   display: none;
 }
 
