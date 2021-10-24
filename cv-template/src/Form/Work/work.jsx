@@ -18,25 +18,25 @@ for (let element in Object.entries(cv)[6][1][0] ) {
   work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
 }
 
-console.log(work);
-
-const [workField, setWorkField] = useState(work)
+const [workField, setWorkField] = useState ([])
 
 const addWork = (e) => {
 
   e.preventDefault();
-  setWorkField([...workField, work]);
-  console.log('work added', workField);
+    setWorkField([...workField, work]);
+  
 }
 
 const removeWork = (e, index) => {
 
   e.preventDefault();
-  const workList = [...workField];
-  workList.splice(index, 1);
-  setWorkField(workList);
-  console.log('work removed');
 
+  if (Object.keys(workField).length >=1) {
+      const workList = [...workField];
+      workList.splice(index, 1);
+      setWorkField(workList);
+  }
+  
 }
 
 return (
