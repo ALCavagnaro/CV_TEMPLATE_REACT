@@ -1,7 +1,7 @@
 import {cv} from '../../resume/resume';
 import Button from '../../Button/button.jsx';
 import { useState} from 'react';
-import {Task} from '../Task/task.jsx';
+
 
 const Work = () => {
     let work = [];
