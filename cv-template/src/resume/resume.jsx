@@ -95,8 +95,8 @@ const cv =
         "lugar de trabajo": "Tokenized",
         "localidad": "Melbourne",
         "puesto": "Senior Javascript Developer",
-        "fecha de inicio": "2020-05-05",
-        "fecha de finalización": "",
+        "inicio": "2020-05-05",
+        "finalización": "",
         "habilidades": ["React", "Redux", "SCSS", "Product"]
       },
       {
