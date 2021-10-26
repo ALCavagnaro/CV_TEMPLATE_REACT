@@ -14,7 +14,6 @@ const Work = () => {
         </div>
       )
 
-    work.push();
 
     for (let element in Object.entries(cv)[6][1][0] ) {
       console.log(element)
@@ -26,14 +25,6 @@ const Work = () => {
       }
       
     }
-
-    // function deleteProps (obj, prop) {
-    //     for (const p of prop) {
-    //         (p in obj) && (delete obj[p]); 
-    //     }    
-    //   }
-      
-    //   deleteProps(work,['1']);
 
 
     const [workField, setWorkField] = useState ([])
