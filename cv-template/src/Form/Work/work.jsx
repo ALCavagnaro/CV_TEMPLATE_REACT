@@ -18,8 +18,18 @@ const Work = () => {
     for (let element in Object.entries(cv)[6][1][0] ) {
       console.log(element)
       if (element === "tareas") {
+
         work.push(<textarea className= 'sub-label'id={element} key={element}>{element}</textarea>)
       }
+
+      else if (element === "finalización"){
+
+        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>,
+        <label class="switch"><input type="checkbox"/><span class="slider round"></span><h4>Trabajo aquí actualmente</h4></label>
+        )
+
+      }
+
       else {
         work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
       }
