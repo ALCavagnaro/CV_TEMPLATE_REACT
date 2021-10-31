@@ -129,6 +129,7 @@ Button {
   height: 34px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 /* Hide default HTML checkbox */
