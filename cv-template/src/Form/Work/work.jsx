@@ -4,6 +4,7 @@ import { useState} from 'react';
 
 
 const Work = () => {
+
     let work = [];
 
       work.push(
@@ -16,7 +17,7 @@ const Work = () => {
 
 
     for (let element in Object.entries(cv)[6][1][0] ) {
-      console.log(element)
+      
       if (element === "tareas") {
 
         work.push(<textarea className= 'sub-label'id={element} key={element}>{element}</textarea>)
@@ -24,18 +25,22 @@ const Work = () => {
 
       else if (element === "finalización"){
 
-        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>,
-        <label class="switch"><input type="checkbox"/><span class="slider round"></span><h4>Trabajo aquí actualmente</h4></label>
+        work.push(
+        <label className="switch"><input type="checkbox"/>
+            <span className="slider round"></span>
+            <h4>Trabajo actualmente acá</h4>
+        </label>,
+        <label className= 'sub-label'id={element} key={element}>{element}<input/></label>,
         )
 
-      }
+      } 
 
       else {
         work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
       }
       
     }
-
+   
 
     const [workField, setWorkField] = useState ([])
 
@@ -69,3 +74,7 @@ const Work = () => {
 }
 
 export default Work;
+
+
+
+
