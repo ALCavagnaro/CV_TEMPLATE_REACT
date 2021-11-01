@@ -7,9 +7,20 @@ import UserData from './userData/userdata.jsx';
 import References from './References/references.jsx';
 import Skills from './Skills/skills.jsx';
 import Work from './Work/work.jsx';
-import Button from '../Button/button.jsx'
+import Button from '../Button/button.jsx';
+import { useState } from 'react';
 
 const Form = () => {
+
+const [confirmation, setConfirmation] = useState(false);
+
+const handleClick = (e) => {
+
+  e.preventDefault();
+   
+  setConfirmation(true);
+
+}
 
 const resume = require('resume-schema');
 
@@ -34,13 +45,14 @@ return (
        <h3>Datos personales:</h3>
        <UserData/>
        <Location/>
-       <Work/>
+       <Work/>  
        <Education/>
        <References/>
        <Skills/>
        <Awards/>
        <Interests/>
-       <Button text='Confirmar'/>
+       <Button text='Confirmar' onClick={handleClick}/>
+       {confirmation ? <Button text='Imprimir template'/> : <> </> }
     </form>
   </>
 )
