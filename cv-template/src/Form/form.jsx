@@ -22,7 +22,7 @@ const handleClick = (e) => {
 
 }
 
-const resume = require('resume-schema');
+const resume = require('resume-schema');   //la función valida los campos del formulario. Si se agrega un campo adicional, tira error//
 
 resume.validate (
     cv,
