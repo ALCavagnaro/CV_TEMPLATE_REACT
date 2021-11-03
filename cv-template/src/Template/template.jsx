@@ -9,7 +9,9 @@ const Template = () => {
       return (
           
         <>
-          <h1>HOLAAAAA</h1>
+           <div>
+              <p>{state.element}</p>
+           </div>
         </>
 
       )

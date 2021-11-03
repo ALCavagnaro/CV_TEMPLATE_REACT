@@ -1,9 +1,12 @@
 import {cv} from '../../resume/resume';
 import Button from '../../Button/button.jsx';
-import { useState} from 'react';
+import { useContext, useState} from 'react';
+import { TemplateState } from '../../Context/CVContext';
 
 
 const Work = () => {
+
+  const [state, setState] = useContext(TemplateState);
 
     let work = [];
 
@@ -36,18 +39,18 @@ const Work = () => {
       } 
 
       else {
-        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
+        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input onChange={() => { setState({...state, element})}}/></label>);
       }
       
     }
-   
-
+      
     const [workField, setWorkField] = useState ([])
 
     const addWork = (e) => {
 
       e.preventDefault();
-        setWorkField([...workField, work]);
+      setWorkField([...workField, work]);
+      console.log(state);
       
     }
 
