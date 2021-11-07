@@ -33,13 +33,13 @@ const Work = () => {
             <span className="slider round"></span>
             <h4>Trabajo actualmente acá</h4>
         </label>,
-        <label className= 'sub-label'id={element} key={element}>{element}<input/></label>,
+        <label className= 'sub-label'id={element} key={element}>{element}<input onInput={e => setState([...state, e.target.value])}/></label>,
         )
 
       } 
 
       else {
-        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input onChange={() => { setState({...state, element})}}/></label>);
+        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input onInput={e => setState([...state, e.target.value])}/></label>); // ver de que se guarden en state varios values. revisar eso//
       }
       
     }

@@ -6,11 +6,20 @@ const Template = () => {
 
       const [state, setState] = useContext(TemplateState);
 
+                  
+            console.log(state[1]);
+      
+
+     
+
       return (
           
         <>
            <div>
-              <p>{state.element}</p>
+              <p>{state[0]}</p>
+              <p>{state[1]}</p>
+              <p>{state[2]}</p>
+              <p>{state[3]}</p>
            </div>
         </>
 
