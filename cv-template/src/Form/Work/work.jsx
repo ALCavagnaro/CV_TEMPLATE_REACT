@@ -23,7 +23,7 @@ const Work = () => {
       
       if (element === "tareas") {
 
-        work.push(<textarea className= 'sub-label'id={element} key={element}>{element}</textarea>)
+        work.push(<textarea className= 'sub-label'id={element} key={element} placeholder={element} onChange={e => setState([...state, e.target.value])}></textarea>)
       }
 
       else if (element === "finalización"){
@@ -33,10 +33,16 @@ const Work = () => {
             <span className="slider round"></span>
             <h4>Trabajo actualmente acá</h4>
         </label>,
-        <label className= 'sub-label'id={element} key={element}>{element}<input onInput={e => setState([...state, e.target.value])}/></label>,
+        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'} onInput={e => setState([...state, e.target.value])}/></label>,
         )
 
-      } 
+      }
+      
+      else if (element === "inicio"){
+        work.push(
+        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'} onInput={e => setState([...state, e.target.value])}/></label>,
+        )
+      }
 
       else {
         work.push(<label className= 'sub-label'id={element} key={element}>{element}<input onInput={e => setState([...state, e.target.value])}/></label>); // ver de que se guarden en state varios values. revisar eso//

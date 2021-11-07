@@ -7,7 +7,7 @@ const Template = () => {
       const [state, setState] = useContext(TemplateState);
 
                   
-            console.log(state[1]);
+            console.log(state[0]);
       
 
      
