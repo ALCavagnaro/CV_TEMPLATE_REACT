@@ -7,7 +7,7 @@ const UserData = () => {
 for (let element of Object.keys(cv.basics)) {
   
   userData.push(
-    <div className='fields' id={element}>
+    <div className='fields' id={element} key={element}>
       <label className ='basics'id={element} key={element}>{element}
         <input/>
       </label>

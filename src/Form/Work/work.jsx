@@ -11,7 +11,7 @@ const Work = () => {
     let work = [];
 
       work.push(
-        <div className='fields' id={Object.keys(cv)[6]}>
+        <div className='fields' id={Object.keys(cv)[6]} key={Object.keys(cv)[6]}>
           <label>
             {Object.keys(cv)[6]}
           </label>

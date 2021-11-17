@@ -6,7 +6,7 @@ const Interests = () => {
   let interests = [];
 
   interests.push(
-    <div className='fields' id={Object.keys(cv)[7]}>
+    <div className='fields' id={Object.keys(cv)[7]} key={Object.keys(cv)[7]}>
       <label>
         {Object.keys(cv)[7]}
       </label>

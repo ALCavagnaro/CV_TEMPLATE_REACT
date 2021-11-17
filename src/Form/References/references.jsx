@@ -5,7 +5,7 @@ const References = () => {
     let references = [];
 
   references.push(
-    <div className='fields' id={Object.keys(cv)[3]}>
+    <div className='fields' id={Object.keys(cv)[3]} key={Object.keys(cv)[3]}>
       <label>
         {Object.keys(cv)[3]}
       </label>
