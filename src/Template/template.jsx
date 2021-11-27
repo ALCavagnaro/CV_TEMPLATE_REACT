@@ -3,8 +3,6 @@ import { TemplateState } from '../Context/CVContext';
 import { jsPDF } from "jspdf";
 import Button from '../Button/button';
 
-
-
 const Template = () => {
 
       const [state, setState] = useContext(TemplateState);
@@ -21,19 +19,25 @@ const Template = () => {
       }
      
 
-      return (
-          
-        <> 
-            <div>
-                  <p>{state[0]}</p>
-                  <p>{state[1]}</p>
-                  <p>{state[2]}</p>
-                  <p>{state[3]}</p>
-            </div>
-            <Button text='descargar' onClick = {print}/>
-      </>
+            return (
+            
+            <> 
 
-      )
+                  {
+
+                       state.map((obj) => 
+                        
+                        <div>
+                        {obj}
+                        </div>
+                        )
+                  }
+
+            <Button text='descargar' onClick = {print}/>
+            </>
+
+            )
+
 
 }
 
