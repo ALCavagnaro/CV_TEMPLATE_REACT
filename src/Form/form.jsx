@@ -41,8 +41,6 @@ resume.validate (
 
 return (
   <>
-    <form className='cvForm'>
-       <h3>Datos personales:</h3>
        <UserData/>
        <Location/>
        <Work/>  
@@ -53,7 +51,7 @@ return (
        <Interests/>
        <Button text='Confirmar' onClick={handleClick}/>
        {confirmation ? <Button text='Imprimir template'/> : <> </> }
-    </form>
+  
   </>
 )
 
