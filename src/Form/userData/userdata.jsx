@@ -6,15 +6,32 @@ const UserData = () => {
 
   const [state, setState] = useContext(TemplateState) 
 
-  const handleInput = (e) => {
-     console.log(e.target.value);
-     setState([...state,e.target.value]);
-  }
+  // const handleInput = (e) => {
+  //    console.log(e.target.value);
+     
+  // }
 
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
+    console.log(e);
+    let userData = []
+
+    userData.push(e.target[0].value);
+    userData.push(e.target[1].value);
+    userData.push(e.target[2].value);
+    userData.push(e.target[3].value);
+    userData.push(e.target[4].value);
+    userData.push(e.target[5].value);
+    userData.push(e.target[6].value);
+    userData.push(e.target[7].value);
+    userData.push(e.target[8].value);
+
+    console.log(typeof( 'type userData', userData))
+
+    setState([...state, userData]);
+
+    console.log(typeof( 'type state', state))
 }
 
 return (
@@ -23,7 +40,7 @@ return (
       {Object.keys(cv.basics).map (element => { 
         return (
           <label className='basics' id={element} key={element}>{element}
-              <input type='text' onChange={handleInput}/>
+              <input type='text' />
           </label>
         )
       })}
