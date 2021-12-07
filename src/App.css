@@ -186,3 +186,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+#test {
+  background-color: rgb(43, 117, 228);
+  color:rgb(216, 221, 230);
+}

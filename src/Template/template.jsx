@@ -7,15 +7,24 @@ const Template = () => {
 
       const [state, setState] = useContext(TemplateState);
 
-                  
-            console.log(state[0]);
+      console.log(state);
 
       const print = () => {
+
+            //const newArray = JSON.stringify(state);
+            const item = state.map((item) => JSON.stringify(item))
+            console.log(typeof(item), item);
             // Default export is a4 paper, portrait, using millimeters for units
             const doc = new jsPDF();
-
-            doc.text(state, 10, 10);
+            doc.setFontSize(10);
+            doc.setTextColor(235,232,240);
+            doc.text(item, 10, 10);
             doc.save("a4.pdf");
+            doc.html(document.querySelector("#test"), {
+                  callback: function (doc) {
+                    doc.save();
+                  }
+               });
       }
      
 
@@ -27,7 +36,7 @@ const Template = () => {
 
                        state.map((obj) => 
                         
-                        <div>
+                        <div id='test'>
                         {obj}
                         </div>
                         )
@@ -43,3 +52,4 @@ const Template = () => {
 
 
 export default Template;
+

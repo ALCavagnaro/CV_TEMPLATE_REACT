@@ -14,7 +14,7 @@ const UserData = () => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    
     let userData = []
 
     userData.push(e.target[0].value);
@@ -27,11 +27,7 @@ const handleSubmit = (e) => {
     userData.push(e.target[7].value);
     userData.push(e.target[8].value);
 
-    console.log(typeof( 'type userData', userData))
-
     setState([...state, userData]);
-
-    console.log(typeof( 'type state', state))
 }
 
 return (
