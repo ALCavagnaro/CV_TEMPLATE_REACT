@@ -19,7 +19,7 @@ const Template = () => {
             doc.setFontSize(10);
             doc.setTextColor(235,232,240);
             doc.text(item, 10, 10);
-            doc.save("a4.pdf");
+            //doc.save("a4.pdf");
             doc.html(document.querySelector("#test"), {
                   callback: function (doc) {
                     doc.save();
