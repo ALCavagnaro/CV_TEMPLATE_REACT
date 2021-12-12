@@ -191,13 +191,17 @@ input:checked + .slider:before {
   background-color: rgb(56, 59, 58);
   color:rgb(255, 255, 255);
   width:95%;
-  height: 3rem;
-  font-size: 4px;
+  height: 4.5rem;
+  font-size: 5.5px;
   font-style: italic;
-  padding: 0.5rem;
+  padding: 0.1rem;
 }
 
 .user-data-info{
   display: inline-block;
   width: fit-content;
+}
+
+.user-data-info > p {
+  margin: 2px;
 }

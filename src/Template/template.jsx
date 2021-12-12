@@ -31,7 +31,7 @@ const Template = () => {
                        state.map(
                              
                              (item) =>  
-                             <h3 className='user-data-info'> 
+                             <div className='user-data-info'> 
                              <p>{item[0]}</p>
                              <p>{item[1]}</p>
                              <p>{item[2]}</p>
@@ -41,7 +41,7 @@ const Template = () => {
                              <p>{item[6]}</p>
                              <p>{item[7]}</p>
                              <p>{item[8]}</p>
-                             </h3> 
+                             </div> 
                        )
                   } 
 
