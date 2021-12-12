@@ -28,6 +28,7 @@ const handleSubmit = (e) => {
     userData.push(e.target[8].value);
 
     setState([...state, userData]);
+    console.log(state);
 }
 
 return (
@@ -36,7 +37,7 @@ return (
       {Object.keys(cv.basics).map (element => { 
         return (
           <label className='basics' id={element} key={element}>{element}
-              <input type='text' />
+              <input type='text' id={element}/>
           </label>
         )
       })}

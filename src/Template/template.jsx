@@ -11,16 +11,9 @@ const Template = () => {
 
       const print = () => {
 
-            //const newArray = JSON.stringify(state);
             const item = state.map((item) => JSON.stringify(item))
-            console.log(typeof(item), item);
-            // Default export is a4 paper, portrait, using millimeters for units
             const doc = new jsPDF();
-            doc.setFontSize(10);
-            doc.setTextColor(235,232,240);
-            doc.text(item, 10, 10);
-            //doc.save("a4.pdf");
-            doc.html(document.querySelector("#test"), {
+            doc.html(document.querySelector("#pdf-tempalte"), {
                   callback: function (doc) {
                     doc.save();
                   }
@@ -31,17 +24,28 @@ const Template = () => {
             return (
             
             <> 
+              
+              <div id='pdf-tempalte'>
 
-                  {
+                  { 
+                       state.map(
+                             
+                             (item) =>  
+                             <h3 className='user-data-info'> 
+                             <p>{item[0]}</p>
+                             <p>{item[1]}</p>
+                             <p>{item[2]}</p>
+                             <p>{item[3]}</p>
+                             <p>{item[4]}</p>
+                             <p>{item[5]}</p>
+                             <p>{item[6]}</p>
+                             <p>{item[7]}</p>
+                             <p>{item[8]}</p>
+                             </h3> 
+                       )
+                  } 
 
-                       state.map((obj) => 
-                        
-                        <div id='test'>
-                        {obj}
-                        </div>
-                        )
-                  }
-
+            </div>
             <Button text='descargar' onClick = {print}/>
             </>
 

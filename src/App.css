@@ -187,7 +187,17 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#test {
-  background-color: rgb(43, 117, 228);
-  color:rgb(216, 221, 230);
+#pdf-tempalte{
+  background-color: rgb(56, 59, 58);
+  color:rgb(255, 255, 255);
+  width:95%;
+  height: 3rem;
+  font-size: 4px;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+.user-data-info{
+  display: inline-block;
+  width: fit-content;
 }
