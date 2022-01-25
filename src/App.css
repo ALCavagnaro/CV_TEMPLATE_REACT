@@ -187,10 +187,11 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-#pdf-tempalte{
+#pdf-template{
   background-color: rgb(56, 59, 58);
   color:rgb(255, 255, 255);
-  width:95%;
+  width:50%;
+  /*margin: auto;*/
   height: 4.5rem;
   font-size: 5.5px;
   font-style: italic;
@@ -199,9 +200,17 @@ input:checked + .slider:before {
 
 .user-data-info{
   display: inline-block;
-  width: fit-content;
+  width: 100%;
+  padding: 3px;
+  height: fit-content;
 }
 
 .user-data-info > p {
   margin: 2px;
+  width: fit-content;
+}
+
+#p-description {
+  font-size: 3.8px;
+  width:70%;
 }
