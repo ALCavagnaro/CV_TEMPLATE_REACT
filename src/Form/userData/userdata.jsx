@@ -35,11 +35,21 @@ return (
     <>
     <form className='cvForm' onSubmit={handleSubmit}>
       {Object.keys(cv.basics).map (element => { 
+
+        if (element !='foto') {
         return (
           <label className='basics' id={element} key={element}>{element}
               <input type='text' id={element}/>
           </label>
-        )
+        ) }
+
+        else {
+          return (
+            <label className='basics' id={element} key={element}>{element}
+                <input type='file' id={element}/>
+            </label>
+          )
+        }
       })}
       <input type='submit' value='Guardar en template'/>
     </form>
