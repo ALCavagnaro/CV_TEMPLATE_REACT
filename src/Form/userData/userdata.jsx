@@ -31,6 +31,11 @@ const handleSubmit = (e) => {
     console.log(state);
 }
 
+const eraseContent = (e) => {
+  e.preventDefault();
+  setState([state.lenght = 0]);
+}
+
 return (
     <>
     <form className='cvForm' onSubmit={handleSubmit}>
@@ -51,7 +56,9 @@ return (
           )
         }
       })}
+
       <input type='submit' value='Guardar en template'/>
+      <input type='reset' value='Eliminar' onClick={eraseContent}/>
     </form>
     </>
 )
