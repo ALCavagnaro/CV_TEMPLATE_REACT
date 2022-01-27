@@ -193,7 +193,6 @@ input:checked + .slider:before {
   width:50%;
   /*margin: auto;*/
   height: 4.5rem;
-  font-size: 5.5px;
   font-style: italic;
   padding: 0.1rem;
 }
@@ -203,6 +202,7 @@ input:checked + .slider:before {
   width: 100%;
   padding: 3px;
   height: fit-content;
+  font-size: 5px;
 }
 
 .user-data-info > p {
