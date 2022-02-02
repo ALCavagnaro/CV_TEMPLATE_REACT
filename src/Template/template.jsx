@@ -7,8 +7,6 @@ const Template = () => {
 
       const [state, setState] = useContext(TemplateState);
 
-      console.log(state);
-
       const print = () => {
 
             const item = state.map((item) => JSON.stringify(item))
@@ -27,6 +25,11 @@ const Template = () => {
               
               <div id='pdf-tempalte'>
 
+                  <div>
+                        <img alt="not found" width={"185px"} height={'180px'} src={''} />
+                        <br />
+                  </div>
+
                   { 
                        state.map(
                              
@@ -43,6 +46,8 @@ const Template = () => {
                              <p>{item[8]}</p>
                              </div> 
                        )
+
+
                   } 
 
             </div>
