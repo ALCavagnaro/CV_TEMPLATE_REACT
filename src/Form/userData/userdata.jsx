@@ -1,16 +1,13 @@
 import {cv} from '../../resume/resume';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
+
+//ver de pasarle la foto por contexto al template//
 
 const UserData = () => {
 
-  const [state, setState] = useContext(TemplateState) 
-
-  // const handleInput = (e) => {
-  //    console.log(e.target.value);
-     
-  // }
-
+  const [state, setState] = useContext(TemplateState);
+  const [selectedImage, setSelectedImage] = useState(null);
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +16,6 @@ const handleSubmit = (e) => {
 
     userData.push(e.target[0].value);
     userData.push(e.target[1].value);
-    userData.push(e.target[2].value);
     userData.push(e.target[3].value);
     userData.push(e.target[4].value);
     userData.push(e.target[5].value);
@@ -36,12 +32,17 @@ const eraseContent = (e) => {
   setState([state.lenght = 0]);
 }
 
+const loadImg = (e) => {
+  console.log(e.target.files[0]);
+  setSelectedImage(e.target.files[0]);
+}
+
 return (
-    <>
+    
     <form className='cvForm' onSubmit={handleSubmit}>
       {Object.keys(cv.basics).map (element => { 
 
-        if (element !='foto') {
+        if (element !=='foto') {
         return (
           <label className='basics' id={element} key={element}>{element}
               <input type='text' id={element}/>
@@ -50,17 +51,28 @@ return (
 
         else {
           return (
-            <label className='basics' id={element} key={element}>{element}
-                <input type='file' id={element}/>
-            </label>
+            <><label className='basics' id={element} key={element}>{element}
+              <input type='file' id={element} onChange={(loadImg)} />
+            </label><div>
+                {selectedImage && (
+                  <div>
+                    <img alt="not found" width={"185px"} height={'180px'} src={URL.createObjectURL(selectedImage)} />
+                    <br />
+                    <button onClick={() => setSelectedImage(null)}>Quitar</button>
+                  </div>
+                )}
+                <br />
+              </div></>
           )
         }
+        
       })}
 
       <input type='submit' value='Guardar en template'/>
       <input type='reset' value='Eliminar' onClick={eraseContent}/>
+
     </form>
-    </>
+    
 )
 
 }
