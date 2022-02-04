@@ -2,8 +2,6 @@ import {cv} from '../../resume/resume';
 import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
 
-//ver de pasarle la foto por contexto al template//
-
 const UserData = () => {
 
   const [state, setState] = useContext(TemplateState);
@@ -23,6 +21,18 @@ const handleSubmit = (e) => {
     userData.push(e.target[7].value);
     userData.push(e.target[8].value);
 
+    let blob = new Blob([selectedImage], { type: "image" });
+// The full Blob Object can be seen 
+// in the Console of the Browser
+    console.log('Blob - ', blob);
+    let reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onloadend = function () {
+    let base64String = reader.result;
+    console.log('Base64 String - ', base64String);
+    userData.push(base64String);
+  }
+
     setState([...state, userData]);
     console.log(state);
 }
@@ -36,6 +46,18 @@ const loadImg = (e) => {
   console.log(e.target.files[0]);
   setSelectedImage(e.target.files[0]);
 }
+
+//     let blob = new Blob([selectedImage], { type: "image" });
+// // The full Blob Object can be seen 
+// // in the Console of the Browser
+//     console.log('Blob - ', blob);
+//     let reader = new FileReader();
+//     reader.readAsDataURL(blob);
+//     reader.onloadend = function () {
+//     let base64String = reader.result;
+//     console.log('Base64 String - ', base64String);
+  
+//}
 
 return (
     
