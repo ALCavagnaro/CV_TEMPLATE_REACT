@@ -188,11 +188,11 @@ input:checked + .slider:before {
 }
 
 #pdf-template{
-  background-color: rgb(56, 59, 58);
-  color:rgb(255, 255, 255);
-  width:50%;
+  /*background-color: rgb(56, 59, 58);*/
+  color:rgb(36, 31, 31);
+  width:80%;
   /*margin: auto;*/
-  height: 4.5rem;
+  height: 7rem;
   font-style: italic;
   padding: 0.1rem;
 }
@@ -213,4 +213,10 @@ input:checked + .slider:before {
 #p-description {
   font-size: 3.8px;
   width:70%;
+}
+
+#template-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
 }
