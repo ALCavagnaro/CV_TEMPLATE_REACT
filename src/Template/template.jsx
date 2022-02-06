@@ -28,30 +28,33 @@ const Template = () => {
 
                   { 
 
-                                         state.map(
-                                          
-                                               (item) =>  
+                        state.map(
+                        
+                              (item) =>  
 
-                                               <div className='user-data-info'>
-                                                      <img alt='not found' width={"50px"} height={'45px'} src={item[8]}></img>
-                                                      <p>{item[0]}</p>
-                                                      <p>{item[1]}</p>
-                                                      <p>{item[2]}</p>
-                                                      <p>{item[3]}</p>
-                                                      <p>{item[4]}</p>
-                                                      <p>{item[5]}</p>
-                                                      <p>{item[6]}</p>
-                                                      <p>{item[7]}</p>
-                                               </div> 
-                                         )
-
-                       
-
+                              <div className='user-data-info'>
+                                    <img id = 'pdf-img' alt='not found' src={item[0]}></img>
+                                    <p>{item[1]}</p>
+                                    <p>{item[2]}</p>
+                                    <p>{item[3]}</p>
+                                    <p>{item[4]}</p>
+                                    <p>{item[5]}</p>
+                                    <p>{item[6]}</p>
+                                    <p>{item[7]}</p>
+                                    <p>{item[8]}</p>
+                                    <p>{item[9]}</p>
+                                    <p>{item[10]}</p>
+                                    <p>{item[11]}</p>
+                                    <p>{item[12]}</p>
+                              </div> 
+                        )
 
                   } 
-
+            
             </div>
+            
             <Button text='descargar' onClick = {print}/>
+      
             </>
 
             )
