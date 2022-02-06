@@ -30,7 +30,7 @@ return (
 
     <>
 
-    <form className='cvForm' onSubmit={handleSubmit}>
+    {/* <form className='cvForm' onSubmit={handleSubmit}>
 
     {Object.keys(cv.basics.location).map (element =>
      
@@ -45,7 +45,7 @@ return (
       <input type='submit' value='Guardar en Template'/>
       <input type='reset' value='Eliminar' onClick={eraseContent}/>
 
-    </form>
+    </form> */}
 
     </>
 )

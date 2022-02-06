@@ -220,3 +220,10 @@ input:checked + .slider:before {
   height: 40px;
   border-radius: 100%;
 }
+
+#pdf-img {
+  border-radius: 50%;
+  width:40px;
+  height:40px;
+  margin: auto;
+}
