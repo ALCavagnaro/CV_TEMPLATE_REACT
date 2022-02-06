@@ -19,27 +19,20 @@ const handleSubmit = (e) => {
     let reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
-    let base64String = reader.result;
-    console.log('Base64 String - ', base64String);
-    userData.push(base64String);
+    let base64String = reader.result;   
+  
+   const form = document.querySelector('#userForm')
 
-    userData.push(e.target[0].value);
-    userData.push(e.target[1].value);
-    userData.push(e.target[3].value);
-    userData.push(e.target[4].value);
-    userData.push(e.target[5].value);
-    userData.push(e.target[6].value);
-    userData.push(e.target[7].value);
-    userData.push(e.target[8].value);
-    userData.push(e.target[9].value);
-    userData.push(e.target[10].value);
-    userData.push(e.target[11].value);
+   for (let item of form) {
+     console.log(item.value)
+     userData.push(item.value)
+   }
+    
     
   }
 
     setState([...state, userData]);
     console.log(state);
-    console.log(e.target[9].id, e.target[10].id, e.target[11].id)
 }
 
 const eraseContent = (e) => {
@@ -55,18 +48,17 @@ const loadImg = (e) => {
     let blob = new Blob([selectedImage], { type: "image" });
 // The full Blob Object can be seen 
 // in the Console of the Browser
-    console.log('Blob - ', blob);
+//    console.log('Blob - ', blob);
     let reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
     let base64String = reader.result;
-    console.log('Base64 String - ', base64String);
   
 }
 
 return (
     
-    <form className='cvForm' onSubmit={handleSubmit}>
+    <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
       {Object.keys(cv.basics).map (element => { 
 
         if (element !=='foto') {
