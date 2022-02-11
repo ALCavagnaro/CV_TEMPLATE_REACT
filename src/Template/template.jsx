@@ -6,7 +6,21 @@ import Button from '../Button/button';
 const Template = () => {
 
       const [state, setState] = useContext(TemplateState);
-      console.log(state);
+      
+       console.log('elementos del obj state', state, 'Length:', state.length);
+       const stateLength = state.length == 0;
+      // console.log('obj state 0 0', state[0][0].value);
+       console.log('tipo de state:', typeof(state));
+
+      // for (let element of state[0]){
+      //   console.log("aleluya", element.id, element.value)
+      // }
+
+      
+      //   for (let key in Object.keys(state)) {
+      //       let element = state.key;
+      //       console.log('hola prueba', element);
+      //     }  
 
       const print = () => {
 
@@ -20,40 +34,16 @@ const Template = () => {
       }
      
 
-            return (
+            return (  //ponerle una condición para que cuando el template esté vacío muestre un texto o algo
             
             <> 
-              
-              <div id='pdf-template'>
 
-                  { 
+              {stateLength ? <div id='pdf-template'>Template vacío</div> : state[0].map((item) => (
 
-                        state.map(
-                        
-                              (item) =>  
-
-                              <div className='user-data-info'>
-                                    <img id = 'pdf-img' alt='not found' src={item[0]}></img>
-                                    <p>{item[1]}</p>
-                                    <p>{item[2]}</p>
-                                    <p>{item[3]}</p>
-                                    <p>{item[4]}</p>
-                                    <p>{item[5]}</p>
-                                    <p>{item[6]}</p>
-                                    <p>{item[7]}</p>
-                                    <p>{item[8]}</p>
-                                    <p>{item[9]}</p>
-                                    <p>{item[10]}</p>
-                                    <p>{item[11]}</p>
-                                    <p>{item[12]}</p>
-                              </div> 
-                        )
-
-                  } 
+                  <h1 key={item.id}>{item.value}</h1>
+                  ))}   
             
-            </div>
-            
-            <Button text='descargar' onClick = {print}/>
+            <Button text='descargar' onClick = {print}/>  
       
             </>
 
@@ -67,3 +57,7 @@ export default Template;
 
 
 
+ {/* {state[0].map((item) => (
+
+                <h1 key={item.id}>{item.value}</h1>
+              ))} */}
