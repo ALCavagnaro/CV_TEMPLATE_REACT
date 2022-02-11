@@ -20,32 +20,8 @@ const handleSubmit = (e) => {
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
     let base64String = reader.result;
-    setState({id:'img', value:base64String});   
+    //setState({id:'img', value:base64String});   
   
-            //  const form = document.querySelector('#userForm')
-
-            //  for (let item of form) {
-
-            //    console.log(item.id);
-
-            //    if (item.id == 'foto' || item.id == 'eliminar' || item.id == 'guardar') {
-                
-            //        setState({''})
-            //    }
-
-            //    else (
-
-            //    setState({id:item.id,value:item.value})
-
-            //    )
-            //  }
-
-            // const form = document.querySelector('#userForm')  // **** este funciona pero guarda el último elemento solamente **** //
-
-            // for (let item of form) {
-
-            //   setState([{id: item.id, value: item.value}])     // tiene que queda entre corchetes para que pueda mapear "state" después //
-            // }
 
             const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
 
@@ -54,21 +30,31 @@ const handleSubmit = (e) => {
             let returnList = [];
 
             for (let item of form) {
+            
               list = new Object();
 
-              if (item.id == 'foto' || item.id == 'eliminar' || item.id == 'guardar')
-              
-              {list.id=item.id;
+              if (item.id == 'eliminar' || item.id == 'guardar') 
+              {
+              list.id = item.id;
               list.value = ''}
+
+              else if (item.id == 'foto') 
+              {
+                list.id = item.id
+                list.img = base64String
+                returnList.push(list)
+              }
               
               else {
               list.id = item.id;
               list.value = item.value;
-              returnList.push(list)}
+              returnList.push(list)
+              }
               
             }
             setState(state.lenght = 0);
-            setState([returnList]); 
+            setState([returnList]);
+            console.log('LISTA DE RETORNO', returnList); 
   }
 
     
@@ -80,7 +66,7 @@ const eraseContent = (e) => {
 }
 
 const loadImg = (e) => {
-  //console.log(e.target.files[0]);
+  console.log(e.target.files[0]);
   setSelectedImage(e.target.files[0]);
 }
 
@@ -92,7 +78,7 @@ const loadImg = (e) => {
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
     let base64String = reader.result;
-  
+    console.log(base64String)
 }
 
 return (
