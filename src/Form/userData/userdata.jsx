@@ -55,17 +55,20 @@ const handleSubmit = (e) => {
 
             for (let item of form) {
               list = new Object();
+
+              if (item.id == 'foto' || item.id == 'eliminar' || item.id == 'guardar')
+              
+              {list.id=item.id;
+              list.value = ''}
+              
+              else {
               list.id = item.id;
               list.value = item.value;
-              console.log(Object());
-              returnList.push(list)
+              returnList.push(list)}
               
             }
-
-            console.log(returnList);
             setState(state.lenght = 0);
-            setState([returnList]);
-    
+            setState([returnList]); 
   }
 
     
