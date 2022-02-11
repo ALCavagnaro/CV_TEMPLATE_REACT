@@ -38,10 +38,10 @@ const Template = () => {
             
             <> 
 
-              {stateLength ? <div id='pdf-template'>Template vacío</div> : state[0].map((item) => (
+              {stateLength ? <div id='pdf-template'>Template vacío</div> : <div id='pdf-template'>{state[0].map((item) => (
 
                   <h1 key={item.id}>{item.value}</h1>
-                  ))}   
+                  ))}</div>}
             
             <Button text='descargar' onClick = {print}/>  
       
