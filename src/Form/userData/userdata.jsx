@@ -10,38 +10,74 @@ const UserData = () => {
 const handleSubmit = (e) => {
     e.preventDefault();
     
-    let userData = []
+    //let userData = []
 
     let blob = new Blob([selectedImage], { type: "image" });
 // The full Blob Object can be seen 
 // in the Console of the Browser
-    console.log('Blob - ', blob);
+//    console.log('Blob - ', blob);
     let reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
-    let base64String = reader.result;   
+    let base64String = reader.result;
+    setState({id:'img', value:base64String});   
   
-   const form = document.querySelector('#userForm')
+            //  const form = document.querySelector('#userForm')
 
-   for (let item of form) {
-     console.log(item.value)
-     userData.push(item.value)
-   }
-    
+            //  for (let item of form) {
+
+            //    console.log(item.id);
+
+            //    if (item.id == 'foto' || item.id == 'eliminar' || item.id == 'guardar') {
+                
+            //        setState({''})
+            //    }
+
+            //    else (
+
+            //    setState({id:item.id,value:item.value})
+
+            //    )
+            //  }
+
+            // const form = document.querySelector('#userForm')  // **** este funciona pero guarda el último elemento solamente **** //
+
+            // for (let item of form) {
+
+            //   setState([{id: item.id, value: item.value}])     // tiene que queda entre corchetes para que pueda mapear "state" después //
+            // }
+
+            const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
+
+            let list;
+
+            let returnList = [];
+
+            for (let item of form) {
+              list = new Object();
+              list.id = item.id;
+              list.value = item.value;
+              console.log(Object());
+              returnList.push(list)
+              
+            }
+
+            console.log(returnList);
+            setState(state.lenght = 0);
+            setState([returnList]);
     
   }
 
-    setState([...state, userData]);
-    console.log(state);
+    
 }
 
 const eraseContent = (e) => {
   e.preventDefault();
-  setState([state.lenght = 0]);
+  setState([state.length = 0]);
 }
 
 const loadImg = (e) => {
-  console.log(e.target.files[0]);
+  //console.log(e.target.files[0]);
   setSelectedImage(e.target.files[0]);
 }
 
@@ -97,8 +133,8 @@ return (
 
           ) }
 
-      <input type='submit' value='Guardar en template'/>
-      <input type='reset' value='Eliminar' onClick={eraseContent}/>
+      <input id = 'guardar' type='submit' value='Guardar en template'/>
+      <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
 
     </form>
     
