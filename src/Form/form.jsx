@@ -42,8 +42,7 @@ resume.validate (
 return (
   <>
        <UserData/>
-       <Location/>
-       <Work/>  
+       <Location/> 
        <Education/>
        <References/>
        <Skills/>

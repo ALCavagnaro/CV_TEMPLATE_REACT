@@ -1,6 +1,7 @@
 import {cv} from '../../resume/resume';
 import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
+import Work from '../Work/work';
 
 const UserData = () => {
 
@@ -53,8 +54,7 @@ const handleSubmit = (e) => {
               
             }
             setState(state.lenght = 0);
-            setState([returnList]);
-            console.log('LISTA DE RETORNO', returnList); 
+            setState([returnList]); 
   }
 
     
@@ -66,7 +66,7 @@ const eraseContent = (e) => {
 }
 
 const loadImg = (e) => {
-  console.log(e.target.files[0]);
+//  console.log(e.target.files[0]);
   setSelectedImage(e.target.files[0]);
 }
 
@@ -78,12 +78,17 @@ const loadImg = (e) => {
     reader.readAsDataURL(blob);
     reader.onloadend = function () {
     let base64String = reader.result;
-    console.log(base64String)
+//    console.log(base64String)
 }
+
+console.log(Object.keys((cv.work[0])));
 
 return (
     
     <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
+
+      <h2>1. Información personal</h2>
+
       {Object.keys(cv.basics).map (element => { 
 
         if (element !=='foto') {
@@ -112,7 +117,7 @@ return (
         
       })}
 
-      {Object.keys(cv.basics.location).map (element =>
+      {Object.keys(cv.basics.location).map (element => 
           
           <div className='fields' id={element} key={element}>
             <label className ='basics'id={element} key={element}>{element}
@@ -121,6 +126,9 @@ return (
           </div>
 
           ) }
+
+      <Work/>
+    
 
       <input id = 'guardar' type='submit' value='Guardar en template'/>
       <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
@@ -132,3 +140,46 @@ return (
 }
 
 export default UserData;
+
+
+
+{/* <h2>2. Experiencia</h2>
+
+      {Object.keys(cv.work[0]).map (element => {
+
+        console.log(element);
+
+        if (element === 'tareas') {
+          return (
+            <textarea className ='basics'id={element} key={element}>{element}
+
+            </textarea>
+          )
+           }
+        else if (element == 'inicio' || element == 'finalización') {
+
+          return (
+            <div className='fields' id={element} key={element}>
+              <label className ='basics'id={element} key={element}>{element}
+                <input input type='date' id={element}/>
+              </label>
+           </div>
+
+          )
+
+        }
+
+        else 
+        
+          return ( 
+          <div className='fields' id={element} key={element}>
+              <label className ='basics'id={element} key={element}>{element}
+                <input input type='text' id={element}/>
+              </label>
+          </div>
+          )
+        }
+        
+       ) 
+      
+      } */}
