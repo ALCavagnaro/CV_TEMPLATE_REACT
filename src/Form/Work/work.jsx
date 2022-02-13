@@ -1,21 +1,18 @@
 import {cv} from '../../resume/resume';
 import Button from '../../Button/button.jsx';
-import { useContext, useState} from 'react';
-import { TemplateState } from '../../Context/CVContext';
+import { useState} from 'react';
 
 
 const Work = () => {
 
-  const [state, setState] = useContext(TemplateState);
-
     let work = [];
 
       work.push(
-        <div className='fields' id={Object.keys(cv)[6]} key={Object.keys(cv)[6]}>
-          <label>
-            {Object.keys(cv)[6]}
-          </label>
-        </div>
+          <div className='fields' id={Object.keys(cv)[6]} key={Object.keys(cv)[6]}>
+            <label>
+              {Object.keys(cv)[6]}
+            </label>
+          </div>
       )
 
 
@@ -23,32 +20,33 @@ const Work = () => {
       
       if (element === "tareas") {
 
-        work.push(<textarea className= 'sub-label'id={element} key={element} placeholder={element} onChange={e => setState([...state, e.target.value])}></textarea>)
+        work.push(<textarea className= 'sub-label'id={element} key={element} placeholder={element}></textarea>)
       }
 
       else if (element === "finalización"){
 
         work.push(
-        <label className="switch"><input type="checkbox"/>
+        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'}/></label>,
+        <label className="switch"><input type="checkbox" value = '' onInput={e => (e.target.value = 'Trabajo actualmente acá')}/>
             <span className="slider round"></span>
-            <h4>Trabajo actualmente acá</h4>
+            <h4 id='span-text'>Trabajo actualmente acá</h4>
         </label>,
-        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'} onInput={e => setState([...state, e.target.value])}/></label>,
         )
 
       }
       
       else if (element === "inicio"){
         work.push(
-        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'} onInput={e => setState([...state, e.target.value])}/></label>,
+        <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'}/></label>,
         )
       }
 
       else {
-        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input onInput={e => setState([...state, e.target.value])}/></label>); // ver de que se guarden en state varios values. revisar eso//
-      }
+        work.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
       
     }
+  
+  }  
       
     const [workField, setWorkField] = useState ([])
 
@@ -56,7 +54,6 @@ const Work = () => {
 
       e.preventDefault();
       setWorkField([...workField, work]);
-      console.log(state);
       
     }
 
@@ -73,11 +70,11 @@ const Work = () => {
     }
 
     return (
-        <>
+        <div>
         {workField}
         <Button text='Agregar experiencia' onClick={(addWork)}/>
         <Button text='Quitar experiencia' onClick={(removeWork)}/>
-        </>
+        </div>
     )
 
 }
