@@ -10,7 +10,7 @@ const Template = () => {
        console.log('elementos del obj state', state, 'Length:', state.length);
        const stateLength = state.length == 0;
       // console.log('obj state 0 0', state[0][0].value);
-       console.log('tipo de state:', typeof(state)); 
+      // console.log('tipo de state:', typeof(state)); 
 
       const print = () => {
 
@@ -29,14 +29,24 @@ const Template = () => {
             
             <> 
 
-              {stateLength ? <div id='pdf-template'>Template vacío</div> : <div id='pdf-template'>{state[0].map((item) => (
+              {stateLength ? <div id='pdf-template'>Template vacío</div> : 
+              
+                  <div id='pdf-template'>
 
-                  item.id == 'foto' ? <img id='pdf-img' src={item.img}></img> : //el problema es que no le dice que value va en el tag
-                  
-                  <p id='pdf-p' key={item.id}>{item.value}</p>
-                  
-                  
-                  ))}</div>}
+                        <div id= 'user-data-info'>
+                        
+                            {state[0].map((item) => (
+
+                              item.id === 'foto' ? <img alt='not found' id='pdf-img' src={item.img}></img> : //item.img para aplicarle tag img
+                              
+                              <p id='pdf-p' key={item.id}>{item.value}</p>
+                              
+                              
+                              ))}
+
+                          </div>
+                      
+                      </div>}
 
               
             
