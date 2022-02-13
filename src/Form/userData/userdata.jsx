@@ -126,10 +126,12 @@ return (
           </div>
 
           ) }
-
-      <Work/>
+          
+      <div className='work-container'>
+          <h2>2. Experiencia laboral</h2>
+          <Work/>
+      </div>
     
-
       <input id = 'guardar' type='submit' value='Guardar en template'/>
       <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
 
