@@ -2,6 +2,7 @@ import {cv} from '../../resume/resume';
 import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
 import Work from '../Work/work';
+import Education from '../Education/education';
 
 const UserData = () => {
 
@@ -87,20 +88,22 @@ return (
     
     <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
+    <div className='category-container'>
+
       <h2>1. Información personal</h2>
 
       {Object.keys(cv.basics).map (element => { 
 
         if (element !=='foto') {
         return (
-          <label className='basics' id={element} key={element}>{element}
+          <label className='sub-label' id={element} key={element}>{element}
               <input type='text' id={element}/>
           </label>
         ) }
 
         else {
           return (
-            <><label className='basics' id={element} key={element}>{element}
+            <><label className='sub-label' id={element} key={element}>{element}
               <input type='file' id={element} onChange={(loadImg)} />
             </label><div>
                 {selectedImage && (
@@ -119,17 +122,20 @@ return (
 
       {Object.keys(cv.basics.location).map (element => 
           
-          <div className='fields' id={element} key={element}>
-            <label className ='basics'id={element} key={element}>{element}
+          <div className='sub-label' id={element} key={element}>
+            <label className ='sub-label'id={element} key={element}>{element}
               <input input type='text' id={element}/>
             </label>
           </div>
 
           ) }
+      
+     </div>
           
-      <div className='work-container'>
+      <div className='category-container'>
           <h2>2. Experiencia laboral</h2>
           <Work/>
+          <Education/>
       </div>
     
       <input id = 'guardar' type='submit' value='Guardar en template'/>
@@ -144,44 +150,3 @@ return (
 export default UserData;
 
 
-
-{/* <h2>2. Experiencia</h2>
-
-      {Object.keys(cv.work[0]).map (element => {
-
-        console.log(element);
-
-        if (element === 'tareas') {
-          return (
-            <textarea className ='basics'id={element} key={element}>{element}
-
-            </textarea>
-          )
-           }
-        else if (element == 'inicio' || element == 'finalización') {
-
-          return (
-            <div className='fields' id={element} key={element}>
-              <label className ='basics'id={element} key={element}>{element}
-                <input input type='date' id={element}/>
-              </label>
-           </div>
-
-          )
-
-        }
-
-        else 
-        
-          return ( 
-          <div className='fields' id={element} key={element}>
-              <label className ='basics'id={element} key={element}>{element}
-                <input input type='text' id={element}/>
-              </label>
-          </div>
-          )
-        }
-        
-       ) 
-      
-      } */}
