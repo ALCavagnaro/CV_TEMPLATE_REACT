@@ -12,15 +12,6 @@ import { useState } from 'react';
 
 const Form = () => {
 
-const [confirmation, setConfirmation] = useState(false);
-
-const handleClick = (e) => {
-
-  e.preventDefault();
-   
-  setConfirmation(true);
-
-}
 
 const resume = require('resume-schema');   //la función valida los campos del formulario. Si se agrega un campo adicional, tira error//
 
@@ -42,14 +33,6 @@ resume.validate (
 return (
   <>
        <UserData/>
-       <Location/> 
-       <References/>
-       <Skills/>
-       <Awards/>
-       <Interests/>
-       <Button text='Confirmar' onClick={handleClick}/>
-       {confirmation ? <Button text='Imprimir template'/> : <> </> }
-  
   </>
 )
 
