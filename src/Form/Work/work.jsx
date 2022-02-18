@@ -5,6 +5,10 @@ import { useState} from 'react';
 
 const Work = () => {
 
+  const checkBox = (e) => {
+    e.target.value = 'Trabajo actualmente acá';
+  }
+
     let work = [];
 
       work.push(
@@ -14,7 +18,6 @@ const Work = () => {
             </label>
           </div>
       )
-
 
     for (let element in Object.entries(cv)[6][1][0] ) {
       
@@ -27,9 +30,9 @@ const Work = () => {
 
         work.push(
         <label className= 'sub-label'id={element} key={element}>{element}<input type={'date'}/></label>,
-        <label className="switch"><input type="checkbox" value = '' onInput={e => (e.target.value = 'Trabajo actualmente acá')}/>
+        <h4 id='span-text'>Trabajo actualmente acá</h4>,
+        <label className="switch"><input type="checkbox" value = '' onInput={checkBox}/>
             <span className="slider round"></span>
-            <h4 id='span-text'>Trabajo actualmente acá</h4>
         </label>,
         )
 
@@ -68,6 +71,7 @@ const Work = () => {
       }
       
     }
+
 
     return (
         <div>

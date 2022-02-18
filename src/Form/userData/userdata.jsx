@@ -3,6 +3,9 @@ import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
 import Work from '../Work/work';
 import Education from '../Education/education';
+import References from '../References/references';
+import Skills from '../Skills/skills';
+import Interests from '../Interests/interests';
 
 const UserData = () => {
 
@@ -82,15 +85,13 @@ const loadImg = (e) => {
 //    console.log(base64String)
 }
 
-console.log(Object.keys((cv.work[0])));
-
 return (
     
     <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
     <div className='category-container'>
 
-      <h2>1. Información personal</h2>
+      <h3 className='title'>1. Información personal</h3>
 
       {Object.keys(cv.basics).map (element => { 
 
@@ -133,9 +134,16 @@ return (
      </div>
           
       <div className='category-container'>
-          <h2>2. Experiencia laboral</h2>
+          <h3 className='title'>2. Experiencia laboral</h3>
           <Work/>
+          <h3 className='title'>3. Educación</h3>
           <Education/>
+          <h3 className='title'>4. Recomendaciones</h3>
+          <References/>
+          <h3 className='title'>4. Habilidades</h3>
+          <Skills/>
+          <h3 className='title'>5. Intereses</h3>
+          <Skills/>
       </div>
     
       <input id = 'guardar' type='submit' value='Guardar en template'/>

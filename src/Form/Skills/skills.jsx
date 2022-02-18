@@ -1,4 +1,6 @@
 import {cv} from '../../resume/resume';
+import { useState } from 'react';
+import Button from '../../Button/button';
 
 const Skills = () => {
 
@@ -17,9 +19,27 @@ for (let element in Object.entries(cv)[4][1][0] ) {
   skills.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
 }
 
+const [skillsField, setSkillsField] = useState([]);
+
+const addSkill = (e) => {
+
+  e.preventDefault();
+  setSkillsField([...skillsField, skills])
+
+}
+
+const removeSkill = (e, index) => {
+  e.preventDefault();
+  const skillsList = [...skillsField];
+  skillsList.splice(index, 1);
+  setSkillsField(skillsList);
+}
+
 return (
     <>
-     {skills}
+     {skillsField}
+     <Button text='Agregar habilidad' onClick={addSkill}/>
+     <Button text='Quitar habilidad' onClick={removeSkill}/>
     </>
 )
 
