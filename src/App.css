@@ -21,17 +21,19 @@ body {
 }
 
 .cvForm {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   width: 40%;
-  margin: 2rem auto;
-  border: rgb(123, 129, 207) solid;
-  border-radius: 5px;
-  padding: 3rem;
-  background-color: white;
+  margin: 2% 30%;
+  padding: 5% 1%;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%); }
+
+.title {
+  margin: 5% 1%;
 }
 
-.basic-fields{
+/* .basic-fields{
   padding:1rem;
   border-radius: 1px;
   margin: auto;
@@ -44,26 +46,38 @@ body {
   justify-content: space-between;
   width: 95%;
   text-transform:uppercase;
-}
+} */
 
 .sub-label {
-  text-transform: capitalize;
-  margin: 2rem;
+  text-transform: uppercase;
+  margin: 1%;
+  display: grid;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: baseline;
+  justify-items: center;
 }
 
 input {
   margin: 0.5rem 2rem;
   border-radius: 3px;
-  border: rgb(48, 46, 49) solid 1px;
+  border: rgb(208 194 215) solid 1px;
   height: 2rem;
-  width: 16rem;
+  width: 180%;
 }
 
-#location, #perfiles, #meta, #basics, #name, #website, #habilidades {
+#foto > input {
+  width: max-content;
+  height: 10rem;
+  width: 10rem;
+  background-image: url('/src/Images/blank_profile.png'); /*Arreglar tamaño de la foto*/
+}
+
+#location, #perfiles, #meta, #basics, #name, #website, #habilidades, #work {
   display: none;
 }
 
-#education, #references, #skills, #awards, #work, #interests{
+#education, #references, #skills, #awards, #interests{
   visibility:hidden ;
   display: block;
   font-size: 1.17em;
@@ -124,16 +138,17 @@ input {
   margin:auto;
 }
 
-.work-container {
+.category-container {
   display: flex;
   flex-direction: column;
   width: 80%;
-  background-color: #c0732c;
   margin: auto;
 }
 
 #span-text {
   font-size: 12px;
+  margin: 1rem;
+  width: 100%;
 }
 
 Button {
@@ -144,11 +159,12 @@ Button {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 24px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  margin: 1rem 0 0 2.3rem;
 }
 
 /* Hide default HTML checkbox */
@@ -174,8 +190,8 @@ Button {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -192,9 +208,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */
