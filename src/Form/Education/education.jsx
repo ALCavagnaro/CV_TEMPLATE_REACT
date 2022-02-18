@@ -22,15 +22,12 @@ for (let element in Object.entries(cv)[2][1][0] ) {
   
 }
 
-console.log(education);
-
 const [educationField, setEducationField] = useState ([]);
 
 const addStudy = (e) => {
 
   e.preventDefault();
   setEducationField([...educationField, education]);
-  console.log(educationField);
 }
 
 const removeStudy = (e, index) => {
@@ -41,11 +38,9 @@ const removeStudy = (e, index) => {
     const educationList = [...educationField];
     educationList.splice(index, 1);
     setEducationField(educationList);
-    console.log('chau');
 }
 
 }
-
 
 
 return (

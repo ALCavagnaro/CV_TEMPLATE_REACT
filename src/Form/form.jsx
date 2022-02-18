@@ -43,7 +43,6 @@ return (
   <>
        <UserData/>
        <Location/> 
-       <Education/>
        <References/>
        <Skills/>
        <Awards/>
