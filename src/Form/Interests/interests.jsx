@@ -6,17 +6,9 @@ const Interests = () => {
 
   let interests = [];
 
-  // interests.push(
-  //   <div className='fields' id={Object.keys(cv)[7]} key={Object.keys(cv)[7]}>
-  //     <label>
-  //       {Object.keys(cv)[7]}
-  //     </label>
-  //   </div>
-  // )
 
-
-for (let element in Object.entries(cv)[7][1][0]) {
-  interests.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
+for (let element of Object.entries(cv["interests"][0])) {
+  interests.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input placeholder={element[1]}/></label>);
 }
 
 const [interestField, setInterestField] = useState([]);

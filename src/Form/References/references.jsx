@@ -6,17 +6,16 @@ const References = () => {
 
     let references = [];
 
-  // references.push(
-  //   <div className='fields' id={Object.keys(cv)[3]} key={Object.keys(cv)[3]}>
-  //     <label>
-  //       {Object.keys(cv)[3]}
-  //     </label>
-  //   </div>
-  // )
 
+for (let element of Object.entries(cv['references'][0])) {
 
-for (let element in Object.entries(cv)[3][1][0] ) {
-  references.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
+  if (element[0] === 'recomendación') {
+  references.push(<textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>)
+  }
+
+  else {
+    references.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input placeholder={element[1]}/></label>);
+  }
 }
 
 const [referenceField, setReferenceField] = useState ([]);

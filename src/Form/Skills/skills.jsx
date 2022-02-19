@@ -6,17 +6,11 @@ const Skills = () => {
 
     let skills = [];
 
-  // skills.push(
-  //   <div className='fields' id={Object.keys(cv)[4]} key={Object.keys(cv)[4]}>
-  //     <label>
-  //       {Object.keys(cv)[4]}
-  //     </label>
-  //   </div>
-  // )
 
 
-for (let element in Object.entries(cv)[4][1][0] ) {
-  skills.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>);
+for (let element of Object.entries(cv["skills"][0]) ) {
+  
+  skills.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input placeholder={element[1]}/></label>);
 }
 
 const [skillsField, setSkillsField] = useState([]);

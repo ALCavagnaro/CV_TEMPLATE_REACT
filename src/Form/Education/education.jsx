@@ -7,18 +7,24 @@ const Education = () => {
 
   let education = [];
 
-  // education.push(
-  //   <div className='fields' id={Object.keys(cv)[2]} key={Object.keys(cv)[2]}>
-  //     <label>
-  //       {Object.keys(cv)[2]}
-  //     </label>
-  //   </div>
-  // )
 
+for (let element of Object.entries(cv["education"][0]) ) {
 
-for (let element in Object.entries(cv)[2][1][0] ) {
+  if (element[0] === 'fecha de inicio') {
+    
+    education.push(<label className='sub-label' id={element[0]} key={element[0]}>{element[0]}<input type={'date'}/></label>)
+  }
 
-  education.push(<label className= 'sub-label'id={element} key={element}>{element}<input/></label>)
+  else if (element[0] === 'fecha de finalización') {
+    education.push(<label className ='sub-label' id={element[0]} key={element[0]}>{element[0]}<input type={'date'}/></label>,
+    <h4 id='span-text'>Estudio sin finalizar</h4>,
+        <label className="switch"><input type="checkbox" value = ''/>
+            <span className="slider round"></span>
+        </label>,
+    )
+  }
+
+  else {education.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input placeholder={element[1]}/></label>)}
   
 }
 
