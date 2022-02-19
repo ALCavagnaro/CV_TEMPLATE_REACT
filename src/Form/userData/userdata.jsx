@@ -85,27 +85,30 @@ const loadImg = (e) => {
 //    console.log(base64String)
 }
 
-return (
-    
+console.log(Object.entries(cv.basics))
+
+return (   //ver el placeholder
+
     <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
     <div className='category-container'>
 
       <h3 className='title'>1. Información personal</h3>
 
-      {Object.keys(cv.basics).map (element => { 
 
-        if (element !=='foto') {
+      {Object.entries(cv.basics).map (element => {
+
+        if (element[0] !=='foto') {
         return (
-          <label className='sub-label' id={element} key={element}>{element}
-              <input type='text' id={element}/>
+          <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
+              <input type='text' id={element[0]} placeholder={element[1]}/> 
           </label>
         ) }
 
         else {
           return (
-            <><label className='sub-label' id={element} key={element}>{element}
-              <input type='file' id={element} onChange={(loadImg)} />
+            <><label className='sub-label' id={element[0]} key={element[0]}>{element[0]}
+              <input type='file' id={element[0]} onChange={(loadImg)} />
             </label><div>
                 {selectedImage && (
                   <div>
@@ -121,11 +124,11 @@ return (
         
       })}
 
-      {Object.keys(cv.basics.location).map (element => 
+      {Object.entries(cv.basics.location).map (element => 
           
-          <div className='sub-label' id={element} key={element}>
-            <label className ='sub-label'id={element} key={element}>{element}
-              <input input type='text' id={element}/>
+          <div className='sub-label' id={element[0]} key={element[0]}>
+            <label className ='sub-label'id={element[0]} key={element[0]}>{element[0]}
+              <input input type='text' id={element[0]} placeholder={element[1]}/>
             </label>
           </div>
 
@@ -143,12 +146,12 @@ return (
           <h3 className='title'>4. Habilidades</h3>
           <Skills/>
           <h3 className='title'>5. Intereses</h3>
-          <Skills/>
+          <Interests/>
       </div>
-    
-      <input id = 'guardar' type='submit' value='Guardar en template'/>
-      <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
-
+      <div className='form-btn-container'> 
+          <input id = 'guardar' type='submit' value='Guardar en template'/>
+          <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
+      </div>
     </form>
     
 )
@@ -157,4 +160,8 @@ return (
 
 export default UserData;
 
+
+function newFunction() {
+  debugger;
+}
 
