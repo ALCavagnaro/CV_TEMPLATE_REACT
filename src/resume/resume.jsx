@@ -6,68 +6,41 @@ const cv =
     },
     
     "basics": {
-      "nombre y apellido": "Juan Pérez",
+      "nombre y apellido": "Ej.: Juan Pérez",
       "puesto": "Ej.: Empleado administrativo",
       "foto": "",
-      "descripción": "Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en Administración de empresas por [NOMBRE DE INSTITUCIÓN] con un curso en [FORMACIÓN COMPLEMENTARIA] expedido por [NOMBRE DEL CENTRO DE FORMACIÓN] ",
+      "descripción": "Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en Administración de empresas por [NOMBRE DE INSTITUCIÓN] con un curso en [FORMACIÓN COMPLEMENTARIA] expedido por [NOMBRE DEL CENTRO DE FORMACIÓN]. Perfil metódico orientado al logro de objetivos.",
       "website": "https://lordajax.com",
-      "teléfono":"+54 (0341) 4 555 555",
+      "teléfono":"Ej.: +54 (0341) 4 555 555",
       "email": "ejemplo@gmail.com",
       "location": {
-        "localidad": "Rosario, Santa Fe",
-        "código postal": "2000",
+        "localidad": "Ej.: Rosario, Santa Fe",
+        "código postal": "Ej.: 2000",
       },
-      "link a redes sociales": "https://linkedin.com/usuario",
+      "link a redes sociales": "Ej.: https://linkedin.com/usuario",
     },
     "education": [
       {
         "fecha de inicio": "2009-12-12",
         "fecha de finalización": "2008-02-12",
-        "campo de estudio": "Software Engineering (incomplete)",
-        "título": "Bachelors",
-        "institución": "The University of Queensland"
+        "campo de estudio": "Ej.: Administración y Finanzas",
+        "título": "Ej.: Administración de empresas",
+        "institución": "Ej.: Universidad de Rosario"
       }
     ],
     "references": [
       {
-        "recomendación": "Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.",
-        "nombre y cargo": "Joey Flores, Co-founder and CEO of Earbits, Inc."
+        "recomendación": "Juan fue contratado como cadete administrativo y, luego de un crecimiento profesional, asumió el cargo de Administrativo junior. Juan es un empleado muy responsable y dedicado. Además, es buen compañero y sabe trabajar en equipo. Recomiendo ampliamente la contratación de Juan.",
+        "nombre y cargo": "Julián Flores, Gerente de Contaduría y finanzas, Banco Municipal."
       },
-      {
-        "reference": "I've had the great pleasure of working with Thomas for the past three years at Earbits, and on a few side projects. Two years ago our CTO left on a moment's notice, Thomas saved our company by quickly stepping up to fill this role. He has been with our company through thick and thin and made serious personal sacrifices in order to help the company during tough times. He is a phenomenal hacker and a true team player. Highly recommended!",
-        "name": "Yotam Rosenbaum, SVP of Operations, Earbits, Inc."
-      },
-      {
-        "reference": "Thomas is an extremely talented engineer with a very broad range of skills and experience. From being a thought leader in the front-end community via backbonetutorials.com and cdnjs.com, to designing and implementing the API for cdnjs.com, working with Thomas has been fantastic learning experience. Thomas is truly a full stack develop, and his work output is incredible. If there is any opportunity to work with Thomas, I take it. He is the definition of an A player.",
-        "name": "Ryan Kirkman, Senior Software Engineer at Nerdwallet"
-      },
-      {
-        "reference": "On Thomas Davis ... Hire this guy. Do not be fooled. Incredibly capable and fast. Plays well with others. Unbelievable at front-end work end programming but that is just the start. Visionary. Hire him before I do.",
-        "name": "Greg Davis"
-      }
     ],
     "skills": [
       {
         "palabra clave": [
-          "HTML / JSX",
-          "SCSS / CSS / BEM / Styled Components",
-          "Javascript / Typescript",
-          "React / Next",
-          "Redux / Apollo"
+          "Inglés",
         ],
-        "nivel": "Senior",
-        "name": "Frontend"
+        "nivel": "Intermedio",
       },
-      {
-        "keywords": ["Node", "Ruby", "Python", "Postgres", "Redis", "Serverless"],
-        "level": "Senior",
-        "name": "Backend"
-      },
-      {
-        "keywords": ["AWS", "G Cloud", "Heroku", "Caching"],
-        "level": "Senior",
-        "name": "Devops"
-      }
     ],
     "awards": [
       {
@@ -79,30 +52,21 @@ const cv =
     ],
     "work": [
       {
-        "tareas": "Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
+        "tareas": "Ejemplo de tareas: Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
         "website": "https://tokenized.com/",
-        "lugar de trabajo": "Tokenized",
-        "localidad": "Melbourne",
-        "puesto": "Senior Javascript Developer",
-        "inicio": "2020-05-05",
-        "finalización": "",
+        "lugar de trabajo": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
+        "localidad": "Ej.: Rosario, Santa Fe",
+        "puesto": "Administrativo junior",
+        "inicio": "20/03/2016",
+        "finalización": "08/09/2020",
         "habilidades": ["React", "Redux", "SCSS", "Product"]
       },
        
     ],
     "interests": [
       {
-        "actividad": "Gardening"
+        "actividad": "Ej.: Tocar la guitarra"
       },
-      {
-        "name": "Music / Jamming"
-      },
-      {
-        "name": "Reading / Writing"
-      },
-      {
-        "name": "Open Source"
-      }
     ]
   }
 
