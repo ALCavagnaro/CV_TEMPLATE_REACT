@@ -98,12 +98,20 @@ return (   //ver el placeholder
 
       {Object.entries(cv.basics).map (element => {
 
-        if (element[0] !=='foto') {
+        if (element[0] !=='foto' && element[0] !== 'descripción') {
+
+          console.log(element[0]);
         return (
           <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
               <input type='text' id={element[0]} placeholder={element[1]}/> 
           </label>
         ) }
+
+        else if (element[0] =='descripción') { console.log('descripción existe');
+          return(
+            <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>
+          )
+        }
 
         else {
           return (

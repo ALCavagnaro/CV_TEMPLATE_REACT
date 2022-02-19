@@ -7,17 +7,17 @@ const cv =
     
     "basics": {
       "nombre y apellido": "Juan Pérez",
-      "puesto": "Ej.: Empleado de comercio",
+      "puesto": "Ej.: Empleado administrativo",
       "foto": "",
-      "descripción": "I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
+      "descripción": "Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en Administración de empresas por [NOMBRE DE INSTITUCIÓN] con un curso en [FORMACIÓN COMPLEMENTARIA] expedido por [NOMBRE DEL CENTRO DE FORMACIÓN] ",
       "website": "https://lordajax.com",
-      "teléfono":"+54 (11) 555 555",
-      "email": "thomasalwyndavis@gmail.com",
+      "teléfono":"+54 (0341) 4 555 555",
+      "email": "ejemplo@gmail.com",
       "location": {
         "localidad": "Rosario, Santa Fe",
         "código postal": "2000",
       },
-      "link a redes sociales": "https://twitter.com/usuario",
+      "link a redes sociales": "https://linkedin.com/usuario",
     },
     "education": [
       {
@@ -79,7 +79,7 @@ const cv =
     ],
     "work": [
       {
-        "tareas": "Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.",
+        "tareas": "Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
         "website": "https://tokenized.com/",
         "lugar de trabajo": "Tokenized",
         "localidad": "Melbourne",
@@ -88,13 +88,7 @@ const cv =
         "finalización": "",
         "habilidades": ["React", "Redux", "SCSS", "Product"]
       },
-      
-      
-      
-      
-      
-      
-      
+       
     ],
     "interests": [
       {

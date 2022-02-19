@@ -140,10 +140,18 @@ input {
   position: absolute;
 }
 
-#tareas {
+
+#tareas, #descripción {
   width:100%;
   height: 8rem;
   margin:auto;
+}
+
+#descripción::placeholder {
+  color: rgb(105, 105, 105);
+  font-size: 1.2em;
+  font-style: italic;
+  text-transform:lowercase;
 }
 
 .category-container {
