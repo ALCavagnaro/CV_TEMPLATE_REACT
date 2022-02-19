@@ -6,13 +6,13 @@ const Skills = () => {
 
     let skills = [];
 
-  skills.push(
-    <div className='fields' id={Object.keys(cv)[4]} key={Object.keys(cv)[4]}>
-      <label>
-        {Object.keys(cv)[4]}
-      </label>
-    </div>
-  )
+  // skills.push(
+  //   <div className='fields' id={Object.keys(cv)[4]} key={Object.keys(cv)[4]}>
+  //     <label>
+  //       {Object.keys(cv)[4]}
+  //     </label>
+  //   </div>
+  // )
 
 
 for (let element in Object.entries(cv)[4][1][0] ) {
@@ -38,8 +38,10 @@ const removeSkill = (e, index) => {
 return (
     <>
      {skillsField}
-     <Button text='Agregar habilidad' onClick={addSkill}/>
-     <Button text='Quitar habilidad' onClick={removeSkill}/>
+     <div className='button-container'>
+        <Button text='Agregar habilidad' onClick={addSkill}/>
+        <Button text='Quitar habilidad' onClick={removeSkill}/>
+     </div>
     </>
 )
 

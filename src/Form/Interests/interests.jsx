@@ -6,13 +6,13 @@ const Interests = () => {
 
   let interests = [];
 
-  interests.push(
-    <div className='fields' id={Object.keys(cv)[7]} key={Object.keys(cv)[7]}>
-      <label>
-        {Object.keys(cv)[7]}
-      </label>
-    </div>
-  )
+  // interests.push(
+  //   <div className='fields' id={Object.keys(cv)[7]} key={Object.keys(cv)[7]}>
+  //     <label>
+  //       {Object.keys(cv)[7]}
+  //     </label>
+  //   </div>
+  // )
 
 
 for (let element in Object.entries(cv)[7][1][0]) {
@@ -37,9 +37,11 @@ return (
 
     <>
 
-    {interests}
-    <Button text='Agregar interés' onClick={addInterest}/>
-    <Button text='Quitar interés' onClick={removeInterest}/>
+    {interestField}
+    <div className='button-container'>
+        <Button text='Agregar interés' onClick={addInterest}/>
+        <Button text='Quitar interés' onClick={removeInterest}/>
+    </div>
     </>
 )
 

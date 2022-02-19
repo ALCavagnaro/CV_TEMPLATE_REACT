@@ -7,13 +7,13 @@ const Education = () => {
 
   let education = [];
 
-  education.push(
-    <div className='fields' id={Object.keys(cv)[2]} key={Object.keys(cv)[2]}>
-      <label>
-        {Object.keys(cv)[2]}
-      </label>
-    </div>
-  )
+  // education.push(
+  //   <div className='fields' id={Object.keys(cv)[2]} key={Object.keys(cv)[2]}>
+  //     <label>
+  //       {Object.keys(cv)[2]}
+  //     </label>
+  //   </div>
+  // )
 
 
 for (let element in Object.entries(cv)[2][1][0] ) {
@@ -47,8 +47,10 @@ return (
 
     <>
     {educationField}
-    <Button text='Agregar estudio' onClick = {addStudy}/>
-    <Button text='Quitar estudio'onClick={removeStudy}/>
+    <div className='button-container'>
+        <Button text='Agregar estudio' onClick = {addStudy}/>
+        <Button text='Quitar estudio'onClick={removeStudy}/>
+    </div>
     </>
 )
 
