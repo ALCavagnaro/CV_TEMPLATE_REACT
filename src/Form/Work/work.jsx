@@ -76,8 +76,10 @@ const Work = () => {
     return (
         <div>
         {workField}
-        <Button text='Agregar experiencia' onClick={(addWork)}/>
-        <Button text='Quitar experiencia' onClick={(removeWork)}/>
+          <div className='button-container'>
+              <Button text='Agregar experiencia' onClick={(addWork)}/>
+              <Button text='Quitar experiencia' onClick={(removeWork)}/>
+          </div>
         </div>
     )
 
