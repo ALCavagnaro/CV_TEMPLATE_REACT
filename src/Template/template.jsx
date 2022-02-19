@@ -29,7 +29,9 @@ const Template = () => {
             
             <> 
 
-              {stateLength ? <div id='pdf-template'>Template vacío</div> : 
+            <button id='btn-descarga' onClick = {print}>Descargar</button>  
+
+              {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
               
                   <div id='pdf-template'>
 
@@ -47,10 +49,6 @@ const Template = () => {
                           </div>
                       
                       </div>}
-
-              
-            
-            <Button text='descargar' onClick = {print}/>  
       
             </>
 
