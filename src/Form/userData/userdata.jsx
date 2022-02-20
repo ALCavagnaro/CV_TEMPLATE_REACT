@@ -1,4 +1,4 @@
-import {cv} from '../../resume/resume';
+import {cv} from '../../resume/resume';                                        //hacer validación de formulario
 import { useContext, useState } from 'react';
 import { TemplateState } from '../../Context/CVContext';
 import Work from '../Work/work';
@@ -64,10 +64,12 @@ const handleSubmit = (e) => {
     
 }
 
-const eraseContent = (e) => {
-  e.preventDefault();
-  setState([state.length = 0]);
-}
+// const eraseContent = (e) => {
+//   e.preventDefault();
+//   setState([state.length = 0]);
+//   setState([...state, <h2 id='pdf-template'>Template vacío</h2>])
+//   console.log(state);
+// }
 
 const loadImg = (e) => {
 //  console.log(e.target.files[0]);
@@ -85,9 +87,7 @@ const loadImg = (e) => {
 //    console.log(base64String)
 }
 
-console.log(Object.entries(cv.basics))
-
-return (   //ver el placeholder
+return (   
 
     <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
@@ -98,18 +98,24 @@ return (   //ver el placeholder
 
       {Object.entries(cv.basics).map (element => {
 
-        if (element[0] !=='foto' && element[0] !== 'descripción') {
-
-          console.log(element[0]);
+        if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email') {
         return (
           <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
               <input type='text' id={element[0]} placeholder={element[1]}/> 
           </label>
         ) }
 
-        else if (element[0] =='descripción') { console.log('descripción existe');
+        else if (element[0] ==='descripción') { 
           return(
             <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>
+          )
+        }
+
+        else if (element[0] ==='email') { 
+          return(
+            <label className='sub-label' id={element[0]} key={element[0]} for='email'>{element[0]}   
+              <input type='email' id={element[0]} placeholder={element[1]}/> 
+          </label>
           )
         }
 
@@ -119,7 +125,7 @@ return (   //ver el placeholder
               <input type='file' id={element[0]} onChange={(loadImg)} />
             </label><div>
                 {selectedImage && (
-                  <div>
+                  <div id='img-container'>
                     <img alt="not found" width={"185px"} height={'180px'} src={URL.createObjectURL(selectedImage)} />
                     <br />
                     <button onClick={() => setSelectedImage(null)}>Quitar</button>
@@ -158,7 +164,7 @@ return (   //ver el placeholder
       </div>
       <div className='form-btn-container'> 
           <input id = 'guardar' type='submit' value='Guardar en template'/>
-          <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/>
+          {/* <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/> */}
       </div>
     </form>
     
