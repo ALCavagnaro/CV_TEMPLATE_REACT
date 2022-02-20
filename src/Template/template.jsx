@@ -1,16 +1,22 @@
 import React , {useContext} from 'react';
 import { TemplateState } from '../Context/CVContext';
 import { jsPDF } from "jspdf";
-import Button from '../Button/button';
+//import Button from '../Button/button';
 
 const Template = () => {
 
-      const [state, setState] = useContext(TemplateState);
-      
-       console.log('elementos del obj state', state, 'Length:', state.length);
-       const stateLength = state.length == 0;
-      // console.log('obj state 0 0', state[0][0].value);
-      // console.log('tipo de state:', typeof(state)); 
+      //const [state, setState] = useContext(TemplateState);
+      const context = useContext(TemplateState);
+      const state = context[0];
+      console.log('elementos del obj state', state, 'Length:', state.length);
+      const stateLength = state.length === 0;
+
+
+      const eraseContent = (e) => {
+              e.preventDefault();
+              state[0].map((item) => item.value='');
+              console.log(state[0].value);
+            }
 
       const print = () => {
 
@@ -29,7 +35,8 @@ const Template = () => {
             
             <> 
 
-            <button id='btn-descarga' onClick = {print}>Descargar</button>  
+            <button id='btn-descarga' onClick = {print}>Descargar</button>
+            <button id='btn-descarga' onClick = {eraseContent}>Borrar</button>  
 
               {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
               
@@ -41,7 +48,7 @@ const Template = () => {
 
                               item.id === 'foto' ? <img alt='not found' id='pdf-img' src={item.img}></img> : //item.img para aplicarle tag img
                               
-                              <p id='pdf-p' key={item.id}>{item.value}</p>
+                              <p className ='pdf-p' key={item.id}>{item.value}</p>
                               
                               
                               ))}
