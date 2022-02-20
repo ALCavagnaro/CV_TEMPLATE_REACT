@@ -25,7 +25,7 @@ const cv =
         "fecha de finalización": "2008-02-12",
         "campo de estudio": "Ej.: Administración y Finanzas",
         "título": "Ej.: Administración de empresas",
-        "institución": "Ej.: Universidad de Rosario"
+        "institución": "Ej.: Universidad Nacional de Rosario"
       }
     ],
     "references": [
