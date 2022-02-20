@@ -10,7 +10,6 @@ const cv =
       "puesto": "Ej.: Empleado administrativo",
       "foto": "",
       "descripción": "Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en Administración de empresas por [NOMBRE DE INSTITUCIÓN] con un curso en [FORMACIÓN COMPLEMENTARIA] expedido por [NOMBRE DEL CENTRO DE FORMACIÓN]. Perfil metódico orientado al logro de objetivos.",
-      "website": "https://lordajax.com",
       "teléfono":"Ej.: +54 (0341) 4 555 555",
       "email": "ejemplo@gmail.com",
       "location": {

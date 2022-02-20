@@ -24,9 +24,6 @@ body {
     width: 100%;
     margin: auto;
     display: flex;
-    /* flex-direction: column-reverse; */
-    /* align-content: stretch; */
-    /* justify-content: space-evenly; */
     align-items: center;
 }
 
@@ -54,7 +51,7 @@ h1{
   margin: 5% 1%;
 }
 
-.sub-label {
+.sub-label, .sub-label-mandatory {
   text-transform: uppercase;
   margin: 1%;
   display: grid;
@@ -62,6 +59,11 @@ h1{
   justify-content: space-evenly;
   align-items: baseline;
   justify-items: center;
+}
+
+.sub-label-mandatory:before {
+  content: '*';
+  color: #ce1e18;
 }
 
 input {
@@ -73,85 +75,42 @@ input {
 }
 
 #foto > input {
-  height: 8.4rem;
-  width: 9.27rem;
-  background-image: url('/src/Images/blank_profile.png'); /*Arreglar tamaño de la foto*/
-  text-align: center;
-  background-repeat: no-repeat;
-  background-color: #ccc;
+  margin: 0.5rem 2rem;
+  border-radius: 3px;
+  border: rgb(208 194 215) solid 1px;
+  width: 115%;
+}
+
+#img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: 5% auto 1% auto;
 }
 
 #location, #perfiles, #meta, #basics, #name, #website, #habilidades, #work {
   display: none;
 }
 
-#education, #references, #skills, #awards, #interests{
-  visibility:hidden ;
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  text-transform: capitalize;
-  padding-bottom: 1.5rem;
-}
-
-#education:after {
-  content: "educación:";
-  visibility: visible;
-  display: block;
-  position: absolute;
-}
-
-#references:after {
-  content: "recomendaciones:";
-  visibility: visible;
-  display: block;
-  position: absolute;
-}
-
-#skills:after {
-  content: "habilidades y conocimientos:";
-  visibility: visible;
-  display: block;
-  position: absolute;
-}
-
-#awards:after {
-  content: "cursos:";
-  visibility: visible;
-  display: block;
-  position: absolute;
-}
-
-#work:after {
-  content: "experiencia:";
-  visibility: visible;
-  display: block;
-  position: absolute;
-}
-
-#interests:after {
-  content: "intereses:";
-  visibility: visible;
-  display: block;
-  position: absolute;
+.s.mandatory:before{
+  content: '*';
 }
 
 
-#tareas, #descripción {
+#tareas, #descripción, #recomendación {
   width:100%;
   height: 8rem;
-  margin:auto;
+  margin:5% auto;
 }
 
-#descripción::placeholder {
+#tareas::placeholder, #descripción::placeholder, #recomendación::placeholder {
   color: rgb(105, 105, 105);
-  font-size: 1.2em;
+  font-size: 0.9rem;
   font-style: italic;
-  text-transform:lowercase;
+  text-transform:uppercase;
 }
 
 .category-container {
@@ -255,17 +214,28 @@ input:checked + .slider:before {
 }
 
 #pdf-template{
-  background-color: #ffffff;
   color:rgb(36, 31, 31);
   width:80%;
   height: max-content;
   margin: 0.5%;
   height: 20rem;
+  font-size: 5px;
+  font-style: italic;
+  padding: 0.1rem;
+}
+
+#pdf-template2{
+  background-color: #ffffff;
+  color:rgb(36, 31, 31);
+  width:40%;
+  margin: 5% auto;
+  height: 70rem;
+  font-size: 2rem;
   font-style: italic;
   padding: 0.1rem;
   box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+  text-align: left;
 }
-
 .user-data-info{
   display: inline-block;
   width: 100%;
@@ -274,13 +244,9 @@ input:checked + .slider:before {
   font-size: 2px;
 }
 
-/* .user-data-info > p {
-  margin: 5px;
-  width: fit-content;
-} */
-
-.pdf-p {
-  margin: 3px;
+.pdf-p2{
+  margin: 5rem 10%;
+  width:50%;
 }
 
 #pdf-img {
@@ -288,7 +254,6 @@ input:checked + .slider:before {
   width:40px;
   height:40px;
   background-color: aliceblue;
-  border: black solid 0.1px;
 }
 
 #btn-descarga{
