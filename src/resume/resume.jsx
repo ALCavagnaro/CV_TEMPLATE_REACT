@@ -16,7 +16,7 @@ const cv =
         "localidad": "Ej.: Rosario, Santa Fe",
         "código postal": "Ej.: 2000",
       },
-      "link a redes sociales": "Ej.: https://linkedin.com/usuario",
+      "Linkedin": "Ej.: https://linkedin.com/usuario",
     },
     "education": [
       {

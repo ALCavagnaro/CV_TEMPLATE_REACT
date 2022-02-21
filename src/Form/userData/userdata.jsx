@@ -12,6 +12,7 @@ const UserData = () => {
   const [state, setState] = useContext(TemplateState);
   const [selectedImage, setSelectedImage] = useState(null);
 
+
 const handleSubmit = (e) => {
             
             e.preventDefault();
@@ -21,7 +22,9 @@ const handleSubmit = (e) => {
             reader.onloadend = function () {
             let base64String = reader.result;
   
-
+            let element = document.querySelector('#location-input');
+            element.classList.remove('mandatory');
+            
             const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
 
             let list;
@@ -52,15 +55,39 @@ const handleSubmit = (e) => {
                     }
               
             }
+            
+            // let element = document.querySelector('#location-input');
+            // element.removeAttribute('mandatory');
 
-            setState(state.lenght = 0);
-            setState([returnList]); 
-  }
+            const mandatory = document.querySelectorAll('.mandatory')
+
+            for (let item of mandatory) {
+
+              const result = item.value;
+              console.log(result);
+
+                  if (result !== '') {
+                    
+                    setState(state.lenght = 0);
+                    setState([returnList]); 
+                    
+                  }
+                     
+                  else {
+
+                    alert('Completar los campos obligatorios indicados con *');
+
+                  }
+
+            } 
+
+            
+      }
 
     
 }
 
-
+      
             const loadImg = (e) => {
     
               setSelectedImage(e.target.files[0]);
@@ -80,7 +107,7 @@ const handleSubmit = (e) => {
 
               {Object.entries(cv.basics).map (element => {
 
-                if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email') {
+                if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email' && element[0] !== 'Linkedin') {
                 return (
                   <label className='sub-label-mandatory' id={element[0]} key={element[0]}>{element[0]}   
                       <input type='text' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
@@ -101,11 +128,21 @@ const handleSubmit = (e) => {
                   )
                 }
 
+                else if (element[0] ==='Linkedin') { 
+                  return(
+                    <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
+                      <input type='email' id={element[0] + `-input`} placeholder={element[1]}/> 
+                  </label>
+                  )
+                }
+
                 else {
                   return (
-                    <><label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
+                    <>
+                    <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
                       <input type='file' id={element[0]} onChange={(loadImg)} />
-                    </label><div>
+                    </label>
+                    <div>
                         {selectedImage && (
                           <div id='img-container'>
                             <img alt="not found" width={"185px"} height={'180px'} src={URL.createObjectURL(selectedImage)} />
@@ -114,7 +151,8 @@ const handleSubmit = (e) => {
                           </div>
                         )}
                         <br />
-                      </div></>
+                      </div>
+                      </>
                   )
                 }
                 

@@ -74,7 +74,7 @@ input {
   width: 180%;
 }
 
-#foto > input {
+#foto-label > input {
   margin: 0.5rem 2rem;
   border-radius: 3px;
   border: rgb(208 194 215) solid 1px;
@@ -91,11 +91,12 @@ input {
   margin: 5% auto 1% auto;
 }
 
-#location, #perfiles, #meta, #basics, #name, #website, #habilidades, #work {
+#location, #location-input, #perfiles, #meta, #basics, #name, #website, #habilidades, #work {
   display: none;
+  visibility: hidden;
 }
 
-.s.mandatory:before{
+.mandatory:before{
   content: '*';
 }
 
