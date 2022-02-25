@@ -216,48 +216,65 @@ input:checked + .slider:before {
 
 #pdf-template{
   color:rgb(36, 31, 31);
-  width:80%;
-  height: max-content;
-  margin: 0.5%;
-  height: 20rem;
-  font-size: 5px;
-  font-style: italic;
-  padding: 0.1rem;
-}
-
-#pdf-template2{
-  background-color: #ffffff;
-  color:rgb(36, 31, 31);
-  width:40%;
-  margin: 5% auto;
-  height: 70rem;
-  font-size: 2rem;
-  font-style: italic;
-  padding: 0.1rem;
-  box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
-  text-align: left;
-}
-.user-data-info{
-  display: inline-block;
-  width: 100%;
-  padding: 3px;
+  width:28rem;
   height: fit-content;
-  font-size: 2px;
+  margin: 5rem auto;
+  font-size: 25px;
+  background-color: bisque;
+  padding: 15px;
+} 
+
+
+  /* #user-data-info {
+    display: flex;
+    height: -moz-fit-content;
+    background-color: rgb(126, 194, 233);
+    color: white;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px;
+} */
+
+.nombre-input{
+  font-weight:700;
 }
 
-.pdf-p2{
-  margin: 5rem 10%;
+.pdf-p{
   width:50%;
+  text-align: justify;
+}
+
+h6 {
+  font-weight: 100;
+  width: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.template-img-container{
+
+  /*background-color: #393b3c;*/
+  display: flex;
+  width: 100%;
+
 }
 
 #pdf-img {
-  border-radius: 50%;
-  width:40px;
-  height:40px;
-  background-color: aliceblue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 5rem;
+    margin-top: 3px;
+    /* margin: auto; */
+    /* background-color: #fff; */
+    /*position: absolute;*/
+    /* margin-left: 12rem;
+    margin-top: -3.3rem; */
 }
 
-#btn-descarga{
+#btn-descarga, #btn-borrar{
   background-color: #3bbd9c;
   border: none;
   border-radius: 25px;
@@ -287,7 +304,7 @@ input:checked + .slider:before {
 }
 
 
-#guardar, #eliminar {
+#guardar {
 
   background-color: #e9daeb;
   border: none;
@@ -311,7 +328,7 @@ input:checked + .slider:before {
   color: white;
 }
 
-#eliminar:hover {
+#btn-borrar:hover {
   background-color: #ce1e18;
   color: white;
 }
