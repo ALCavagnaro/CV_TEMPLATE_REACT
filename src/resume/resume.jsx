@@ -9,14 +9,14 @@ const cv =
       "foto": "",
       "nombre": "Ej.: Juan Pérez",
       "puesto": "Ej.: Empleado administrativo",
-      "descripción": "Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en Administración de empresas por [NOMBRE DE INSTITUCIÓN] con un curso en [FORMACIÓN COMPLEMENTARIA] expedido por [NOMBRE DEL CENTRO DE FORMACIÓN]. Perfil metódico orientado al logro de objetivos.",
+      "descripción": "(MÁX. 250 palabras) Ej.: Empleado administrativo con más de cinco años de experiencia. Graduado en [TÍTULO] por [NOMBRE DE INSTITUCIÓN]. Perfil metódico orientado al logro de objetivos.",
       "teléfono":"Ej.: +54 (0341) 4 555 555",
       "email": "ejemplo@gmail.com",
       "location": {
         "localidad": "Ej.: Rosario, Santa Fe",
-        "código postal": "Ej.: 2000",
+        "CP": "Ej.: 2000",
       },
-      "Linkedin": "Ej.: https://linkedin.com/usuario",
+      "linkedin": "Ej.: https://linkedin.com/usuario",
     },
     "education": [
       {
