@@ -214,30 +214,54 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+                                                                    /* *** ESTILO PARA EL TEMPLATE *** */
+
 #pdf-template{
   color:rgb(36, 31, 31);
-  width:28rem;
-  height: fit-content;
+  width:50rem;
+  height: 40rem;
   margin: 5rem auto;
-  font-size: 25px;
-  background-color: bisque;
+  font-size: 2.1rem;
+  background-color: rgb(247, 242, 236);
   padding: 15px;
-} 
+}
+
+.template-img-container{
+
+  /*background-color: #393b3c;*/
+  display: flex;
+  width: 100%;
+
+}
+
+#pdf-img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 23rem;
+    /* margin: auto; */
+    /* background-color: #fff; */
+    /*position: absolute;*/
+    /* margin-left: 12rem;
+    margin-top: -3.3rem; */
+}
 
 
-  /* #user-data-info {
-    display: flex;
-    height: -moz-fit-content;
-    background-color: rgb(126, 194, 233);
-    color: white;
+  .user-data-info {
+    /*background-color: rgb(146, 178, 199);*/
     align-content: stretch;
     justify-content: space-evenly;
     align-items: center;
     padding: 4px;
-} */
+    color: rgb(59, 65, 70);
+}
 
 .nombre-input{
   font-weight:700;
+}
+
+.descripción {
+  margin-top: 1px;
 }
 
 .pdf-p{
@@ -253,25 +277,35 @@ h6 {
   margin-bottom: 2px;
 }
 
-.template-img-container{
-
-  /*background-color: #393b3c;*/
-  display: flex;
-  width: 100%;
-
+.user-contact{
+    display: flex;
+    color: #787575;
+    font-size: 1rem;  /* antes eran 4px*/
+    width: 100%;
+    text-align: left;
+    background-color: antiquewhite;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-#pdf-img {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-left: 5rem;
-    margin-top: 3px;
-    /* margin: auto; */
-    /* background-color: #fff; */
-    /*position: absolute;*/
-    /* margin-left: 12rem;
-    margin-top: -3.3rem; */
+.teléfono-input::before{
+  content: 'Teléfono: ';
+}
+
+.email-input::before {
+  content: 'Correo electrónico: ';
+}
+
+.localidad::before {
+  content: 'Localidad: ';
+}
+
+.linkedin-input::before {
+  content: 'Linkedin: ';
+}
+
+.CP::before {
+  content: 'Código postal: ';
 }
 
 #btn-descarga, #btn-borrar{
