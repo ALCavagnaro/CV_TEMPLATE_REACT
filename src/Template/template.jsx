@@ -23,11 +23,6 @@ const Template = () => {
 
             const item = state.map((item) => JSON.stringify(item))
             const doc = new jsPDF();
-           // const img = document.querySelector('#pdf-img');
-           // const img2 = img.cloneNode(true);
-           // img2.style.width = '3px';
-           // img2.style.border = 'black 5px solid';
-           // img2.style.margin = '0'
             const html = document.querySelector("#pdf-template");
             const html2 = html.cloneNode(true);
             html2.style.backgroundColor = 'bisque'; // clonación
@@ -39,8 +34,15 @@ const Template = () => {
             html2.childNodes[0].style.height = '30px';
             html2.childNodes[0].style.width = '30px';
             html2.childNodes[0].style.margin = '3px 21mm';
-            console.log(html2.childNodes.div);
 
+            let contact = html2.querySelectorAll('.user-contact');
+
+           for (let element of contact) {
+                 console.log(element);
+                 element.style.fontSize = '4px';
+           }
+
+      
             doc.html(html2, {
                   callback: function (doc) {     
                    doc.save();
@@ -91,10 +93,11 @@ const Template = () => {
                               else if (item.id==='email-input' || item.id==='teléfono-input'|| item.id === 'linkedin-input' || item.id ==='localidad' || item.id === 'CP') {
                                     
                                     return (
-
-                                          <div className = 'user-contact'>
-                                                <div className={item.id} id={item.id}>{item.value}</div>
-                                          </div>
+                                          
+                                          <>
+                                          
+                                                <div className='user-contact' id={item.id}>{item.value}</div>
+                                          </>
 
                                           )
                               }
