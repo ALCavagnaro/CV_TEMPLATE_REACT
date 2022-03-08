@@ -6,12 +6,13 @@ import Education from '../Education/education';
 import References from '../References/references';
 import Skills from '../Skills/skills';
 import Interests from '../Interests/interests';
+import {Link} from 'react-router-dom';
 
 const UserData = () => {
 
   const [state, setState] = useContext(TemplateState);
   const [selectedImage, setSelectedImage] = useState(null);
-
+  const [goToTemplate, setGoToTemplate] = useState(false);
 
 const handleSubmit = (e) => {
             
@@ -56,21 +57,18 @@ const handleSubmit = (e) => {
               
             }
             
-            // let element = document.querySelector('#location-input');
-            // element.removeAttribute('mandatory');
 
             const mandatory = document.querySelectorAll('.mandatory')
 
             for (let item of mandatory) {
 
               const result = item.value;
-              console.log(result);
-
+            
                   if (result !== '') {
                     
                     setState(state.lenght = 0);
-                    setState([returnList]); 
-                    
+                    setState([returnList]);
+                    setGoToTemplate(true);
                   }
                      
                   else {
@@ -83,7 +81,7 @@ const handleSubmit = (e) => {
 
             
       }
-
+    
     
 }
 
@@ -107,7 +105,7 @@ const handleSubmit = (e) => {
 
               {Object.entries(cv.basics).map (element => {
 
-                if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email' && element[0] !== 'Linkedin') {
+                if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email' && element[0] !== 'linkedin') {
                 return (
                   <label className='sub-label-mandatory' id={element[0]} key={element[0]}>{element[0]}   
                       <input type='text' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
@@ -116,7 +114,7 @@ const handleSubmit = (e) => {
 
                 else if (element[0] ==='descripción') { 
                   return(
-                    <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>
+                    <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
                   )
                 }
 
@@ -128,10 +126,10 @@ const handleSubmit = (e) => {
                   )
                 }
 
-                else if (element[0] ==='Linkedin') { 
+                else if (element[0] ==='linkedin') { 
                   return(
                     <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
-                      <input type='email' id={element[0] + `-input`} placeholder={element[1]}/> 
+                      <input type='text' id={element[0] + `-input`} placeholder={element[1]}/> 
                   </label>
                   )
                 }
@@ -145,7 +143,7 @@ const handleSubmit = (e) => {
                     <div>
                         {selectedImage && (
                           <div id='img-container'>
-                            <img alt="not found" width={"185px"} height={'180px'} src={URL.createObjectURL(selectedImage)} />
+                            <img alt="not found" width={"175px"} height={'250px'} src={URL.createObjectURL(selectedImage)} />
                             <br />
                             <button onClick={() => setSelectedImage(null)}>Quitar</button>
                           </div>
@@ -183,8 +181,7 @@ const handleSubmit = (e) => {
                     <Interests/>
               </div>
               <div className='form-btn-container'> 
-                  <input id = 'guardar' type='submit' value='Guardar en template'/>
-                  {/* <input id = 'eliminar' type='reset' value='Eliminar' onClick={eraseContent}/> */}
+                  {goToTemplate? <Link to = '/template'><input id = 'guardar' type='submit' value='Ir al Template'/></Link>: <input id = 'guardar' type='submit' value='Guardar en template'/> }
               </div>
         </form>
         
