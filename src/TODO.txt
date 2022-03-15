@@ -1,0 +1,8 @@
+El formulario debe quedar en la página principal
+Hacer funcionar el botón de borrar
+Arreglar el título del apartado de experiencio
+Arreglar el color de fondo particionado de los datos de contacto
+Encontrar la manera de ponerle título a cada sección
+Arreglar tamaño de la foto
+Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
+
