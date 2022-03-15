@@ -91,7 +91,7 @@ input {
   margin: 5% auto 1% auto;
 }
 
-#location, #location-input, #perfiles, #meta, #basics, #name, #website, #habilidades, #work {
+#location, #location-input, #perfiles, #meta, #basics, #name, #website-label, #habilidades, #work {
   display: none;
   visibility: hidden;
 }
@@ -256,6 +256,15 @@ input:checked + .slider:before {
     color: rgb(59, 65, 70);
 }
 
+.user-experience {
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4px;
+  color: rgb(59, 65, 70);
+
+}
+
 .nombre-input{
   font-weight:700;
 }
@@ -285,27 +294,34 @@ h6 {
     text-align: left;
     background-color: antiquewhite;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: start;
+    padding: 2px;
 }
 
-.teléfono-input::before{
+
+#teléfono-input::before{
   content: 'Teléfono: ';
+  margin: 0 2px 0 4px;
 }
 
-.email-input::before {
+#email-input::before {
   content: 'Correo electrónico: ';
+  margin: 0 2px 0 4px;
 }
 
-.localidad::before {
+#localidad::before {
   content: 'Localidad: ';
+  margin: 0 2px 0 4px;
 }
 
-.linkedin-input::before {
+#linkedin-input::before {
   content: 'Linkedin: ';
+  margin: 0 2px 0 4px;
 }
 
-.CP::before {
+#CP::before {
   content: 'Código postal: ';
+  margin: 0 2px 0 4px;
 }
 
 #btn-descarga, #btn-borrar{

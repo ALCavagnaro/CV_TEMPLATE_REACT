@@ -53,7 +53,7 @@ const cv =
       {
         "tareas": "Ejemplo de tareas: Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
         "website": "https://tokenized.com/",
-        "lugar de trabajo": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
+        "empleador": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
         "localidad": "Ej.: Rosario, Santa Fe",
         "puesto": "Administrativo junior",
         "inicio": "20/03/2016",
