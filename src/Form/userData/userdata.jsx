@@ -158,8 +158,8 @@ const handleSubmit = (e) => {
 
               {Object.entries(cv.basics.location).map (element => 
                   
-                  <div className='sub-label' id={element[0]} key={element[0]}>
-                    <label className ='sub-label'id={element[0]} key={element[0]}>{element[0]}
+                  <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
+                    <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
                       <input input type='text' id={element[0]} placeholder={element[1]}/>
                     </label>
                   </div>
