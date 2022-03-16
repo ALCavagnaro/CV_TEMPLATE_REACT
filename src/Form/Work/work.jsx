@@ -28,7 +28,7 @@ const Work = () => {
       else if (element[0] === "finalización"){
 
         work.push(
-        <label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input type={'date'}/></label>,
+        <label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input id={element[0] + `-input`} type={'date'}/></label>,
         <h4 id='span-text'>Trabajo actualmente acá</h4>,
         <label className="switch"><input type="checkbox" value = '' onInput={checkBox}/>
             <span className="slider round"></span>
@@ -39,7 +39,7 @@ const Work = () => {
       
       else if (element[0] === "inicio"){
         work.push(
-        <label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input type={'date'}/></label>,
+        <label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input id={element[0] + `-input`} type={'date'}/></label>,
         )
       }
 
