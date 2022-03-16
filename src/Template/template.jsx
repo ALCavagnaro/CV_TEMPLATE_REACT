@@ -1,6 +1,7 @@
 import React , {useContext} from 'react';
 import { TemplateState } from '../Context/CVContext';
 import { jsPDF } from "jspdf";
+
 //import Button from '../Button/button';
 
 const Template = () => {
@@ -26,7 +27,7 @@ const Template = () => {
             const html = document.querySelector("#pdf-template");
             const html2 = html.cloneNode(true);
             html2.style.backgroundColor = 'bisque'; // clonación
-            html2.style.fontSize = '5px';
+            html2.style.fontSize = '7px';
             html2.style.width = '50mm';
             html2.style.height = '72mm';
             html2.style.margin ='2mm';
@@ -35,12 +36,28 @@ const Template = () => {
             html2.childNodes[0].style.width = '30px';
             html2.childNodes[0].style.margin = '3px 21mm';
 
+            let description = html2.querySelector('.descripción');
+            description.style.fontSize='3.5px';
+
             let contact = html2.querySelectorAll('.user-contact');
 
-           for (let element of contact) {
-                 console.log(element);
-                 element.style.fontSize = '4px';
-           }
+                  for (let element of contact) {
+                        
+                        element.style.fontSize = '3.4px';
+                        element.style.width = '48mm';
+                        element.style.margin = 'auto';
+                  }
+
+            let experience = html2.querySelectorAll('.user-experience-p');
+
+                  for (let element of experience) {
+
+                        element.style.fontSize = '3.6px';
+                        element.style.width = '48mm';
+                        element.style.padding = '1px';
+                        element.style.margin = '3px auto';
+                        element.style.letterSpacing = '0.8px';
+                  }
 
       
             doc.html(html2, {
@@ -84,7 +101,7 @@ const Template = () => {
                                     return (
 
                                           <div className= 'user-data-info'>
-                                                <h6 className={item.id} id={item}>{item.value}</h6>
+                                                <h6 className={item.id} id={item.id + ` - user`}>{item.value}</h6>
                                           </div>
 
                                            )        
@@ -103,10 +120,13 @@ const Template = () => {
                               }
                                
                               
-                              else {
+                              else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'puesto.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   //arreglar la condición para que el título no aparezca por default//
                                     
-                                    <p className ='pdf-p' id={item.id} key={item.id}>{item.value}</p>
-                               
+                                    return (
+                                          <div className = 'user-experience'>
+                                                <h6 className= 'user-experience-p' id={item.id + ` - user`}>{item.value}</h6>
+                                          </div>
+                                    )       
                               }
                               
                               
