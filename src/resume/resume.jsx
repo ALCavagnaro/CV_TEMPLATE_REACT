@@ -55,7 +55,7 @@ const cv =
         "website": "https://tokenized.com/",
         "empleador": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
         "localidad": "Ej.: Rosario, Santa Fe",
-        "puesto": "Administrativo junior",
+        "cargo": "Administrativo junior",
         "inicio": "20/03/2016",
         "finalización": "08/09/2020",
         "habilidades": ["React", "Redux", "SCSS", "Product"]
