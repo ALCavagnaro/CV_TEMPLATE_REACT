@@ -120,15 +120,23 @@ const Template = () => {
                               }
                                
                               
-                              else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'puesto.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   //arreglar la condición para que el título no aparezca por default//
+                              else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'puesto.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   
                                     
                                     return (
                                           <div className = 'user-experience'>
-                                                <h6 className= 'user-experience-p' id={item.id + ` - user`}>{item.value}</h6>
+                                                <h6 className= 'user-experience-p' id={item.id + `-user`}>{item.value}</h6>
                                           </div>
                                     )       
                               }
                               
+                              else if (item.id === 'desde-input' || item.id === 'hasta-input' || item.id === 'campo-input' || item.id === 'título-input' || item.id === 'institución-input') {   
+                                    
+                                    return (
+                                          <div className = 'user-education'>
+                                                <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
+                                          </div>
+                                    )       
+                              }
                               
                             })}
 
