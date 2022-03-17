@@ -143,7 +143,7 @@ const handleSubmit = (e) => {
                     <div>
                         {selectedImage && (
                           <div id='img-container'>
-                            <img alt="not found" width={"175px"} height={'250px'} src={URL.createObjectURL(selectedImage)} />
+                            <img alt="not found" width={"175px"} height={'200px'} src={URL.createObjectURL(selectedImage)} />
                             <br />
                             <button onClick={() => setSelectedImage(null)}>Quitar</button>
                           </div>
