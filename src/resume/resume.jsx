@@ -20,22 +20,22 @@ const cv =
     },
     "education": [
       {
-        "fecha de inicio": "2009-12-12",
-        "fecha de finalización": "2008-02-12",
-        "campo de estudio": "Ej.: Administración y Finanzas",
+        "institución": "Ej.: Universidad Nacional de Rosario",
         "título": "Ej.: Administración de empresas",
-        "institución": "Ej.: Universidad Nacional de Rosario"
+        "campo": "Ej.: Administración y Finanzas",
+        "desde": "2009-12-12",
+        "hasta": "2008-02-12", 
       }
     ],
     "references": [
       {
-        "recomendación": "Juan fue contratado como cadete administrativo y, luego de un crecimiento profesional, asumió el cargo de Administrativo junior. Juan es un empleado muy responsable y dedicado. Además, es buen compañero y sabe trabajar en equipo. Recomiendo ampliamente la contratación de Juan.",
-        "nombre y cargo": "Julián Flores, Gerente de Contaduría y finanzas, Banco Municipal."
+        "recomendación": "Juan fue contratado como cadete administrativo y, luego de un crecimiento profesional, asumió el cargo de Administrativo junior. Juan es muy responsable, dedicado y sabe trabajar en equipo. Recomiendo ampliamente su contratación.",
+        "responsable": "Marcos Flores, Gerente de Contaduría y finanzas en Banco Municipal."
       },
     ],
     "skills": [
       {
-        "palabra clave": [
+        "habilidad/conocimiento": [
           "Inglés",
         ],
         "nivel": "Intermedio",
@@ -50,10 +50,10 @@ const cv =
       }
     ],
     "work": [
-      {
+      {  
+        "empleador": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
         "tareas": "Ejemplo de tareas: Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
         "website": "https://tokenized.com/",
-        "empleador": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
         "localidad": "Ej.: Rosario, Santa Fe",
         "cargo": "Administrativo junior",
         "inicio": "20/03/2016",
