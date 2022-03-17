@@ -91,7 +91,7 @@ input {
   margin: 5% auto 1% auto;
 }
 
-#location, #location-input, #perfiles, #meta, #basics, #name, #website-label, #habilidades, #work {
+#location, #location-input, #perfiles, #meta, #basics, #name, #website-label, #habilidades-label, #work {
   display: none;
   visibility: hidden;
 }
@@ -263,6 +263,19 @@ input:checked + .slider:before {
   padding: 4px;
   color: rgb(59, 65, 70);
 
+}
+
+.user-education-p {
+  align-content: stretch;
+  justify-content: space-evenly;
+  text-align: left;
+  padding: 4px;
+  color: rgb(59, 65, 70);
+
+}
+
+#empleador-input-user {
+  font-weight: 400;
 }
 
 .nombre-input{
