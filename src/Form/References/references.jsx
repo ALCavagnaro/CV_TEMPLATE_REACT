@@ -14,7 +14,7 @@ for (let element of Object.entries(cv['references'][0])) {
   }
 
   else {
-    references.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input placeholder={element[1]}/></label>);
+    references.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input id={'responsable'} placeholder={element[1]}/></label>);
   }
 }
 

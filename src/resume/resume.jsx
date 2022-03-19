@@ -51,11 +51,11 @@ const cv =
     ],
     "work": [
       {  
+        "cargo": "Administrativo junior",
         "empleador": "[NOMBRE DE EMPRESA/ CONTRATANTE] Ej.: Banco Municipal",
         "tareas": "Ejemplo de tareas: Trámites bancarios y cobranzas a distintos clientes; control de facturación; pagos a proveedores y gestion de ordenes de pagos; control de reportes de gastos",
         "website": "https://tokenized.com/",
         "localidad": "Ej.: Rosario, Santa Fe",
-        "cargo": "Administrativo junior",
         "inicio": "20/03/2016",
         "finalización": "08/09/2020",
         "habilidades": ["React", "Redux", "SCSS", "Product"]
