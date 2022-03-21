@@ -22,7 +22,7 @@ const Work = () => {
       
       if (element[0] === "tareas") {
 
-        work.push(<textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>)
+        work.push(<p className='textarea-title'>Descripción de las tareas</p>,<textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>);
       }
 
       else if (element[0] === "finalización"){

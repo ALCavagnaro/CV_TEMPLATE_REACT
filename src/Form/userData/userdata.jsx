@@ -113,9 +113,10 @@ const handleSubmit = (e) => {
                 ) }
 
                 else if (element[0] ==='descripción') { 
-                  return(
+                  return [
+                    <p className='textarea-title'>Descripción del pérfil</p>, 
                     <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
-                  )
+                  ]
                 }
 
                 else if (element[0] ==='email') { 

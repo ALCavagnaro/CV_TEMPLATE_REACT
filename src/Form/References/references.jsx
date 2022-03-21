@@ -10,7 +10,7 @@ const References = () => {
 for (let element of Object.entries(cv['references'][0])) {
 
   if (element[0] === 'recomendación') {
-  references.push(<textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>)
+  references.push(<p className='textarea-title'>Texto breve de recomendación</p>,<textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]}></textarea>)
   }
 
   else {
