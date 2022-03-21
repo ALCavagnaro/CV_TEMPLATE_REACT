@@ -6,4 +6,6 @@ Encontrar la manera de ponerle título a cada sección
 Arreglar tamaño de la foto
 Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
 Arreglar tamaño de foto tanto en template como en PDF
+Probar la iteración de un bloque de contenido en un componente separado del Template. Ese componente luego se importa y renderea en el Template
+No se visualiza en el template ningún campo de las referencias ni actividades. Arreglar el ID del input para que se puedan renderear 
 
