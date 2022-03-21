@@ -1,8 +1,7 @@
 import React , {useContext} from 'react';
 import { TemplateState } from '../Context/CVContext';
-import { jsPDF } from "jspdf";
+import Print from '../Print/Print';
 
-//import Button from '../Button/button';
 
 const Template = () => {
 
@@ -14,66 +13,17 @@ const Template = () => {
       
      // console.log('item.value:', state[0].map((item) => item.value));
 
-      const eraseContent = (e) => {
+      const eraseContent = (e) => { //No anda//
               e.preventDefault();
               state[0].map((item) => item.value='');
               console.log(state[0].value);
-            }
-
-      const print = () => {
-
-            const item = state.map((item) => JSON.stringify(item))
-            const doc = new jsPDF();
-            const html = document.querySelector("#pdf-template");
-            const html2 = html.cloneNode(true);
-            html2.style.backgroundColor = 'bisque'; // clonación
-            html2.style.fontSize = '7px';
-            html2.style.width = '50mm';
-            html2.style.height = '72mm';
-            html2.style.margin ='2mm';
-            html2.style.padding = '1mm';
-            html2.childNodes[0].style.height = '30px';
-            html2.childNodes[0].style.width = '30px';
-            html2.childNodes[0].style.margin = '3px 21mm';
-
-            let description = html2.querySelector('.descripción');
-            description.style.fontSize='3.5px';
-
-            let contact = html2.querySelectorAll('.user-contact');
-
-                  for (let element of contact) {
-                        
-                        element.style.fontSize = '3.4px';
-                        element.style.width = '48mm';
-                        element.style.margin = 'auto';
-                  }
-
-            let experience = html2.querySelectorAll('.user-experience-p');
-
-                  for (let element of experience) {
-
-                        element.style.fontSize = '3.6px';
-                        element.style.width = '48mm';
-                        element.style.padding = '1px';
-                        element.style.margin = '3px auto';
-                        element.style.letterSpacing = '0.8px';
-                  }
-
-      
-            doc.html(html2, {
-                  callback: function (doc) {     
-                   doc.save();
-                  },
-
-               });
-      }
-     
+            }  
 
             return (  //la condición sirve para que cuando el template esté vacío se muestre un texto y no crashee el código
             
             <> 
 
-            <button id='btn-descarga' onClick = {print}>Descargar</button>
+            <button id='btn-descarga' onClick = {Print}>Descargar</button>
             <button id='btn-borrar' onClick = {eraseContent}>Borrar</button>  
 
               {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
@@ -120,7 +70,7 @@ const Template = () => {
                               }
                                
                               
-                              else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'puesto.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   
+                              else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'cargo.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   
                                     
                                     return (
                                           <div className = 'user-experience'>
@@ -130,6 +80,33 @@ const Template = () => {
                               }
                               
                               else if (item.id === 'desde-input' || item.id === 'hasta-input' || item.id === 'campo-input' || item.id === 'título-input' || item.id === 'institución-input') {   
+                                    
+                                    return (
+                                          <div className = 'user-education'>
+                                                <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
+                                          </div>
+                                    )       
+                              }
+
+                              else if (item.id === 'recomendación' || item.id === 'responsable') {   
+                                    
+                                    return (
+                                          <div className = 'user-education'>
+                                                <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
+                                          </div>
+                                    )       
+                              }
+
+                              else if (item.id === 'habilidad/conocimiento' || item.id === 'nivel') {   
+                                    
+                                    return (
+                                          <div className = 'user-education'>
+                                                <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
+                                          </div>
+                                    )       
+                              }
+
+                              else if (item.id === 'actividad') {   
                                     
                                     return (
                                           <div className = 'user-education'>
