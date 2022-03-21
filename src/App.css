@@ -51,7 +51,7 @@ h1{
   margin: 5% 1%;
 }
 
-.sub-label, .sub-label-mandatory {
+.sub-label, .sub-label-mandatory, .textarea-title {
   text-transform: uppercase;
   margin: 1%;
   display: grid;
