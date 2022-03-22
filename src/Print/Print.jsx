@@ -5,8 +5,7 @@ const Print = () => {
             //const item = state.map((item) => JSON.stringify(item))
             const doc = new jsPDF();
             const html = document.querySelector("#pdf-template");
-            const html2 = html.cloneNode(true);
-            html2.style.backgroundColor = 'bisque'; // clonación
+            const html2 = html.cloneNode(true); // clonación
             html2.style.fontSize = '7px';
             html2.style.width = '50mm';
             html2.style.height = '72mm';
