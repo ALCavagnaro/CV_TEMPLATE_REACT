@@ -217,13 +217,18 @@ input:checked + .slider:before {
                                                                     /* *** ESTILO PARA EL TEMPLATE *** */
 
 #pdf-template{
+  display: flex;
+  flex-direction: column;
   color:rgb(36, 31, 31);
   width:50rem;
   height: fit-content;
   margin: 5rem auto;
   font-size: 2.1rem;
-  background-color: rgb(247, 242, 236);
+  background-color: #887673;
   padding: 15px;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .template-img-container{
@@ -301,11 +306,12 @@ h6 {
 
 .user-contact{
     display: flex;
+    flex-direction: column;
     color: #787575;
     font-size: 1rem;  /* antes eran 4px*/
     width: 100%;
     text-align: left;
-    background-color: antiquewhite;
+    background-color: #f3eae8;
     align-items: stretch;
     justify-content: start;
     padding: 2px;
