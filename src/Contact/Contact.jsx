@@ -13,14 +13,15 @@ const Contact = () => {
         <>
             {stateLength? <></> : state[0].map((item) => {
 
-            if (item.id==='email-input' || item.id==='teléfono-input'|| item.id === 'linkedin-input' || item.id ==='localidad' || item.id === 'CP') {
+            if (item.id==='email-input' || 
+                item.id==='teléfono-input'|| 
+                item.id === 'linkedin-input' || 
+                item.id ==='localidad' || 
+                item.id === 'CP') 
                 
-                // return (
-                        
-                //         <div className='user-contact' id={item.id}>{item.value}</div>
-                // )
-
-                contact.push(<p>{item.value}</p>)
+            {
+                
+                contact.push(<p className='p-contact'>{item.value}</p>)
 
             }
 

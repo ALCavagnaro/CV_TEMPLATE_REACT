@@ -224,10 +224,10 @@ input:checked + .slider:before {
   height: fit-content;
   margin: 5rem auto;
   font-size: 2.1rem;
-  background-color: #887673;
+  background-color: white;
   padding: 15px;
   align-content: stretch;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
   align-items: flex-start;
 }
 
@@ -243,17 +243,11 @@ input:checked + .slider:before {
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
-    margin: 1rem 23rem;
-    /* margin: auto; */
-    /* background-color: #fff; */
-    /*position: absolute;*/
-    /* margin-left: 12rem;
-    margin-top: -3.3rem; */
+    margin: auto;
+  
 }
 
-
   .user-data-info {
-    /*background-color: rgb(146, 178, 199);*/
     align-content: stretch;
     justify-content: space-evenly;
     align-items: center;
@@ -261,25 +255,30 @@ input:checked + .slider:before {
     color: rgb(59, 65, 70);
 }
 
-.user-experience-p {
+.experience-title, .study-title, .recommendation-title, .ability-title, .activities-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration:wavy;
+}
+
+.user-experience, .user-education, .user-recommendation, .user-ability, .user-activities{
+  margin: 8px auto 0.2px auto;
+  width: 100%;
+  padding: 2px;
+}
+
+.user-experience-p, .user-education-p, .user-recommendation-p, .user-ability-p, .user-activities-p {
   align-content: stretch;
   justify-content: space-evenly;
   text-align: left;
   padding: 4px;
   color: rgb(59, 65, 70);
+  width: 100%;
 
 }
 
-.user-education-p {
-  align-content: stretch;
-  justify-content: space-evenly;
-  text-align: left;
-  padding: 4px;
-  color: rgb(59, 65, 70);
-
-}
-
-#empleador-input-user {
+#empleador-input-user, #institución-input-user {
   font-weight: 400;
 }
 
@@ -299,10 +298,11 @@ input:checked + .slider:before {
 h6 {
   font-weight: 100;
   width: 100%;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-align: center;
   margin-bottom: 2px;
 }
+
 
 .user-contact{
     display: flex;
@@ -315,6 +315,11 @@ h6 {
     align-items: stretch;
     justify-content: start;
     padding: 2px;
+}
+
+.p-contact{
+  width: 100%;
+  margin: 1px;
 }
 
 

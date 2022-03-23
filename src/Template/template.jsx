@@ -2,25 +2,29 @@ import React , {useContext} from 'react';
 import { TemplateState } from '../Context/CVContext';
 import Print from '../Print/Print';
 import Contact from '../Contact/Contact';
+import Presentación from '../Presentación/Presentación';
+import Experience from '../Experience/Experience';
+import Study from '../Study/Study';
+import Recommendation from '../Recommendation/Recommendation';
+import Ability from '../Ability/Ability'; 
+import Activities from '../Activities/Activities';
+import Photo from '../Photo/Photo';
 
 
 const Template = () => {
 
-      //const [state, setState] = useContext(TemplateState);
       const context = useContext(TemplateState);
       const state = context[0];
       console.log('elementos del obj state', state, 'Length:', state.length);
       const stateLength = state.length === 0;
       
-     // console.log('item.value:', state[0].map((item) => item.value));
-
       const eraseContent = (e) => { //No anda//
               e.preventDefault();
               state[0].map((item) => item.value='');
               console.log(state[0].value);
             }
             
-            return (  //la condición sirve para que cuando el template esté vacío se muestre un texto y no crashee el código
+            return (  
             
             <> 
 
@@ -30,100 +34,16 @@ const Template = () => {
               {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
               
                   <div id='pdf-template'>
-
-                            {state[0].map((item) => {
-                                  //item.img para aplicarle tag img
-
-                                    if (item.id === 'foto') {
-
-                                          return (
-
-                                                <>
-                                                      
-                                                      <img alt='not found' id='pdf-img' src={item.img}></img>
-                                                
-                                                </>
-                                          )
-                                          
-                                    }
-                                          
-                                    else if (item.id === 'nombre-input' || item.id === "puesto-input" || item.id === 'descripción') {
-                                          
-                                          return (
-
-                                                <div className= 'user-data-info'>
-                                                      <h6 className={item.id} id={item.id + ` - user`}>{item.value}</h6>
-                                                </div>
-
-                                                )        
-                                    }
-
-                                    
-
-                                    // else if (item.id==='email-input' || item.id==='teléfono-input'|| item.id === 'linkedin-input' || item.id ==='localidad' || item.id === 'CP') {
-                                          
-                                    //       return (
-                                                
-                                    //             <>
-                                                
-                                    //                   <div className='user-contact' id={item.id}>{item.value}</div>
-                                    //             </>
-
-                                    //             )
-                                    // }
-                                    
-                                    
-                                    else if (item.id === 'tareas' || item.id === 'empleador-input' || item.id === 'localidad-input' || item.id === 'cargo.input' || item.id === 'inicio-input' || item.id === 'finalización-input') {   
-                                          
-                                          return (
-                                                <div className = 'user-experience'>
-                                                      <h6 className= 'user-experience-p' id={item.id + `-user`}>{item.value}</h6>
-                                                </div>
-                                          )       
-                                    }
-                                    
-                                    else if (item.id === 'desde-input' || item.id === 'hasta-input' || item.id === 'campo-input' || item.id === 'título-input' || item.id === 'institución-input') {   
-                                          
-                                          return (
-                                                <div className = 'user-education'>
-                                                      <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
-                                                </div>
-                                          )       
-                                    }
-
-                                    else if (item.id === 'recomendación' || item.id === 'responsable') {   
-                                          
-                                          return (
-                                                <div className = 'user-education'>
-                                                      <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
-                                                </div>
-                                          )       
-                                    }
-
-                                    else if (item.id === 'habilidad/conocimiento' || item.id === 'nivel') {   
-                                          
-                                          return (
-                                                <div className = 'user-education'>
-                                                      <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
-                                                </div>
-                                          )       
-                                    }
-
-                                    else if (item.id === 'actividad') {   
-                                          
-                                          return (
-                                                <div className = 'user-education'>
-                                                      <h6 className= 'user-education-p' id={item.id + `-user`}>{item.value}</h6>
-                                                </div>
-                                          )       
-                                    }
-
-                                    
-                            })}
-
+                        
+                              <Photo/>
+                              <Presentación/>
                               <Contact/>
-                              
-
+                              <Experience/>
+                              <Study/>
+                              <Recommendation/>
+                              <Ability/>
+                              <Activities/>
+                                
                           </div>
                   
                   }
