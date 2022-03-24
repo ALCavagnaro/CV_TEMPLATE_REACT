@@ -17,7 +17,7 @@ const Activities = () => {
                 
                 {
                 
-                activities.push(<h6 className= 'user-activities-p' id={item.id + `-user`}>{item.value}</h6>)
+                activities.push(<ul className= 'user-activities-p' id={item.id + `-user`}>{item.value}</ul>)
 
                 }
 
@@ -25,7 +25,7 @@ const Activities = () => {
             }) }
 
             <div className = 'user-activities'>
-                <ul className='activities-title'>Intereses personales</ul>
+                <h6 className='activities-title'>Intereses personales</h6>
                     {activities}
             </div>
         </>

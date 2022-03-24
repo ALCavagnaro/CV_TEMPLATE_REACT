@@ -18,7 +18,7 @@ const Experience = () => {
                 item.id === 'tareas' || 
                 item.id === 'empleador-input' || 
                 item.id === 'localidad-input' || 
-                item.id === 'cargo.input' || 
+                item.id === 'cargo-input' || 
                 item.id === 'inicio-input' || 
                 item.id === 'finalización-input') 
                 

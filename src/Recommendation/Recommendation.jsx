@@ -27,7 +27,7 @@ const Recommendation = () => {
 
             <div className = 'user-recommendation'>
                 <h6 className='recommendation-title'>Recomendaciones</h6>
-                    "{recommendation}"
+                    {recommendation}
             </div>
         </>
     )

@@ -51,17 +51,81 @@ const Print = () => {
 
             studyTitle.style.fontSize = '4.5px';
 
+            let studyContainer = html2.querySelector('.user-education');
+
+            studyContainer.style.margin = '1mm auto 1mm auto';
+
+            let study = html2.querySelectorAll('.user-education-p');
+
+                  for (let element of study) {
+
+                        element.style.fontSize = '3.6px';
+                        element.style.width = '48mm';
+                        element.style.padding = '1px';
+                        element.style.margin = '3px auto';
+                        element.style.letterSpacing = '0.6px';
+
+                  }
+
             let recommendationTitle = html2.querySelector('.recommendation-title');
 
             recommendationTitle.style.fontSize = '4.5px';
+
+            let recommendationContainer = html2.querySelector('.user-recommendation');
+
+            recommendationContainer.style.margin = '1mm auto 1mm auto';
+
+            let recommendation = html2.querySelectorAll('.user-recommendation-p');
+            
+            for (let element of recommendation) {
+
+                  element.style.fontSize = '3.6px';
+                  element.style.width = '48mm';
+                  element.style.padding = '1px';
+                  element.style.margin = '3px auto';
+                  element.style.letterSpacing = '0.6px';
+
+            }
 
             let abilityTitle = html2.querySelector('.ability-title');
             
             abilityTitle.style.fontSize = '4.5px';
 
+            let abilityContainer = html2.querySelector('.user-ability');
+
+            abilityContainer.style.margin = '1mm auto 1mm auto';
+
+            let ability = html2.querySelectorAll('.user-ability-p');
+
+            for (let element of ability) {
+
+                  element.style.fontSize = '3.6px';
+                  element.style.width = '48mm';
+                  element.style.padding = '1px';
+                  element.style.margin = '3px auto';
+                  element.style.letterSpacing = '0.6px';
+
+            }
+
             let activitiesTitle = html2.querySelector('.activities-title');
 
             activitiesTitle.style.fontSize = '4.5px';
+
+            let activitiesContainer = html2.querySelector('.user-activities');
+
+            activitiesContainer.style.margin = '1mm auto 1mm auto';
+
+            let activities = html2.querySelectorAll('.user-activities-p');
+
+            for (let element of activities) {
+
+                  element.style.fontSize = '3.6px';
+                  element.style.width = '48mm';
+                  element.style.padding = '1px';
+                  element.style.margin = '3px auto';
+                  element.style.letterSpacing = '0.6px';
+
+            }
 
       
             doc.html(html2, {
