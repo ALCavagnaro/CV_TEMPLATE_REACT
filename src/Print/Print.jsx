@@ -7,9 +7,11 @@ const Print = () => {
             const html = document.querySelector("#pdf-template");
             const html2 = html.cloneNode(true); // clonación
             html2.style.fontSize = '7px';
-            html2.style.width = '50mm';
-            html2.style.height = '72mm';
-            html2.style.margin ='2mm';
+            html2.style.width = '50mm'; //ancho del texto
+            html2.style.height = '50mm';
+            html2.style.marginTop ='2mm';
+            html2.style.marginLeft ='1mm';
+            html2.style.marginRight ='1mm';
             html2.style.padding = '1.5mm';
             html2.childNodes[0].style.height = '30px';
             html2.childNodes[0].style.width = '30px';
@@ -129,6 +131,11 @@ const Print = () => {
 
       
             doc.html(html2, {
+
+                  x:0,
+                  y:1,
+                  autoPaging: 'text',
+                  margin: [0, 0, 1, 0],
                   callback: function (doc) {     
                    doc.save();
                   },
