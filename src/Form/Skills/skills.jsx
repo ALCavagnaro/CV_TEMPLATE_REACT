@@ -10,7 +10,7 @@ const Skills = () => {
 
 for (let element of Object.entries(cv["skills"][0]) ) {
   
-  skills.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input id={element[0]} placeholder={element[1]}/></label>);
+  skills.push(<label className= 'sub-label'id={element[0]} key={element[0]}>{element[0]}<input id={element[0]} placeholder={element[1]} value={element[1]}/></label>);
 }
 
 const [skillsField, setSkillsField] = useState([]);
