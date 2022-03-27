@@ -217,6 +217,7 @@ input:checked + .slider:before {
                                                                     /* *** ESTILO PARA EL TEMPLATE *** */
 
 #pdf-template{
+  display: flow-root;
   display: flex;
   flex-direction: column;
   color:rgb(36, 31, 31);
@@ -257,7 +258,7 @@ input:checked + .slider:before {
 
 .experience-title, .study-title, .recommendation-title, .ability-title, .activities-title{
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   text-decoration:wavy;
 }
@@ -268,6 +269,12 @@ input:checked + .slider:before {
   padding: 2px;
 }
 
+.user-ability-subcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+
 .user-experience-p, .user-education-p, .user-recommendation-p, .user-ability-p, .user-activities-p {
   align-content: stretch;
   justify-content: space-evenly;
@@ -276,6 +283,20 @@ input:checked + .slider:before {
   color: rgb(59, 65, 70);
   width: 100%;
 
+}
+
+.user-activities-p {
+  font-size: 1.5rem;
+  font-weight: 100;
+  width: 100%;
+  letter-spacing: 0.8px;
+  text-align: left;
+  margin-bottom: 2px;
+  text-decoration: dashed;
+}
+
+#cargo-input-user {
+  font-weight: 600;
 }
 
 #empleador-input-user, #institución-input-user {
@@ -302,7 +323,6 @@ h6 {
   text-align: center;
   margin-bottom: 2px;
 }
-
 
 .user-contact{
     display: flex;
@@ -406,3 +426,4 @@ h6 {
   background-color: #ce1e18;
   color: white;
 }
+
