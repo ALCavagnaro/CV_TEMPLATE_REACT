@@ -22,12 +22,13 @@ const Ability = () => {
 
                 }
 
-
             }) }
 
             <div className = 'user-ability'>
                 <h6 className='ability-title'>Habilidades y conocimientos</h6>
-                    {ability}
+                    <div className='user-ability-subcontainer'>
+                        {ability}
+                    </div>
             </div>
         </>
     )
