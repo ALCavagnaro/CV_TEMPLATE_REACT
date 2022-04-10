@@ -14,49 +14,49 @@ const UserData = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [goToTemplate, setGoToTemplate] = useState(false);
 
-const handleSubmit = (e) => {
-            
-            e.preventDefault();
-            let blob = new Blob([selectedImage], { type: "image" });
-            let reader = new FileReader();
-            reader.readAsDataURL(blob);
-            reader.onloadend = function () {
-            let base64String = reader.result;
-  
-            let element = document.querySelector('#location-input');
-            element.classList.remove('mandatory');
-            
-            const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
+    const handleSubmit = (e) => {
+                
+                e.preventDefault();
+                let blob = new Blob([selectedImage], { type: "image" });
+                let reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
+                let base64String = reader.result;
+      
+                let element = document.querySelector('#location-input');
+                element.classList.remove('mandatory');
+                
+                const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
 
-            let list;
+                let list;
 
-            let returnList = [];
+                let returnList = [];
 
-            for (let item of form) {
-            
-                list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
+                for (let item of form) {
+                
+                    list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
 
-                if (item.id === 'eliminar' || item.id === 'guardar') 
-                    {
-                    list.id = item.id;
-                    list.value = ''}
+                    if (item.id === 'eliminar' || item.id === 'guardar') 
+                        {
+                        list.id = item.id;
+                        list.value = ''}
 
-                else if (item.id === 'foto') 
-                    {
-                      list.id = item.id
-                      list.img = base64String
-                      returnList.push(list)
-                    }
-                    
-                else 
-                    {
-                    list.id = item.id;
-                    list.value = item.value;
-                    returnList.push(list)
-                    }
-              
-            }
-            
+                    else if (item.id === 'foto') 
+                        {
+                          list.id = item.id
+                          list.img = base64String
+                          returnList.push(list)
+                        }
+                        
+                    else 
+                        {
+                        list.id = item.id;
+                        list.value = item.value;
+                        returnList.push(list)
+                        }
+                  
+                }
+                
 
             const mandatory = document.querySelectorAll('.mandatory')
 
@@ -192,8 +192,4 @@ const handleSubmit = (e) => {
 
 export default UserData;
 
-
-function newFunction() {
-  debugger;
-}
 

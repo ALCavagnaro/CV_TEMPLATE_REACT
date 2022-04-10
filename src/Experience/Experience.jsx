@@ -20,7 +20,8 @@ const Experience = () => {
                 item.id === 'localidad-input' || 
                 item.id === 'cargo-input' || 
                 item.id === 'inicio-input' || 
-                item.id === 'finalización-input') 
+                item.id === 'finalización-input' ||
+                item.id === 'checkBox-work-input' )
                 
             {
                 

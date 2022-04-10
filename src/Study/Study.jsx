@@ -19,7 +19,8 @@ const Study = () => {
                 item.id === 'hasta-input' || 
                 item.id === 'campo-input' || 
                 item.id === 'título-input' || 
-                item.id === 'institución-input'
+                item.id === 'institución-input'||
+                item.id === 'checkBox-education-input'
                 
                 ) {
                 

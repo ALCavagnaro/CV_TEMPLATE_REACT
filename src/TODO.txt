@@ -1,17 +1,15 @@
 [Pendientes]
 
-El formulario debe quedar en la página principal
-Hacer funcionar el botón de borrar
+Simplificar el componente userData > hacer un componente aparte para la imagen
 
-Arreglar el color de fondo particionado de los datos de contacto
+El formulario debe quedar en la página principal
+
 
 Arreglar tamaño de la foto
 Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
 Arreglar tamaño de foto tanto en template como en PDF (validar tamaño máximo)
 
-No se visualiza en el template ningún campo de las referencias ni actividades. Arreglar el ID del input para que se puedan renderear
 
-Hacer funcionar el botón de estudio/ trabajo actual
 
 Los títulos de las secciones no deberían aparecer cuando no se ingresa información
 
@@ -22,3 +20,7 @@ El print tira un error
 Arreglar el título del apartado de experiencia
 Encontrar la manera de ponerle título a cada sección
 Probar la iteración de un bloque de contenido en un componente separado del Template. Ese componente luego se importa y renderea en el Template
+Arreglar el color de fondo particionado de los datos de contacto
+No se visualiza en el template ningún campo de las referencias ni actividades. Arreglar el ID del input para que se puedan renderear
+Hacer funcionar el botón de borrar
+Hacer funcionar el botón de estudio/ trabajo actual
