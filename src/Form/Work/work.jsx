@@ -21,6 +21,10 @@ const Work = () => {
        )
     }
 
+      // else if (box.checked === 'on') {return (
+      //   box.setAttribute('value', '')
+      // )}
+
       else {
         
         return (
@@ -60,7 +64,7 @@ const Work = () => {
         </label>,
         <h4 id='span-text'>Trabajo actualmente acá</h4>,
         <label className="switch">
-            <input id = 'checkBox-work-input' type="checkbox" onInput={checkBox}/>
+            <input id = 'checkBox-work-input' type="checkbox" onInput={checkBox} value = {''} />
             <span className="slider round"></span>
         </label>,
         )
