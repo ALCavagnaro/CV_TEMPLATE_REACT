@@ -5,13 +5,24 @@ import Button from '../../Button/button';
 
 const Education = () => {
 
-  const [currentStudy, setCurrentStudy] = useState(false);
-
   const checkBox = (e) => {
 
     e.preventDefault();
-    setCurrentStudy(true);
-    e.target.value = 'Estudio sin finalizar';
+    const box = document.querySelector('#checkBox-education-input');
+        if (box.checked === true) { return (
+
+              box.setAttribute ('value', 'Estudio en curso')
+            )
+           }
+
+        else {
+          
+          return (
+          
+            box.setAttribute('value', '')
+          )
+        
+        }
   }
 
   let education = [];
