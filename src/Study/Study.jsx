@@ -28,13 +28,14 @@ const Study = () => {
 
                 }
 
-
             }) }
 
-            <div className = 'user-education'>
+            {study.length > 0? <div className = 'user-education'>
                 <h6 className='study-title'>Educación</h6>
-                    {study}
-            </div>
+                     {study}
+             </div> : <></>}
+
+            
         </>
     )
 
