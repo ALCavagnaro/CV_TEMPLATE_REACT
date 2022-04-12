@@ -1,18 +1,10 @@
 [Pendientes]
 
 Simplificar el componente userData > hacer un componente aparte para la imagen
-
 El formulario debe quedar en la página principal
-
-
 Arreglar tamaño de la foto
 Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
 Arreglar tamaño de foto tanto en template como en PDF (validar tamaño máximo)
-
-
-
-Los títulos de las secciones no deberían aparecer cuando no se ingresa información
-
 
 [Hecho]
 
@@ -24,3 +16,4 @@ Arreglar el color de fondo particionado de los datos de contacto
 No se visualiza en el template ningún campo de las referencias ni actividades. Arreglar el ID del input para que se puedan renderear
 Hacer funcionar el botón de borrar
 Hacer funcionar el botón de estudio/ trabajo actual
+Los títulos de las secciones no deberían aparecer cuando no se ingresa información

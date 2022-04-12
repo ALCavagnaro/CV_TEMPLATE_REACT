@@ -32,10 +32,10 @@ const Experience = () => {
 
             }) }
 
-            <div className = 'user-experience'>
+            {experience.length > 0? <div className = 'user-experience'>
                 <h6 className='experience-title'>Experiencia Laboral</h6>
-                    {experience}
-            </div>
+                     {experience}
+             </div> : <></>}
         </>
     )
 

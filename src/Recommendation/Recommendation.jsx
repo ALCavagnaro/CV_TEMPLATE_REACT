@@ -25,10 +25,10 @@ const Recommendation = () => {
 
             }) }
 
-            <div className = 'user-recommendation'>
-                <h6 className='recommendation-title'>Recomendaciones</h6>
-                    {recommendation}
-            </div>
+            {recommendation.length > 0? <div className = 'user-recommendation'>
+                <h6 className='user-recommendation'>Recomendaciones</h6>
+                     {recommendation}
+             </div> : <></>}
         </>
     )
 

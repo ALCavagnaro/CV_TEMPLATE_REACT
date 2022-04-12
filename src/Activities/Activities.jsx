@@ -24,10 +24,10 @@ const Activities = () => {
 
             }) }
 
-            <div className = 'user-activities'>
+            {activities.length > 0? <div className = 'user-activities'>
                 <h6 className='activities-title'>Intereses personales</h6>
-                    {activities}
-            </div>
+                     {activities}
+             </div> : <></>}
         </>
     )
 
