@@ -2,7 +2,6 @@ import { jsPDF } from "jspdf";
 
 const Print = () => {
 
-            //const item = state.map((item) => JSON.stringify(item))
             const doc = new jsPDF();
             const html = document.querySelector("#pdf-template");
             const html2 = html.cloneNode(true); // clonación
@@ -13,9 +12,22 @@ const Print = () => {
             html2.style.marginLeft ='1mm';
             html2.style.marginRight ='1mm';
             html2.style.padding = '1.5mm';
-            html2.childNodes[0].style.height = '30px';
-            html2.childNodes[0].style.width = '30px';
-            html2.childNodes[0].style.margin = '3px 21mm';
+
+            let image = html2.querySelector('#pdf-img');
+
+            //  if (image.src = data:image;base64,bnVsbA==) {
+                  
+                  image.style.height = '30px';
+                  image.style.width = '30px';
+                  image.style.margin = '3px 21mm';
+            // }
+
+             if (image.src = 'data:image;base64,bnVsbA==') {
+                  
+                  image.style.width = '0px';
+                  image.style.height = '0px';
+                  image.style.display = 'none';
+            }
 
             let description = html2.querySelector('.descripción');
             description.style.fontSize='3.5px';
