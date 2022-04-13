@@ -30,7 +30,10 @@ const Print = () => {
                   }
 
             
+
             let experienceTitle = html2.querySelector('.experience-title');
+
+            if (experienceTitle != null) {  
 
             experienceTitle.style.fontSize = '4.5px';
 
@@ -48,8 +51,12 @@ const Print = () => {
                         element.style.margin = '3px auto';
                         element.style.letterSpacing = '0.6px';
                   }
+
+            }
             
             let studyTitle = html2.querySelector('.study-title');
+
+            if (studyTitle != null) {
 
             studyTitle.style.fontSize = '4.5px';
 
@@ -69,7 +76,11 @@ const Print = () => {
 
                   }
 
+            }
+
             let recommendationTitle = html2.querySelector('.recommendation-title');
+
+            if (recommendationTitle != null) {
 
             recommendationTitle.style.fontSize = '4.5px';
 
@@ -87,9 +98,13 @@ const Print = () => {
                   element.style.margin = '3px auto';
                   element.style.letterSpacing = '0.6px';
 
+                  }
+
             }
 
             let abilityTitle = html2.querySelector('.ability-title');
+
+            if (abilityTitle != null) {
             
             abilityTitle.style.fontSize = '4.5px';
 
@@ -107,9 +122,13 @@ const Print = () => {
                   element.style.margin = '3px auto';
                   element.style.letterSpacing = '0.6px';
 
+                  }
+
             }
 
             let activitiesTitle = html2.querySelector('.activities-title');
+
+            if (activitiesTitle != null) {
 
             activitiesTitle.style.fontSize = '4.5px';
 
@@ -126,6 +145,8 @@ const Print = () => {
                   element.style.padding = '1px';
                   element.style.margin = '3px auto';
                   element.style.letterSpacing = '0.6px';
+
+                  }
 
             }
 
