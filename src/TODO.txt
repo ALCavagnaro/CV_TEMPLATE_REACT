@@ -1,5 +1,6 @@
 [Pendientes]
 
+No imprime el PDF cuando uno de los campos no está completo
 Simplificar el componente userData > hacer un componente aparte para la imagen
 El formulario debe quedar en la página principal
 Arreglar tamaño de la foto
