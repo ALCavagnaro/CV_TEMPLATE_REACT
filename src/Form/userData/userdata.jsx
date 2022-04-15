@@ -45,7 +45,9 @@ const UserData = () => {
                         {
                           list.id = item.id
                           list.img = base64String
+                          list.value = selectedImage
                           returnList.push(list)
+                          console.log(selectedImage)
                         }
                         
                     else 
@@ -89,7 +91,7 @@ const UserData = () => {
             const loadImg = (e) => {
     
               setSelectedImage(e.target.files[0]);
-
+              
             }
 
     
@@ -148,7 +150,7 @@ const UserData = () => {
                             <br />
                             <button onClick={() => setSelectedImage(null)}>Quitar</button>
                           </div>
-                        )}
+                        )} 
                         <br />
                       </div>
                       </>

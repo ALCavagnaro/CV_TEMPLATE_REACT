@@ -5,13 +5,13 @@ const Photo = () => {
     //const [state, setState] = useContext(TemplateState);
     const context = useContext(TemplateState);
     const state = context[0];
-    const stateLength = state.length === 0;
+    //const stateLength = state.length === 0;
 
     return (
         <>
             {state[0].map((item) => {
 
-                    if (item.id === 'foto') {
+                    if (item.id === 'foto' && item.value !== null) { console.log(item)
 
                         return (
 
@@ -23,7 +23,6 @@ const Photo = () => {
                         )
                         
                     }
-                        
 
 
                     })}

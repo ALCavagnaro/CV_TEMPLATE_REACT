@@ -15,19 +15,14 @@ const Print = () => {
 
             let image = html2.querySelector('#pdf-img');
 
-            //  if (image.src = data:image;base64,bnVsbA==) {
+      
+             if (image != null) {
                   
                   image.style.height = '30px';
                   image.style.width = '30px';
                   image.style.margin = '3px 21mm';
-            // }
-
-             if (image.src = 'data:image;base64,bnVsbA==') {
-                  
-                  image.style.width = '0px';
-                  image.style.height = '0px';
-                  image.style.display = 'none';
             }
+
 
             let description = html2.querySelector('.descripción');
             description.style.fontSize='3.5px';
