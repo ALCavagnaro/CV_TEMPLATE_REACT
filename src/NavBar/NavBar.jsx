@@ -11,7 +11,7 @@ export const NavBar = () => {
                     <Link to= '/template'><Button text='Template'/></Link>
                     <Link to= '/form'><Button text='Formulario'/></Link>
                 </div>
-                    <h1 id='nav-title'>Completá los campos de tu CV</h1>
+                    <h1 id='nav-title'>Mi CV</h1>
              </div>
           </div>
         </>
