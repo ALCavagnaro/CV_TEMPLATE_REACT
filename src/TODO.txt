@@ -1,11 +1,9 @@
 [Pendientes]
 
-No imprime el PDF cuando uno de los campos no está completo
+Validar tamaño máximo para la foto
 Simplificar el componente userData > hacer un componente aparte para la imagen
 El formulario debe quedar en la página principal
-Arreglar tamaño de la foto
 Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
-Arreglar tamaño de foto tanto en template como en PDF (validar tamaño máximo)
 
 [Hecho]
 
@@ -18,3 +16,4 @@ No se visualiza en el template ningún campo de las referencias ni actividades. 
 Hacer funcionar el botón de borrar
 Hacer funcionar el botón de estudio/ trabajo actual
 Los títulos de las secciones no deberían aparecer cuando no se ingresa información
+No imprime el PDF cuando uno de los campos no está completo
