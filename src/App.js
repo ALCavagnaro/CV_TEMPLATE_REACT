@@ -19,7 +19,7 @@ function App() {
       <CVContext> 
         <NavBar/>
           <Switch>
-            <Route path='/Form' exact>
+            <Route path='/micv' exact>
               <Form/>
             </Route>
             <Route path='/template' exact>
