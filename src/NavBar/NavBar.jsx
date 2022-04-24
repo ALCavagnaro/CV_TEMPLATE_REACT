@@ -9,7 +9,7 @@ export const NavBar = () => {
              <div id='nav-container'>
                 <div className='nav-btn-container'>
                     <Link to= '/template'><Button text='Template'/></Link>
-                    <Link to= '/form'><Button text='Formulario'/></Link>
+                    <Link to= '/micv'><Button text='Inicio'/></Link>
                 </div>
                     <h1 id='nav-title'>Mi CV</h1>
              </div>

@@ -96,7 +96,9 @@ const UserData = () => {
 
     
 
-    return (   
+    return ( 
+      <>
+      <h1 id='form-title'>Completá el formulario y descargá tu CV</h1>
 
         <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
@@ -110,21 +112,21 @@ const UserData = () => {
                 if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email' && element[0] !== 'linkedin') {
                 return (
                   <label className='sub-label-mandatory' id={element[0]} key={element[0]}>{element[0]}   
-                      <input type='text' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'} value={element[1]}/> 
+                      <input type='text' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
                   </label>
                 ) }
 
                 else if (element[0] ==='descripción') { 
                   return [
                     <p className='textarea-title'>Descripción del pérfil</p>, 
-                    <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}>{element[1]}</textarea>
+                    <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
                   ]
                 }
 
                 else if (element[0] ==='email') { 
                   return(
                     <label className='sub-label-mandatory' id={element[0]} key={element[0]} for='email'>{element[0]}   
-                      <input type='email' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'} value={element[1]}/> 
+                      <input type='email' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
                   </label>
                   )
                 }
@@ -132,7 +134,7 @@ const UserData = () => {
                 else if (element[0] ==='linkedin') { 
                   return(
                     <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
-                      <input type='text' id={element[0] + `-input`} placeholder={element[1]} value={element[1]}/> 
+                      <input type='text' id={element[0] + `-input`} placeholder={element[1]}/> 
                   </label>
                   )
                 }
@@ -163,7 +165,7 @@ const UserData = () => {
                   
                   <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
                     <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
-                      <input input type='text' id={element[0]} placeholder={element[1]} value={element[1]}/>
+                      <input input type='text' id={element[0]} placeholder={element[1]}/>
                     </label>
                   </div>
 
@@ -184,9 +186,10 @@ const UserData = () => {
                     <Interests/>
               </div>
               <div className='form-btn-container'> 
-                  {goToTemplate? <Link to = '/template'><input id = 'guardar' type='submit' value='Ir al Template'/></Link>: <input id = 'guardar' type='submit' value='Guardar en template'/> }
+                  {goToTemplate? <Link to = '/template'><input id = 'guardar' type='submit' value='¡Crear CV!'/></Link>: <input id = 'guardar' type='submit' value='Guardar mis datos'/> }
               </div>
         </form>
+        </>
         
     )
 
