@@ -20,6 +20,12 @@ body {
     margin-bottom: 8rem;
 }
 
+#nav-title{
+
+  text-align: center;
+  width: 20%;
+}
+
 #nav-container{
     width: 100%;
     margin: auto;
@@ -49,6 +55,13 @@ h1{
 
 .title {
   margin: 5% 1%;
+}
+
+#form-title{
+  margin: auto;
+    margin-bottom: 5rem;
+    width: 50%;
+    text-align: center;
 }
 
 .sub-label, .sub-label-mandatory, .textarea-title {
