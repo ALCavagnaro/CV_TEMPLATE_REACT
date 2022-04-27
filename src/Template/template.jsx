@@ -27,25 +27,35 @@ const Template = () => {
             
             <> 
 
-            {stateLength? <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-descarga' onClick = {Print}>Descargar</button>:<button id='btn-descarga' onClick = {Print}>Descargar</button>}
-            {stateLength? <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-borrar'>Borrar</button>:<button id='btn-borrar' onClick = {eraseContent}>Borrar</button>}  
+            <div className= 'template-btn-container'>
 
-              {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
+                {stateLength? 
               
-                  <div id='pdf-template'>
-                        
-                              <Photo/>
-                              <Presentación/>
-                              <Contact/>
-                              <Experience/>
-                              <Study/>
-                              <Recommendation/>
-                              <Ability/>
-                              <Activities/>
-                                
-                          </div>
+                      <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-descarga' onClick = {Print}>Descargar</button>:
+                      <button id='btn-descarga' onClick = {Print}>Descargar</button>}
+                      
+                {stateLength? 
                   
-                  }
+                  <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-borrar'>Borrar</button>:
+                  <button id='btn-borrar' onClick = {eraseContent}>Borrar</button>}
+
+            </div>
+                  {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
+                  
+                      <div id='pdf-template'>
+                            
+                                  <Photo/>
+                                  <Presentación/>
+                                  <Contact/>
+                                  <Experience/>
+                                  <Study/>
+                                  <Recommendation/>
+                                  <Ability/>
+                                  <Activities/>
+                                    
+                              </div>
+                      
+                      }
       
             </>
 

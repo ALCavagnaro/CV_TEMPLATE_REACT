@@ -2,7 +2,6 @@
 
 Validar tamaño máximo para la foto
 Simplificar el componente userData > hacer un componente aparte para la imagen
-El formulario debe quedar en la página principal
 Buscar la manera de hacer, por lo menos, dos diseños diferentes de template
 
 [Hecho]
@@ -17,3 +16,5 @@ Hacer funcionar el botón de borrar
 Hacer funcionar el botón de estudio/ trabajo actual
 Los títulos de las secciones no deberían aparecer cuando no se ingresa información
 No imprime el PDF cuando uno de los campos no está completo
+El formulario debe quedar en la página principal
+Arreglo estilo responsive

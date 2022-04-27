@@ -267,6 +267,7 @@ input:checked + .slider:before {
     align-items: center;
     padding: 4px;
     color: rgb(59, 65, 70);
+    margin: 3% auto;
 }
 
 .experience-title, .study-title, .recommendation-title, .ability-title, .activities-title{
@@ -440,3 +441,81 @@ h6 {
   color: white;
 }
 
+@media only screen and (max-width: 400px) {
+  body {
+    width: fit-content;
+  }
+
+  .navBar{
+    margin-bottom: 1rem;
+  }
+
+  #nav-title {
+    font-size: 2rem;
+    text-align: right;
+    display: contents;
+  }
+  
+  #nav-container{
+      /* width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center; */
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+  }
+
+  .nav-btn-container {
+    /*display: none;*/
+    display: inline-table;
+  }
+
+ .nav-btn {
+   margin: 1%;
+ }
+
+  #pdf-template{  
+    width: 50%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    width: fit-content;
+    
+  }
+
+  .template-btn-container{
+    padding: 0 10%;
+  }
+
+  Button {
+   
+    margin: 0.5rem 0.5rem;
+    height: 2rem;
+}
+
+  #form-title {
+    margin: auto;
+    margin-bottom: 2rem;
+    /* width: 50%; */
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  input {
+    /* margin: 0.5rem 2rem; */
+    border-radius: 3px;
+    border: rgb(208 194 215) solid 1px;
+    height: 2rem;
+    width: 15rem;
+  }
+
+  .cvForm {
+    display: inline-block;
+    width: 85%;
+    margin: 5%;
+  }
+  
+}
