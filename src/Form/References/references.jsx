@@ -1,6 +1,6 @@
 import {cv} from '../../resume/resume';
 import { useState } from 'react';
-import Button from '../../Button/button';
+import FormButton from '../../FormButton/FormButton';
 
 const References = () => {
 
@@ -37,8 +37,8 @@ return (
     <>
     {referenceField}
     <div className='button-container'>
-        <Button text='Agregar referencia' onClick={addReference}/>
-        <Button text='Quitar referencia'onClick={removeReference}/>
+        <FormButton text='Agregar referencia' onClick={addReference}/>
+        <FormButton text='Quitar referencia'onClick={removeReference}/>
     </div>
     </>
 )

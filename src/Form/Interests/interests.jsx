@@ -1,6 +1,6 @@
 import {cv} from '../../resume/resume';
 import { useState } from 'react';
-import Button from '../../Button/button';
+import FormButton from '../../FormButton/FormButton';
 
 const Interests = () => {
 
@@ -31,8 +31,8 @@ return (
 
     {interestField}
     <div className='button-container'>
-        <Button text='Agregar interés' onClick={addInterest}/>
-        <Button text='Quitar interés' onClick={removeInterest}/>
+        <FormButton text='Agregar interés' onClick={addInterest}/>
+        <FormButton text='Quitar interés' onClick={removeInterest}/>
     </div>
     </>
 )

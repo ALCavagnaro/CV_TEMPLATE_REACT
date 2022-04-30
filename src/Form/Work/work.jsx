@@ -1,5 +1,5 @@
 import {cv} from '../../resume/resume';
-import Button from '../../Button/button.jsx';
+import FormButton from '../../FormButton/FormButton';
 import { useState} from 'react';
 
 
@@ -109,8 +109,8 @@ const Work = () => {
         <div>
         {workField}
           <div className='button-container'>
-              <Button text='Agregar experiencia' onClick={(addWork)}/>
-              <Button text='Quitar experiencia' onClick={(removeWork)}/>
+              <FormButton text='Agregar experiencia' onClick={(addWork)}/>
+              <FormButton text='Quitar experiencia' onClick={(removeWork)}/>
           </div>
         </div>
     )
