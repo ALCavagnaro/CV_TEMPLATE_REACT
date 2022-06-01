@@ -14,6 +14,7 @@ Para abrir la aplicación dirigirse a:
     http://localhost:3000
 
 Contacto:
+
 Linkedin: https://www.linkedin.com/in/ana-laura-cavagnaro-aa52b155/
 email: analauracavagnaro@gmail.com
 
@@ -24,16 +25,17 @@ This is an application to generate PDF resumes. It can be tested online [here] (
 ## To download the app:
 Go to the project directory and write the following code in the terminal to install the necessary dependencies:
 
-npm install
+    npm install
 
 To launch the application on localhost, type in the terminal:
 
-npm start
+    npm start
 
 To open the application go to:
 
-http://localhost:3000
+    http://localhost:3000
 
 Contact:
+
 Linkedin: https://www.linkedin.com/in/ana-laura-cavagnaro-aa52b155/
 email: analauracavagnaro@gmail.com
