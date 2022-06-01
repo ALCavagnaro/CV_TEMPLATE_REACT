@@ -98,7 +98,7 @@ const UserData = () => {
 
     return ( 
       <>
-      <h1 id='form-title'>Completá el formulario y descargá tu CV</h1>
+      <h1 id='form-title'>Completá el formulario para descargar tu CV en PDF</h1>
 
         <form id = 'userForm' className='cvForm' onSubmit={handleSubmit}>
 
