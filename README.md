@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+Esta es una aplicación para generar curriculums en PDF. Se puede probar online [acá] (https://alcavagnaro.github.io/micv/). Esta hecha con React JS y no necesita backend. Mi intención fue crear una aplicación gratuita que fuera intuitiva para el usuario. Para la validación y estandarización de los campos, utilicé [JSON Resume Schema] (https://jsonresume.org/). También usé la librería jsPDF para generar los [PDF del template] (https://github.com/parallax/jsPDF).  Por ahora, sólo tengo un modelo de template que presenta un problema con los márgenes superiores e inferiores.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Para descargar la aplicación:
+Dirigirse al directorio del proyecto y escribir en la terminal el código siguiente para instalar las dependencias necesarias:
 
-## Available Scripts
+    npm install
 
-In the project directory, you can run:
+Para lanzar la aplicación en el localhost, escribir en la terminal:
 
-### `npm start`
+    npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para abrir la aplicación dirigirse a:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    http://localhost:3000
 
-### `npm test`
+Contacto:
+Linkedin: https://www.linkedin.com/in/ana-laura-cavagnaro-aa52b155/
+email: analauracavagnaro@gmail.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+This is an application to generate PDF resumes. It can be tested online [here] (https://alcavagnaro.github.io/micv/). It is made with React JS and does not need a backend. My intention was to create a free application that was intuitive for the user. For field validation and standardization, I used [JSON Resume Schema] (https://jsonresume.org/). I also used the jsPDF library to generate the [template PDFs] (https://github.com/parallax/jsPDF). For now, I only have a template model that has a problem with the top and bottom margins.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## To download the app:
+Go to the project directory and write the following code in the terminal to install the necessary dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install
 
-### `npm run eject`
+To launch the application on localhost, type in the terminal:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To open the application go to:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact:
+Linkedin: https://www.linkedin.com/in/ana-laura-cavagnaro-aa52b155/
+email: analauracavagnaro@gmail.com
