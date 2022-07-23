@@ -83,7 +83,7 @@ h1{
     text-align: center;
 }
 
-.sub-label, .sub-label-mandatory, .textarea-title {
+.sub-label, .textarea-title {
   text-transform: uppercase;
   margin: 1%;
   display: grid;
@@ -93,10 +93,10 @@ h1{
   justify-items: center;
 }
 
-.sub-label-mandatory:before {
+/* .sub-label-mandatory:before {
   content: '*';
   color: #ce1e18;
-}
+} */
 
 input {
   margin: 0.5rem 2rem;
@@ -130,9 +130,9 @@ input {
   visibility: hidden;
 }
 
-.mandatory:before{
+/* .mandatory:before{
   content: '*';
-}
+} */
 
 
 #tareas, #descripción, #recomendación {

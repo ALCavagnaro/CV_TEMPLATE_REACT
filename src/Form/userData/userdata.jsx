@@ -12,58 +12,7 @@ const UserData = () => {
 
   const [state, setState] = useContext(TemplateState);
   const [selectedImage, setSelectedImage] = useState(null);
-  //const [goToTemplate, setGoToTemplate] = useState(false);
-
-//   const loadImg = (e) => {
-
-//     e.preventDefault();
-//     let blob = new Blob([selectedImage], { type: "image" });
-//     let reader = new FileReader();
-//     reader.readAsDataURL(blob);
-//     reader.onloadend = function () {
-
-//         let base64String = reader.result;
-
-//         console.log("reader result", reader.result);
-//         console.log("selected image", selectedImage);
-
-//         setSelectedImage(e.target.files[0]);
-
-//         const form = document.querySelector('#userForm')
-
-//         console.log("formulario", form)
-//         console.log(form["foto"])
-
-//         let list;
-
-//         let returnList = [];
-
-//         for (let item of form) {
-        
-//             list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
-
-//                   if (item.id === 'foto') 
-//                 {
-//                   list.id = item.id
-//                   list.img = base64String
-//                   list.value = selectedImage
-//                   returnList.push(list)
-                  
-//                 }
-
-//             }
-
-//             setState([returnList])
-
-          
-//            console.log('img value - 2:', e.target.files, "lista loadImg: ", returnList);
-
-    
-//   }
-
-// } 
-
-    
+ 
 
     const handleSubmit = (e) => {
                 
@@ -77,8 +26,6 @@ const UserData = () => {
 
                       console.log('reader result', reader.result)
             
-                      let element = document.querySelector('#location-input');
-                      element.classList.remove('mandatory');
                       
                       const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
 
@@ -114,89 +61,32 @@ const UserData = () => {
                         
                       }
 
-                      //setState(state.lenght = 0);
                       setState([returnList])
                       console.log('Estado de state', state, "lista: handlesubmit", returnList)
                 
-
-                      // const mandatory = document.querySelectorAll('.mandatory')
-
-                      // for (let item of mandatory) {
-
-                      //   const result = item.value;
                       
-                      //       if (result !== '') {
-                              
-                      //         setState(state.lenght = 0);
-                      //         setState([returnList]);
-                      //         setGoToTemplate(true);
-                      //       }
-                              
-                      //       else {
-
-                      //         alert('Completar los campos obligatorios indicados con *');
-
-                      //       }
-
-                      // } 
-                      
-            
+                    
 
             
                  }
 
                 
       
-
+          }
           
-        
     
-     }
+    
+     
 
                 const loadImg = (e) => {
 
-                  e.preventDefault();
-                  let blob = new Blob([selectedImage], { type: "image" });
-                  let reader = new FileReader();
-                  reader.readAsDataURL(blob);
-                  reader.onloadend = function () {
-
-                      let base64String = reader.result;
-
-                      console.log('img value - 1:', e.target.files[0]);
-
+                  
                       setSelectedImage(e.target.files[0]);
 
-                      const form = document.querySelector('#userForm')
-
-                      let list;
-
-                      let returnList = [];
-
-                      for (let item of form) {
-                      
-                          list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
-
-                                if (item.id === 'foto') 
-                              {
-                                list.id = item.id
-                                list.img = base64String
-                                list.value = selectedImage
-                                returnList.push(list)
-                                
-                              }
-
-                          }
-
-                          setState([returnList])
-              
-                        
-                          console.log('img value - 2:', e.target.files[0]);
-              
-                  
+                              
                 }
 
-          }  
+          
       
             
     
@@ -216,55 +106,43 @@ const UserData = () => {
 
                       {Object.entries(cv.basics).map (element => {
 
-                            if (element[0] !=='foto' && element[0] !== 'descripción' && element[0] !== 'email' && element[0] !== 'linkedin') {
-                            return (
-                              <label className='sub-label-mandatory' id={element[0]} key={element[0]}>{element[0]}   
-                                  <input type='text' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
-                              </label>
-                            ) }
-
-                            else if (element[0] ==='descripción') { 
-                              return [
-                                <p className='textarea-title'>Descripción del pérfil</p>, 
-                                <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
-                              ]
-                            }
-
-                            else if (element[0] ==='email') { 
+                            if (element[0]==='foto') { 
                               return(
-                                <label className='sub-label-mandatory' id={element[0]} key={element[0]} for='email'>{element[0]}   
-                                  <input type='email' id={element[0] + `-input`} placeholder={element[1]} className={'mandatory'}/> 
-                              </label>
-                              )
-                            }
 
-                            else if (element[0] ==='linkedin') { 
-                              return(
-                                <label className='sub-label' id={element[0]} key={element[0]}>{element[0]}   
-                                  <input type='text' id={element[0] + `-input`} placeholder={element[1]}/> 
-                              </label>
-                              )
-                            }
-
-                            else {
-                              return ( 
                                 <>
-                                <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
-                                  <input type='file' id={element[0]} onChange={(loadImg)} />
-                                </label>
-                                <div>
-                                    {selectedImage && (
-                                      <div id='img-container'>
-                                        <img alt="not found" width={"175px"} height={'200px'} src={URL.createObjectURL(selectedImage)} />
-                                        <br />
-                                        <button onClick={() => setSelectedImage(null)}>Quitar</button>
-                                      </div>
-                                    )} 
-                                    <br />
+                                 <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
+                                   <input type='file' id={element[0]} onChange={(loadImg)} />
+                                 </label>
+                                 <div>
+                                     {selectedImage && (
+                                       <div id='img-container'>
+                                         <img alt="not found" width={"175px"} height={'200px'} src={URL.createObjectURL(selectedImage)} />
+                                         <br />
+                                         <button onClick={() => setSelectedImage(null)}>Quitar</button>
+                                       </div>
+                                     )} 
+                                     <br />
                                   </div>
-                                  </>
+                                   </>
+
                               )
                             }
+
+                            else if (element[0]==='descripción') {
+                              return [
+                                     <p className='textarea-title'>Descripción del pérfil</p>, 
+                                     <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
+                                   ]
+                            }
+
+                            else 
+                            return (
+                              <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
+                              <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
+                                <input input type='text' id={element[0] + `-input`} placeholder={element[1]}/>
+                              </label>
+                            </div>
+                            )
                         
                       })}
 
