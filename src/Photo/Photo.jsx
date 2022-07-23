@@ -9,7 +9,7 @@ const Photo = () => {
 
     return (
         <>
-            {context[0].map((item) => {
+            {context[0][0].map((item) => {
 
                     if (item.id === 'foto' && item.value !== null) { 
 

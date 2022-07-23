@@ -14,7 +14,7 @@ const Template = () => {
 
       const context = useContext(TemplateState);
       const [state, setState] = useState(context[0]);
-      console.log('elementos del obj state', state,'context',context[0], 'state length',state.length);
+      //console.log('elementos del obj state', state,'context',context[0], 'state length',state.length);
       //const stateLength = context.length === 0;
       
       const eraseContent = (e) => { 

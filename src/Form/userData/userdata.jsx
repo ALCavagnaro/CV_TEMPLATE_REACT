@@ -14,17 +14,68 @@ const UserData = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   //const [goToTemplate, setGoToTemplate] = useState(false);
 
+//   const loadImg = (e) => {
+
+//     e.preventDefault();
+//     let blob = new Blob([selectedImage], { type: "image" });
+//     let reader = new FileReader();
+//     reader.readAsDataURL(blob);
+//     reader.onloadend = function () {
+
+//         let base64String = reader.result;
+
+//         console.log("reader result", reader.result);
+//         console.log("selected image", selectedImage);
+
+//         setSelectedImage(e.target.files[0]);
+
+//         const form = document.querySelector('#userForm')
+
+//         console.log("formulario", form)
+//         console.log(form["foto"])
+
+//         let list;
+
+//         let returnList = [];
+
+//         for (let item of form) {
+        
+//             list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
+
+//                   if (item.id === 'foto') 
+//                 {
+//                   list.id = item.id
+//                   list.img = base64String
+//                   list.value = selectedImage
+//                   returnList.push(list)
+                  
+//                 }
+
+//             }
+
+//             setState([returnList])
+
+          
+//            console.log('img value - 2:', e.target.files, "lista loadImg: ", returnList);
+
+    
+//   }
+
+// } 
+
+    
+
     const handleSubmit = (e) => {
                 
                 e.preventDefault();
-                // let blob = new Blob([selectedImage], { type: "image" });
-                // let reader = new FileReader();
-                // reader.readAsDataURL(blob);
-                // reader.onloadend = function () {
+                let blob = new Blob([selectedImage], { type: "image" });
+                let reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
 
-                //       let base64String = reader.result;
+                      let base64String = reader.result;
 
-                //       console.log('reader result', reader.result)
+                      console.log('reader result', reader.result)
             
                       let element = document.querySelector('#location-input');
                       element.classList.remove('mandatory');
@@ -44,14 +95,14 @@ const UserData = () => {
                               list.id = item.id;
                               list.value = ''}
 
-                          // else if (item.id === 'foto') 
-                          //     {
-                          //       list.id = item.id
-                          //       list.img = base64String
-                          //       list.value = selectedImage
-                          //       returnList.push(list)
+                          else if (item.id === 'foto') 
+                              {
+                                list.id = item.id
+                                list.img = base64String
+                                list.value = selectedImage
+                                returnList.push(list)
                                 
-                          //     }
+                              }
                               
                           else 
                               {
@@ -65,7 +116,7 @@ const UserData = () => {
 
                       //setState(state.lenght = 0);
                       setState([returnList])
-                      console.log('Estado de state', state)
+                      console.log('Estado de state', state, "lista: handlesubmit", returnList)
                 
 
                       // const mandatory = document.querySelectorAll('.mandatory')
@@ -92,7 +143,15 @@ const UserData = () => {
             
 
             
-                // }
+                 }
+
+                
+      
+
+          
+        
+    
+     }
 
                 const loadImg = (e) => {
 
@@ -104,7 +163,7 @@ const UserData = () => {
 
                       let base64String = reader.result;
 
-                      //console.log('img value - 1:', e.target.files[0]);
+                      console.log('img value - 1:', e.target.files[0]);
 
                       setSelectedImage(e.target.files[0]);
 
@@ -132,63 +191,12 @@ const UserData = () => {
                           setState([returnList])
               
                         
-                         // console.log('img value - 2:', e.target.files[0]);
+                          console.log('img value - 2:', e.target.files[0]);
               
                   
                 }
 
           }  
-      
-
-          
-        
-    
-     }
-
-          //       const loadImg = (e) => {
-
-          //         e.preventDefault();
-          //         let blob = new Blob([selectedImage], { type: "image" });
-          //         let reader = new FileReader();
-          //         reader.readAsDataURL(blob);
-          //         reader.onloadend = function () {
-
-          //             let base64String = reader.result;
-
-          //             console.log('img value - 1:', e.target.files[0]);
-
-          //             setSelectedImage(e.target.files[0]);
-
-          //             const form = document.querySelector('#userForm')
-
-          //             let list;
-
-          //             let returnList = [];
-
-          //             for (let item of form) {
-                      
-          //                 list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
-
-          //                       if (item.id === 'foto') 
-          //                     {
-          //                       list.id = item.id
-          //                       list.img = base64String
-          //                       list.value = selectedImage
-          //                       returnList.push(list)
-                                
-          //                     }
-
-          //                 }
-
-          //                 setState([returnList])
-              
-                        
-          //                 console.log('img value - 2:', e.target.files[0]);
-              
-                  
-          //       }
-
-          // }  
       
             
     
@@ -242,7 +250,7 @@ const UserData = () => {
                               return ( 
                                 <>
                                 <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
-                                  <input type='file' id={element[0]} onChange={(handleSubmit)} />
+                                  <input type='file' id={element[0]} onChange={(loadImg)} />
                                 </label>
                                 <div>
                                     {selectedImage && (
