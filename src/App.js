@@ -18,14 +18,14 @@ function App() {
     <>
       <CVContext> 
         <NavBar/>
-          <Switch>
-            <Route path='/micv' exact>
-              <Form/>
-            </Route>
-            <Route path='/template' exact>
-              <Template/>
-            </Route>
-          </Switch>
+        <Switch>
+            <div id='main-container'>
+              <Route path= '/micv' exact>
+                <Form/>
+                <Template/>
+              </Route>
+            </div>
+        </Switch>
       </CVContext>
       </>
     </BrowserRouter>

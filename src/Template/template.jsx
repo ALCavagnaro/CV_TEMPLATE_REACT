@@ -14,48 +14,55 @@ const Template = () => {
 
       const context = useContext(TemplateState);
       const [state, setState] = useState(context[0]);
-      console.log('elementos del obj state', state,'context',context[0]);
-      const stateLength = state.length === 0;
+      console.log('elementos del obj state', state,'context',context[0], 'state length',state.length);
+      //const stateLength = context.length === 0;
       
       const eraseContent = (e) => { 
               e.preventDefault();
               setState([]);
-              console.log(state.length, state);
+              context[0] = [];
+              console.log(state, 'contexto', context);
             }
             
             return (  
             
             <> 
 
-            <div className= 'template-btn-container'>
+                  <div className='template-container'>
+                        {context[0].length === 0 ? <h2 id='pdf-template'>Template vacío</h2> : 
+                        
+                        <div id='pdf-template'>
+                              
+                                    <Photo/>
+                                    <Presentación/>
+                                    <Contact/>
+                                    <Experience/>
+                                    <Study/>
+                                    <Recommendation/>
+                                    <Ability/>
+                                    <Activities/>
+                                          
+                        </div>
 
-                {stateLength? 
-              
-                      <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-descarga' onClick = {Print}>Descargar</button>:
-                      <button id='btn-descarga' onClick = {Print}>Descargar</button>}
-                      
-                {stateLength? 
-                  
-                  <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-borrar'>Borrar</button>:
-                  <button id='btn-borrar' onClick = {eraseContent}>Borrar</button>}
+                              
+                        
+                        }
 
-            </div>
-                  {stateLength ? <h2 id='pdf-template'>Template vacío</h2> : 
-                  
-                      <div id='pdf-template'>
-                            
-                                  <Photo/>
-                                  <Presentación/>
-                                  <Contact/>
-                                  <Experience/>
-                                  <Study/>
-                                  <Recommendation/>
-                                  <Ability/>
-                                  <Activities/>
+                              <div className= 'template-btn-container'>
+
+                              {context[0].length === 0 ?
+
+                                    <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-descarga' onClick = {Print}>Descargar</button>:
+                                    <button id='btn-descarga' onClick = {Print}>Descargar</button>}
                                     
+                              {context[0].length === 0 ?
+                              
+                              <button disabled='disabled' style={{cursor:'no-drop'}} id='btn-borrar'>Borrar</button>:
+                              <button id='btn-borrar' onClick = {eraseContent}>Borrar</button>}
+
                               </div>
-                      
-                      }
+
+                  </div>
       
             </>
 

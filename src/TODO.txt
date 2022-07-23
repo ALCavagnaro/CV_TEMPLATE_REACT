@@ -18,3 +18,20 @@ Los títulos de las secciones no deberían aparecer cuando no se ingresa informa
 No imprime el PDF cuando uno de los campos no está completo
 El formulario debe quedar en la página principal
 Arreglo estilo responsive
+
+
+22/07/22
+
+
+Se muestran los módulos del formulario y del template en la misma ventana
+Los datos se pasan al template con el cambio en el input del formulario
+
+[pendientes nuevos]
+
+Ahora no se pasa la foto
+Ver de que los campos. ej: datos de contacto, solo aparezca si se completan los subcampos
+El template siempre debería quedar en pantalla
+Las fechas salen al revés
+Botón de Borrar en el formulario
+Descripción de tareas se sale del template
+Achicar el formulario => Colapsar info personal y achicar el espacio entre los inputs 

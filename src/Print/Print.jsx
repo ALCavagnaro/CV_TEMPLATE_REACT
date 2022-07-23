@@ -16,16 +16,22 @@ const Print = () => {
             let image = html2.querySelector('#pdf-img');
 
       
-             if (image != null) {
+                  if (image != null) {
                   
                   image.style.height = '30px';
                   image.style.width = '30px';
                   image.style.margin = '3px 21mm';
-            }
+                  
+                  }     
 
-
+            
             let description = html2.querySelector('.descripción');
+
+                  if (description != null) {
+
             description.style.fontSize='3.5px';
+
+                  }
 
             let contact = html2.querySelectorAll('.user-contact');
 

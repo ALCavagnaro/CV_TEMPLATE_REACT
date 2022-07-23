@@ -4,14 +4,14 @@ import { TemplateState } from '../Context/CVContext';
 const Photo = () => {
     //const [state, setState] = useContext(TemplateState);
     const context = useContext(TemplateState);
-    const state = context[0];
+    //const state = context[0];
     //const stateLength = state.length === 0;
 
     return (
         <>
-            {state[0].map((item) => {
+            {context[0].map((item) => {
 
-                    if (item.id === 'foto' && item.value !== null) { console.log(item)
+                    if (item.id === 'foto' && item.value !== null) { 
 
                         return (
 

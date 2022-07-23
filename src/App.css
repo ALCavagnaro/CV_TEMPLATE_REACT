@@ -16,14 +16,13 @@ body {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-    height: 8rem;
-    margin-bottom: 8rem;
+    height: 5rem;
 }
 
 #nav-title{
 
   text-align: center;
-  width: 20%;
+  
 }
 
 #nav-container{
@@ -31,6 +30,21 @@ body {
     margin: auto;
     display: flex;
     align-items: center;
+}
+
+#main-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+
+.template-container{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: fit-content;
+  margin: 2%;
 }
 
 .nav-btn-container{
@@ -45,13 +59,18 @@ h1{
 }
 
 .cvForm {
-  display: inline-block;
-  width: 40%;
-  margin: 2% 30%;
-  padding: 5% 1%;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%); }
+  display: inline-block; 
+    width: 50%;
+    /* margin: 2%; */
+    padding: 5% 1%;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+    font-size: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    bottom: 0;
+}
 
 .title {
   margin: 5% 1%;
@@ -83,9 +102,11 @@ input {
   margin: 0.5rem 2rem;
   border-radius: 3px;
   border: rgb(208 194 215) solid 1px;
-  height: 2rem;
+  height: fit-content;
   width: 180%;
+  font-size: 1rem;
 }
+
 
 #foto-label > input {
   margin: 0.5rem 2rem;
@@ -122,7 +143,7 @@ input {
 
 #tareas::placeholder, #descripción::placeholder, #recomendación::placeholder {
   color: rgb(105, 105, 105);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: italic;
   text-transform:uppercase;
 }
@@ -141,20 +162,26 @@ input {
 }
 
 Button {
-  background-color: #a76eaf;
-  border: none;
+  background-color: white;
+  border: #a76eaf solid;
   border-radius: 25px;
-  color: #ffffff;
+  color: black;
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
-  width: 8rem;
-  height: 3rem;
+  width: fit-content;
+  height: 3.5rem;
 }
+
+Button:hover{
+  border: #aaaee0 solid;
+}
+
+
 
 .button-container {
   display:flex
@@ -234,16 +261,18 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   color:rgb(36, 31, 31);
-  width:50rem;
+  width:100%;
   height: fit-content;
-  margin: 5rem auto;
   font-size: 2.1rem;
   background-color: white;
   padding: 15px;
   align-content: stretch;
   /*justify-content: space-evenly;*/
   align-items: flex-start;
+  border-radius: 8px;
+  background: #fff;
 }
+
 
 .template-img-container{
 
@@ -441,6 +470,12 @@ h6 {
   color: white;
 }
 
+.template-btn-container{
+  padding: 0 10%;
+  margin: 2% auto;
+}
+
+
 @media only screen and (max-width: 400px) {
   body {
     width: fit-content;
@@ -483,11 +518,13 @@ h6 {
     margin: 1rem auto;
     font-size: 1.5rem;
     width: fit-content;
+    text-align: center;
     
   }
 
   .template-btn-container{
     padding: 0 10%;
+    margin: 2% auto;
   }
 
   Button { 

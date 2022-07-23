@@ -7,10 +7,10 @@ export const NavBar = () => {
         <>
          <div className='navBar'>
              <div id='nav-container'> 
-                <div className='nav-btn-container'>
+                {/* <div className='nav-btn-container'>
                     <Link to= '/template'><Button  text='Template'/></Link>
                     <Link to= '/micv'><Button  text='Inicio'/></Link>
-                </div>
+                </div> */}
                     <h1 id='nav-title'>Mi CV</h1>
              </div>
           </div>
