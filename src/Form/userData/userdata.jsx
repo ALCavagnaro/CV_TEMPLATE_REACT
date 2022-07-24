@@ -6,90 +6,76 @@ import Education from '../Education/education';
 import References from '../References/references';
 import Skills from '../Skills/skills';
 import Interests from '../Interests/interests';
-import {Link} from 'react-router-dom';
 
 const UserData = () => {
 
   const [state, setState] = useContext(TemplateState);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [valueImg, setValueImg] = useState(null);
  
 
-    const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
                 
-                e.preventDefault();
-                let blob = new Blob([selectedImage], { type: "image" });
-                let reader = new FileReader();
-                reader.readAsDataURL(blob);
-                reader.onloadend = function () {
+          e.preventDefault();
+          
+          if (e.target.type === 'file') {
+                  
+                  let blob = new Blob([e.target.files[0]], { type: "image" });
+                  let reader = new FileReader();
+                  reader.readAsDataURL(blob);
+                  reader.onloadend = function () {
 
-                      let base64String = reader.result;
+                          let base64String = reader.result;
+                          setValueImg(base64String);
+                          const returnList2 = [{id: "foto", img: base64String, value: e.target.files[0] }]
+                          //const  userInput = {id: "foto", img: base64String, value: e.target.files[0] }
+                          setState([returnList2])
 
-                      console.log('reader result', reader.result)
+                  }
+            }
+                
+          const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
+          
+          let list;
+          
+          let returnList = [];
+
+          for (let item of form) {
+          
+              list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
+
+
+              if (item.id === 'foto') {
+                      list.id = item.id
+                      list.img = valueImg
+                      //list.value = selectedImage
+                      returnList.push(list)
+              }
+                  
+              else if (item.id != 'foto') {
+
+                      list.id = item.id;
+                      list.value = item.value;
+                      returnList.push(list);
+
+              }
+              
             
-                      
-                      const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
-
-                      let list;
-
-                      let returnList = [];
-
-                      for (let item of form) {
-                      
-                          list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
-
-                          if (item.id === 'eliminar' || item.id === 'guardar') 
-                              {
-                              list.id = item.id;
-                              list.value = ''}
-
-                          else if (item.id === 'foto') 
-                              {
-                                list.id = item.id
-                                list.img = base64String
-                                list.value = selectedImage
-                                returnList.push(list)
-                                
-                              }
-                              
-                          else 
-                              {
-                              list.id = item.id;
-                              list.value = item.value;
-                              returnList.push(list);
-                              
-                              }
-                        
-                      }
-
-                      setState([returnList])
-                      console.log('Estado de state', state, "lista: handlesubmit", returnList)
-                
-                      
-                    
-
-            
-                 }
-
-                
-      
           }
+
+          setState([returnList]);
+
+          console.log("state", state)
+          
+  }
           
     
     
      
 
-                const loadImg = (e) => {
-
-                  
-                      setSelectedImage(e.target.files[0]);
-
-                              
-                }
-
-          
-      
-            
-    
+  const loadImg = (e) => {
+      setSelectedImage(e.target.files[0]);                            
+  }
 
     return ( 
       

@@ -11,7 +11,7 @@ const Photo = () => {
         <>
             {context[0][0].map((item) => {
 
-                    if (item.id === 'foto' && item.value !== null) { 
+                    if (item.id === 'foto' && item.img !== null) { 
 
                         return (
 
