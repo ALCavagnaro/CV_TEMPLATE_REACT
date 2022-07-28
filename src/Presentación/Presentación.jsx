@@ -7,11 +7,13 @@ const Presentación = () => {
     const state = context[0];
     const stateLength = state.length === 0;
 
-    let presentacion = [];
+    //let presentacion = [];
+
+    console.log('presentación', state)
 
     return (
         <>
-            {stateLength? <></> : state[0].map((item) => {
+            {/* {stateLength? <></> : Object.keys(state).map((item) => {
 
             if (item.id === 'nombre-input' || 
                 item.id === "puesto-input" || 
@@ -28,7 +30,9 @@ const Presentación = () => {
 
             <div className='user-data-info'>
                     {presentacion}
-            </div>
+            </div> */}
+
+            <h6 className='nombre-input' id='nombre-input'>{state["nombre-input"] === undefined ? "": state["nombre-input"].value}</h6>
         </>
     )
 
