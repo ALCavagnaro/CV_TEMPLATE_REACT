@@ -13,6 +13,7 @@ const UserData = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [valueImg, setValueImg] = useState(null);
  
+  console.log('state inicial', state);
 
   const handleSubmit = (e) => {
                 
@@ -20,58 +21,53 @@ const UserData = () => {
           
           if (e.target.type === 'file') {
                   
-                  let blob = new Blob([e.target.files[0]], { type: "image" });
+                  let blob = new Blob([e.target.files[0]], { type: "image" });  // llamada asíncrona para pasar la foto a base64
                   let reader = new FileReader();
                   reader.readAsDataURL(blob);
                   reader.onloadend = function () {
 
                           let base64String = reader.result;
-                          setValueImg(base64String);
+                          setValueImg(base64String);     // guardo el valor que después uso para el src de la img en un hook
                           const returnList2 = [{id: "foto", img: base64String, value: e.target.files[0] }]
                           //const  userInput = {id: "foto", img: base64String, value: e.target.files[0] }
-                          setState([returnList2])
+                          setState({"foto": {img: base64String}})
+                          
 
                   }
             }
                 
-          const form = document.querySelector('#userForm')  // CAMBIAR ESTE CÓDIGO //
+          const form = document.querySelector('#userForm')  
           
-          let list;
-          
-          let returnList = [];
+
+          let newState = {}  //este obj contiene otro obj
 
           for (let item of form) {
           
-              list = new Object();  //Creo un nuevo objeto para guardar los ítems del form en State//
+              let formItem = new Object();  //Creo un nuevo objeto para guardar los ítems del form en el newState//
 
 
               if (item.id === 'foto') {
-                      list.id = item.id
-                      list.img = valueImg
-                      //list.value = selectedImage
-                      returnList.push(list)
+                      
+                      formItem.img = valueImg  // le paso el valor que uso para el scr de la imagen por hook de nuevo acá para que no lo cargué en una segunda lectura del código
+                      
               }
                   
               else if (item.id != 'foto') {
 
-                      list.id = item.id;
-                      list.value = item.value;
-                      returnList.push(list);
-
+                     
+                      formItem.value = item.value;
+                      
               }
               
+              newState[item.id] = formItem       //cada obj del formItem se guarda con un ID dentro del newState
             
           }
 
-          setState([returnList]);
+          setState(newState);   // el obj newState se guarda en el contexto
 
-          console.log("state", state)
           
   }
-          
-    
-    
-     
+            
 
   const loadImg = (e) => {
       setSelectedImage(e.target.files[0]);                            
@@ -88,61 +84,66 @@ const UserData = () => {
                     <h2 id='form-title'>Formulario CV</h2>
 
                       <h3 className='title'>1. Información personal</h3>
-
-
-                      {Object.entries(cv.basics).map (element => {
-
-                            if (element[0]==='foto') { 
-                              return(
-
-                                <>
-                                 <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
-                                   <input type='file' id={element[0]} onChange={(loadImg)} />
-                                 </label>
-                                 <div>
-                                     {selectedImage && (
-                                       <div id='img-container'>
-                                         <img alt="not found" width={"175px"} height={'200px'} src={URL.createObjectURL(selectedImage)} />
-                                         <br />
-                                         <button onClick={() => setSelectedImage(null)}>Quitar</button>
-                                       </div>
-                                     )} 
-                                     <br />
-                                  </div>
-                                   </>
-
-                              )
-                            }
-
-                            else if (element[0]==='descripción') {
-                              return [
-                                     <p className='textarea-title'>Descripción del pérfil</p>, 
-                                     <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxlength={'250'}></textarea>
-                                   ]
-                            }
-
-                            else 
-                            return (
-                              <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
-                              <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
-                                <input input type='text' id={element[0] + `-input`} placeholder={element[1]}/>
-                              </label>
-                            </div>
-                            )
                         
-                      })}
-
-                      {Object.entries(cv.basics.location).map (element => 
                           
-                            <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
-                              <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
-                                <input input type='text' id={element[0]} placeholder={element[1]}/>
-                              </label>
-                            </div>
+                                {Object.entries(cv.basics).map (element => {
 
-                      )}
+                                      if (element[0]==='foto') { 
+                                        return(
+
+                                          <>
+                                          
+                                              <label className='sub-label' id={element[0] + `-label`} key={element[0]}>{element[0]}
+                                                <input type='file' id={element[0]} onChange={(loadImg)} />
+                                              </label>
+                                              <div>
+                                                  {selectedImage && (
+                                                    <div id='img-container'>
+                                                      <img alt="not found" width={"175px"} height={'200px'} src={URL.createObjectURL(selectedImage)} />
+                                                      <br />
+                                                      <button onClick={() => setSelectedImage(null)}>Quitar</button>
+                                                    </div>
+                                                  )} 
+                                                  <br />
+                                                </div>
+                                          </>
+
+                                            )
+                                          }
+
+                                          else if (element[0]==='descripción') {
+                                            return [
+                                                  <p className='textarea-title'>Descripción del pérfil</p>, 
+                                                  <textarea className= 'sub-label'id={element[0]} key={element[0]} placeholder={element[1]} rows={'5'} maxLength={'250'}></textarea>
+                                                ]
+                                          }
+
+                                          else 
+                                          return (
+                                            <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
+                                            <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
+                                              <input input type='text' id={element[0] + `-input`} placeholder={element[1]}/>
+                                            </label>
+                                          </div>
+                                          )
+                                      
+                                    })}
+
+                                    {Object.entries(cv.basics.location).map (element => 
+                                        
+                                          <div className='sub-label' id={element[0] + `label-container`} key={element[0]}>
+                                            <label className ='sub-label'id={element[0] + `label`} key={element[0]}>{element[0]}
+                                              <input input type='text' id={element[0]} placeholder={element[1]}/>
+                                            </label>
+                                          </div>
+
+                                    )}
+
+                          
+
+              </div>
               
-                      </div>
+                      
                       
                         <div className='category-container'>
                             <h3 className='title'>2. Experiencia laboral</h3>
