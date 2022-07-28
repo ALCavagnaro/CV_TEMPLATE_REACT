@@ -4,7 +4,7 @@ import { createContext } from 'react';
 const CVContext = (props) => {
 
 
-    const [template, setTemplate] = useState([])
+    const [template, setTemplate] = useState({})
 
     return (
 
